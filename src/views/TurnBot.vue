@@ -51,7 +51,8 @@ export default defineComponent({
   },
   methods: {
     saveTurn() : void {
-      const { player, cardDeck, evolutionCount, prosperityCount, actionRoll, territoryRoll, beaconRoll } = this.navigationState
+      const { player, cardDeck, evolutionCount, prosperityCount, blueDotCount, redDotCount,
+        actionRoll, territoryRoll, beaconRoll } = this.navigationState
       const turn : Turn = {
         round: this.round,
         turn: this.turn,
@@ -60,6 +61,8 @@ export default defineComponent({
           cardDeck: cardDeck.toPersistence(),
           evolutionCount,
           prosperityCount,
+          blueDotCount,
+          redDotCount,
           actionRoll,
           territoryRoll,
           beaconRoll

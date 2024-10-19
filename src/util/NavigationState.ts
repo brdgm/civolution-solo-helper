@@ -6,6 +6,8 @@ import Card from '@/services/Card'
 import Cards from '@/services/Cards'
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import Player from '@/services/enum/Player'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import ScoringCategory from '@/services/enum/ScoringCategory'
 
 export default class NavigationState {
 
@@ -14,6 +16,10 @@ export default class NavigationState {
   readonly startPlayer : Player
   readonly player : Player
   
+  readonly difficultyLevel : DifficultyLevel
+  readonly eraScoringTiles : ScoringCategory[]
+  readonly finalScoringTiles : ScoringCategory[]
+  
   readonly cardDeck : CardDeck
   readonly evolutionCount : number
   readonly prosperityCount : number
@@ -21,6 +27,8 @@ export default class NavigationState {
   readonly actionRoll : number
   readonly territoryRoll : number
   readonly beaconRoll : number
+  readonly blueDotCount : number
+  readonly redDotCount : number
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
@@ -34,12 +42,18 @@ export default class NavigationState {
     this.startPlayer = getStartPlayer(state, this.round)
     this.player = getPlayer(route, this.startPlayer)
 
+    this.difficultyLevel = state.setup.difficultyLevel
+    this.eraScoringTiles = state.setup.eraScoringTiles
+    this.finalScoringTiles = state.setup.finalScoringTiles
+
     // try to load persistence with rolled die values for current turns
     const botPersistence = getBotPersistence(state, this.round, this.turn)
     if (botPersistence) {
       this.cardDeck = CardDeck.fromPersistence(botPersistence.cardDeck)
       this.evolutionCount = botPersistence.evolutionCount
       this.prosperityCount = botPersistence.prosperityCount
+      this.blueDotCount = botPersistence.blueDotCount
+      this.redDotCount = botPersistence.redDotCount
       this.actionRoll = botPersistence.actionRoll
       this.territoryRoll = botPersistence.territoryRoll
       this.beaconRoll = botPersistence.beaconRoll
@@ -48,9 +62,15 @@ export default class NavigationState {
     else {
       const previousBotPersistence = getPreviousBotPersistence(state, this.round, this.turn)
       this.cardDeck = CardDeck.fromPersistence(previousBotPersistence.cardDeck)
-      // draw next card
+      // draw next card, count dots
       if (this.player == Player.BOT) {
-        this.cardDeck.draw()
+        const nextCard = this.cardDeck.draw()
+        this.blueDotCount = previousBotPersistence.blueDotCount + nextCard.blueDotCount
+        this.redDotCount = previousBotPersistence.redDotCount + nextCard.redDotCount
+      }
+      else {
+        this.blueDotCount = previousBotPersistence.blueDotCount
+        this.redDotCount = previousBotPersistence.redDotCount  
       }
       // counters
       this.evolutionCount = previousBotPersistence.evolutionCount
@@ -118,7 +138,13 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
 
   // check previous round
   if (round > 1) {
-    return getPreviousBotPersistence(state, round - 1, MAX_TURN)
+    const lastRoundBotPersistence = getPreviousBotPersistence(state, round - 1, MAX_TURN)
+    if (lastRoundBotPersistence) {
+      // reset dot counters for new round
+      lastRoundBotPersistence.blueDotCount = 0
+      lastRoundBotPersistence.redDotCount = 0
+      return lastRoundBotPersistence
+    }
   }
 
   // get initial card deck
@@ -130,6 +156,8 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
     cardDeck: initialCardDeck,
     evolutionCount: 0,
     prosperityCount: 0,
+    blueDotCount: 0,
+    redDotCount: 0,
     actionRoll: 0,
     territoryRoll: 0,
     beaconRoll: 0

@@ -69,6 +69,8 @@ export interface BotPersistence {
   cardDeck: CardDeckPersistence
   evolutionCount: number
   prosperityCount: number
+  blueDotCount: number
+  redDotCount: number
   actionRoll: number
   territoryRoll: number
   beaconRoll: number

@@ -12,7 +12,7 @@ const stateBotData = mockState({initialCardDeck:{pile:[1,2,3,4],discard:[]}, rou
     mockTurn({round:1,turn:2,player:Player.BOT,cardDeck:{pile:[2,3,4],discard:[1]}}),
     mockTurn({round:1,turn:3,player:Player.PLAYER}),
     mockTurn({round:1,turn:4,player:Player.BOT,cardDeck:{pile:[3,4],discard:[2,1]},
-        evolutionCount:2, prosperityCount:1,
+        evolutionCount:2, prosperityCount:1, blueDotCount:3, redDotCount:1,
         actionRoll:3, territoryRoll:4, beaconRoll:5})
   ]})
 ]})
@@ -68,6 +68,8 @@ describe('util/NavigationState', () => {
     expect(navigationState.cardDeck.toPersistence()).to.eql({pile:[3,4],discard:[2,1]})
     expect(navigationState.evolutionCount).to.eq(2)
     expect(navigationState.prosperityCount).to.eq(1)
+    expect(navigationState.blueDotCount).to.eq(3)
+    expect(navigationState.redDotCount).to.eq(1)
     expect(navigationState.actionRoll).to.eq(3)
     expect(navigationState.territoryRoll).to.eq(4)
     expect(navigationState.beaconRoll).to.eq(5)
@@ -81,6 +83,8 @@ describe('util/NavigationState', () => {
     expect(navigationState.cardDeck.toPersistence()).to.eql({pile:[4],discard:[3,2,1]})
     expect(navigationState.evolutionCount).to.eq(2)
     expect(navigationState.prosperityCount).to.eq(1)
+    expect(navigationState.blueDotCount).to.eq(5)  // card3.blueDotCount = 2
+    expect(navigationState.redDotCount).to.eq(2)   // card3.redDotCount = 1
     expect(navigationState.actionRoll).to.greaterThanOrEqual(1)
     expect(navigationState.territoryRoll).to.greaterThanOrEqual(1)
     expect(navigationState.beaconRoll).to.greaterThanOrEqual(1)
@@ -94,6 +98,8 @@ describe('util/NavigationState', () => {
     expect(navigationState.cardDeck.toPersistence()).to.eql({pile:[4],discard:[3,2,1]})
     expect(navigationState.evolutionCount).to.eq(2)
     expect(navigationState.prosperityCount).to.eq(1)
+    expect(navigationState.blueDotCount).to.eq(2)  // card3.blueDotCount = 2
+    expect(navigationState.redDotCount).to.eq(1)   // card3.redDotCount = 1
     expect(navigationState.actionRoll).to.greaterThanOrEqual(1)
     expect(navigationState.territoryRoll).to.greaterThanOrEqual(1)
     expect(navigationState.beaconRoll).to.greaterThanOrEqual(1)
@@ -107,6 +113,8 @@ describe('util/NavigationState', () => {
     expect(navigationState.cardDeck.toPersistence()).to.eql({pile:[1,2,3,4],discard:[]})
     expect(navigationState.evolutionCount).to.eq(0)
     expect(navigationState.prosperityCount).to.eq(0)
+    expect(navigationState.blueDotCount).to.eq(0)
+    expect(navigationState.redDotCount).to.eq(0)
     expect(navigationState.actionRoll).to.eq(0)
     expect(navigationState.territoryRoll).to.eq(0)
     expect(navigationState.beaconRoll).to.eq(0)
