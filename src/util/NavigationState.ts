@@ -99,7 +99,7 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
   if (roundData) {
     const lastBotPersistence = roundData.turns
         .filter(item => item.turn < turn)
-        .toSorted((a,b) => a.turn - b.turn)
+        .toSorted((a,b) => b.turn - a.turn)
         .map(item => item.botPersistence)
         .find(item => item != undefined)
     if (lastBotPersistence) {

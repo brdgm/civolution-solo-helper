@@ -4,7 +4,7 @@
   <h1 class="mb-3">{{t('roundStart.title')}}</h1>
 
   <h3 v-html="t('roundStart.newCards.title')"></h3>
-  <p v-html="t('roundStart.newCards.playAsUsual')"></p>
+  <p v-html="t('roundStart.newCards.noAction')"></p>
 
   <h3 v-html="t('roundStart.newGoals.title')"></h3>
   <ol>
@@ -16,7 +16,7 @@
   </ol>
 
   <h3 v-html="t('roundStart.extraFind.title')"></h3>
-  <p v-html="t('roundStart.extraFind.playAsUsual')"></p>
+  <p v-html="t('roundStart.extraFind.noAction')"></p>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}

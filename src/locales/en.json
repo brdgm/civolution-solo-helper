@@ -37,7 +37,7 @@
     "title": "Era Start",
     "newCards": {
       "title": "1) New Cards",
-      "playAsUsual": "Play as usual."
+      "noAction": "V.I.C.I does nothing."
     },
     "newGoals": {
       "title": "2) New goals",
@@ -48,7 +48,7 @@
     },
     "extraFind": {
       "title": "3) Extra find",
-      "playAsUsual": "Play as usual, V.I.C.I makes no extra find."
+      "noAction": "V.I.C.I makes no extra find."
     }
   },
   "turnPlayer": {
@@ -59,10 +59,41 @@
     "title": "V.I.C.I"
   },
   "roundEnd": {
-    "title": "Era End"
+    "title": "Era End",
+    "sitePhase": {
+      "title": "5) Site phase",
+      "botNotAffected": "V.I.C.I is never affected by face-up sites."
+    },
+    "feedingPhase": {
+      "title": "6) Feeding phase",
+      "feedTribes": {
+        "title": "A) V.I.C.I Feeding phase:"
+      },
+      "scoreStrongTribes": "B) Score V.I.C.I's strong tribes."
+    },
+    "eventPhase": {
+      "title": "7) Event phase",
+      "adjustWeather": "A) V.I.C.I is never affected by the weather.",
+      "resolveEvent": {
+        "title": "B) V.I.C.I never gets event bonuses."
+      },
+      "scoreCategory": "C) Score current category for V.I.C.I.",
+      "startingCivilization": {
+        "title": "D) Determine starting civilization:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Income phase",
+      "scoreStatues": "B) Score V.I.C.I's statues."
+    },
+    "noNextStartPlayer": "Please determine the next start player."
   },
   "gameEnd": {
     "title": "Game End"
+  },
+  "endRoundButton": {
+    "title": "End Action Phase",
+    "confirm": "Do you want to end the action phase?"
   },
   "sideBar": {
     "round": "Era {round}"
@@ -73,6 +104,10 @@
     "3": "Medium",
     "4": "Advanced",
     "5": "Expert"
+  },
+  "player": {
+    "player": "Player",
+    "bot": "V.I.C.I"
   },
   "notfound": {
     "title": "Not Found"

@@ -10,6 +10,7 @@
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
   </button>
+  <EndRoundButton :navigationState="navigationState" @endRound="endRound"/>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
@@ -19,15 +20,17 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
-import { useStateStore } from '@/store/state'
+import { Turn, useStateStore } from '@/store/state'
 import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
+import EndRoundButton from '@/components/turn/EndRoundButton.vue'
 
 export default defineComponent({
   name: 'TurnPlayer',
   components: {
     FooterButtons,
-    SideBar
+    SideBar,
+    EndRoundButton
   },
   setup() {
     const { t } = useI18n()
@@ -48,8 +51,21 @@ export default defineComponent({
     }
   },
   methods: {
+    saveTurn() : void {
+      const turn : Turn = {
+        round: this.round,
+        turn: this.turn,
+        player: this.navigationState.player
+      }
+      this.state.storeTurn(turn)
+    },
     next() : void {
+      this.saveTurn()
       this.$router.push(`/round/${this.round}/turn/${this.turn+1}/bot`)
+    },
+    endRound() : void {
+      this.saveTurn()
+      this.$router.push(`/round/${this.round}/end`)
     }
   }
 })

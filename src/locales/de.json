@@ -37,7 +37,7 @@
     "title": "Beginn der Epoche",
     "newCards": {
       "title": "1) Neue Karten",
-      "playAsUsual": "Keine Anpassungen."
+      "noAction": "V.I.C.I macht nichts."
     },
     "newGoals": {
       "title": "2) Neue Ziele",
@@ -48,7 +48,7 @@
     },
     "extraFind": {
       "title": "3) Sonderfund",
-      "playAsUsual": "Keine Anpassungen. V.I.C.I macht keinen Sonderfund."
+      "noAction": "V.I.C.I macht keinen Sonderfund."
     }
   },
   "turnPlayer": {
@@ -59,10 +59,41 @@
     "title": "V.I.C.I"
   },
   "roundEnd": {
-    "title": "Ende der Epoche"
+    "title": "Ende der Epoche",
+    "sitePhase": {
+      "title": "5) Ortsphase",
+      "botNotAffected": "V.I.C.I ist nie von Orten betroffen."
+    },
+    "feedingPhase": {
+      "title": "6) Ernährungsphase",
+      "feedTribes": {
+        "title": "A) V.I.C.I Ernährungsphase:"
+      },
+      "scoreStrongTribes": "B) Werte V.I.C.I starke Stämme."
+    },
+    "eventPhase": {
+      "title": "7) Ereignisphase",
+      "adjustWeather": "A) V.I.C.I ist nie vom Wetter betroffen.",
+      "resolveEvent": {
+        "title": "B) V.I.C.I erhält nie Ereignis-Boni."
+      },
+      "scoreCategory": "C) Werte aktuelle Kategorie für V.I.C.I.",
+      "startingCivilization": {
+        "title": "D) Bestimme Startzivilisation:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Einkommensphase",
+      "scoreStatues": "B) Werte V.I.C.Is Statuen."
+    },
+    "noNextStartPlayer": "Bitte den nächsten Startspieler bestimmen."
   },
   "gameEnd": {
     "title": "Spielende"
+  },
+  "endRoundButton": {
+    "title": "Aktionsphase beenden",
+    "confirm": "Soll die Aktionsphase beendet werden?"
   },
   "sideBar": {
     "round": "Epoche {round}"
@@ -73,6 +104,10 @@
     "3": "Mittel",
     "4": "Fortgeschritten",
     "5": "Schwer"
+  },
+  "player": {
+    "player": "Spieler",
+    "bot": "V.I.C.I"
   },
   "notfound": {
     "title": "Nicht Gefunden"
