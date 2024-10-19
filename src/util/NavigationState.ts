@@ -49,14 +49,23 @@ export default class NavigationState {
       const previousBotPersistence = getPreviousBotPersistence(state, this.round, this.turn)
       this.cardDeck = CardDeck.fromPersistence(previousBotPersistence.cardDeck)
       // draw next card
-      this.cardDeck.draw()
+      if (this.player == Player.BOT) {
+        this.cardDeck.draw()
+      }
       // counters
       this.evolutionCount = previousBotPersistence.evolutionCount
       this.prosperityCount = previousBotPersistence.prosperityCount
       // roll dice for action selection
-      this.actionRoll = rollDice(6)
-      this.territoryRoll = rollDice(6)
-      this.beaconRoll = rollDice(6)
+      if (this.player == Player.BOT) {
+        this.actionRoll = rollDice(6)
+        this.territoryRoll = rollDice(6)
+        this.beaconRoll = rollDice(6)
+      }
+      else {
+        this.actionRoll = 0
+        this.territoryRoll = 0
+        this.beaconRoll = 0
+      }
     }
     this.currentCard = this.cardDeck.currentCard ?? Cards.get(1)
   }

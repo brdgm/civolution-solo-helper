@@ -8,6 +8,6 @@ export default function (params?: MockCardDeckParams) : CardDeck {
 }
 
 export interface MockCardDeckParams {
-  pile?: string[]
-  discard?: string[]
+  pile?: number[]
+  discard?: number[]
 }
