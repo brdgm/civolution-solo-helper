@@ -11,6 +11,8 @@
   </button>
   <EndRoundButton :navigationState="navigationState" @endRound="endRound"/>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -23,13 +25,15 @@ import { useRoute } from 'vue-router'
 import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
 import EndRoundButton from '@/components/turn/EndRoundButton.vue'
+import DebugInfo from '@/components/turn/DebugInfo.vue'
 
 export default defineComponent({
   name: 'TurnBot',
   components: {
     FooterButtons,
     SideBar,
-    EndRoundButton
+    EndRoundButton,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()

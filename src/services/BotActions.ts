@@ -109,7 +109,7 @@ function getScoringActions(scoringAction: ScoringAction, round: number,
     case ScoringActionType.FINAL_SCORING_CATEGORIES:
       return getFinalScoringCategoryActions(finalScoringTiles, count, vpCount)
     default:
-      throw new Error(`Invalid scoring action: ${scoringAction}`)
+      throw new Error(`Invalid scoring action type: ${scoringActionType}`)
   }
 }
 
