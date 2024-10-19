@@ -35,8 +35,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import { useStateStore } from '@/store/state'
-import { Round } from '@/store/state'
+import { useStateStore, Round } from '@/store/state'
 import Player from '@/services/enum/Player'
 import CardDeck from '@/services/CardDeck'
 
@@ -59,7 +58,7 @@ export default defineComponent({
         turns: []
       }
       this.state.storeRound(round)
-      this.$router.push('/round/1/turn/1/player')
+      this.$router.push('/round/1/start')
     }
   }
 })

@@ -5,12 +5,15 @@ import CardDeck from '@/services/CardDeck'
 import Card from '@/services/Card'
 import Cards from '@/services/Cards'
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
+import Player from '@/services/enum/Player'
 
 export default class NavigationState {
 
   readonly round : number
   readonly turn : number
-
+  readonly startPlayer : Player
+  readonly player : Player
+  
   readonly cardDeck : CardDeck
   readonly evolutionCount : number
   readonly prosperityCount : number
@@ -21,7 +24,15 @@ export default class NavigationState {
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
-    this.turn = getIntRouteParam(route, 'turn')
+    if (route.name == 'RoundEnd' || route.name == 'GameEnd') {
+      this.turn = MAX_TURN
+    }
+    else {
+      this.turn = getIntRouteParam(route, 'turn')
+    }
+
+    this.startPlayer = getStartPlayer(state, this.round)
+    this.player = getPlayer(route, this.startPlayer)
 
     // try to load persistence with rolled die values for current turns
     const botPersistence = getBotPersistence(state, this.round, this.turn)
@@ -52,13 +63,33 @@ export default class NavigationState {
 
 }
 
+const MAX_TURN = 999
+
+function getStartPlayer(state: State, round: number) : Player {
+  const roundData = state.rounds.find(item => item.round == round)
+  if (roundData) {
+    return roundData.startPlayer
+  }
+  return Player.PLAYER
+}
+
+function getPlayer(route: RouteLocation, startPlayer: Player) : Player {
+  if (route.name == 'TurnPlayer') {
+    return Player.PLAYER
+  }
+  else if (route.name == 'TurnBot') {
+    return Player.BOT
+  }
+  else {
+    return startPlayer
+  }
+}
+
 function getBotPersistence(state: State, round: number, turn: number) : BotPersistence|undefined {
   const roundData = state.rounds.find(item => item.round == round)
   if (roundData) {
     const turnData = roundData.turns.find(item => item.turn == turn)
-    if (turnData && turnData.botPersistence) {
-      return turnData.botPersistence
-    }
+    return turnData?.botPersistence
   }
   return undefined
 }
@@ -67,7 +98,7 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
   const roundData = state.rounds.find(item => item.round == round)
   if (roundData) {
     const lastBotPersistence = roundData.turns
-        .filter(item => (item.turn < turn) || turn == 0)
+        .filter(item => item.turn < turn)
         .toSorted((a,b) => a.turn - b.turn)
         .map(item => item.botPersistence)
         .find(item => item != undefined)
@@ -78,7 +109,7 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
 
   // check previous round
   if (round > 1) {
-    return getPreviousBotPersistence(state, round - 1, 0)
+    return getPreviousBotPersistence(state, round - 1, MAX_TURN)
   }
 
   // get initial card deck

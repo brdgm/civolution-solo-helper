@@ -33,12 +33,36 @@
     "diceNotice": "Diese Würfel werden nicht gewürfelt - sie dienen dazu, die Anzahl von V.I.C.Is Würfeln zu ermitteln.",
     "noOtherComponents": "Anderes Spielmaterial wird für V.I.C.I nicht benötigt."
   },
+  "roundStart": {
+    "title": "Beginn der Epoche",
+    "newCards": {
+      "title": "1) Neue Karten",
+      "playAsUsual": "Keine Anpassungen."
+    },
+    "newGoals": {
+      "title": "2) Neue Ziele",
+      "playerTakeGoal": "Nehme eine Zielplatine (optional).",
+      "botDetermine": "Bestimme eine Zielplatine für V.I.C.I.",
+      "botTakeGoal": "Entferne Zielplatine <b>{goalChip}</b> (wenn verfügbar).",
+      "botNoGoal": "Es wird keine Zielplatine entfernt."
+    },
+    "extraFind": {
+      "title": "3) Sonderfund",
+      "playAsUsual": "Keine Anpassungen. V.I.C.I macht keinen Sonderfund."
+    }
+  },
   "turnPlayer": {
     "title": "Spieler",
     "takeTurn": "Führe deinen Zug aus."
   },
   "turnBot": {
     "title": "V.I.C.I"
+  },
+  "roundEnd": {
+    "title": "Ende der Epoche"
+  },
+  "gameEnd": {
+    "title": "Spielende"
   },
   "sideBar": {
     "round": "Epoche {round}"

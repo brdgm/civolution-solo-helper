@@ -1,17 +1,11 @@
 <template>
   <SideBar :navigationState="navigationState"/>
 
-  <h1>
-    {{t('turnPlayer.title')}}
-  </h1>
+  <h1 class="mb-3">{{t('gameEnd.title')}}</h1>
 
-  <p v-html="t('turnPlayer.takeTurn')" class="mt-4 mb-4"></p>
+  <p>...</p>
 
-  <button class="btn btn-primary btn-lg mt-4" @click="next()">
-    {{t('action.next')}}
-  </button>
-
-  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
+  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
 </template>
 
 <script lang="ts">
@@ -24,7 +18,7 @@ import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
 
 export default defineComponent({
-  name: 'TurnPlayer',
+  name: 'GameEnd',
   components: {
     FooterButtons,
     SideBar
@@ -35,21 +29,12 @@ export default defineComponent({
     const state = useStateStore()
 
     const navigationState = new NavigationState(route, state)
-    const { round, turn } = navigationState
 
-    return { t, state, navigationState, round, turn }
+    return { t, state, navigationState }
   },
   computed: {
     backButtonRouteTo() : string {
-      if (this.turn > 1) {
-        return `/round/${this.round}/turn/${this.turn-1}/bot`
-      }
-      return `/round/${this.round}/start`
-    }
-  },
-  methods: {
-    next() : void {
-      this.$router.push(`/round/${this.round}/turn/${this.turn+1}/bot`)
+      return '/round/4/end'
     }
   }
 })

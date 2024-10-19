@@ -43,10 +43,7 @@ export default defineComponent({
       if (this.turn > 1) {
         return `/round/${this.round}/turn/${this.turn-1}/player`
       }
-      if (this.round > 1) {
-        return `/round/${this.round-1}/end`
-      }
-      return ''
+      return `/round/${this.round}/start`
     }
   },
   methods: {

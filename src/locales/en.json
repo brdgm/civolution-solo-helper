@@ -33,12 +33,36 @@
     "diceNotice": "You do not roll them, they are used to count the number of V.I.C.I's dice.",
     "noOtherComponents": "Other components are not used for V.I.C.I."
   },
+  "roundStart": {
+    "title": "Era Start",
+    "newCards": {
+      "title": "1) New Cards",
+      "playAsUsual": "Play as usual."
+    },
+    "newGoals": {
+      "title": "2) New goals",
+      "playerTakeGoal": "Take a goal chip (optional).",
+      "botDetermine": "Determine goal chip for V.I.C.I.",
+      "botTakeGoal": "Remove goal chip <b>{goalChip}</b> (if available).",
+      "botNoGoal": "No goal chip is removed."
+    },
+    "extraFind": {
+      "title": "3) Extra find",
+      "playAsUsual": "Play as usual, V.I.C.I makes no extra find."
+    }
+  },
   "turnPlayer": {
     "title": "Player",
     "takeTurn": "Take your turn."
   },
   "turnBot": {
     "title": "V.I.C.I"
+  },
+  "roundEnd": {
+    "title": "Era End"
+  },
+  "gameEnd": {
+    "title": "Game End"
   },
   "sideBar": {
     "round": "Era {round}"
