@@ -33,6 +33,16 @@
     "diceNotice": "Diese Würfel werden nicht gewürfelt - sie dienen dazu, die Anzahl von V.I.C.Is Würfeln zu ermitteln.",
     "noOtherComponents": "Anderes Spielmaterial wird für V.I.C.I nicht benötigt."
   },
+  "turnPlayer": {
+    "title": "Spieler",
+    "takeTurn": "Führe deinen Zug aus."
+  },
+  "turnBot": {
+    "title": "V.I.C.I"
+  },
+  "sideBar": {
+    "round": "Epoche {round}"
+  },
   "difficultyLevel": {
     "1": "Einstieg",
     "2": "Moderat",

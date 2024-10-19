@@ -33,6 +33,16 @@
     "diceNotice": "You do not roll them, they are used to count the number of V.I.C.I's dice.",
     "noOtherComponents": "Other components are not used for V.I.C.I."
   },
+  "turnPlayer": {
+    "title": "Player",
+    "takeTurn": "Take your turn."
+  },
+  "turnBot": {
+    "title": "V.I.C.I"
+  },
+  "sideBar": {
+    "round": "Era {round}"
+  },
   "difficultyLevel": {
     "1": "Beginner",
     "2": "Moderate",

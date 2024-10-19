@@ -67,6 +67,8 @@ export interface Turn {
 }
 export interface BotPersistence {
   cardDeck: CardDeckPersistence
+  evolutionCount: number
+  prosperityCount: number
   actionRoll: number
   territoryRoll: number
   beaconRoll: number

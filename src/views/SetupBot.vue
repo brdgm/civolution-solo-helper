@@ -59,7 +59,7 @@ export default defineComponent({
         turns: []
       }
       this.state.storeRound(round)
-      this.$router.push('/round/1/turn/1')
+      this.$router.push('/round/1/turn/1/player')
     }
   }
 })
