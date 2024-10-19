@@ -1,0 +1,42 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Solo Helper",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> against Automa, the artificial opponent.",
+    "play2": "This application replaces the Automa card deck and guides you through the game and Automa ruleset. It supports all difficult levels, the company special abilities and most of the executive officers. You can play against up to three Automa players.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup Game",
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard"
+    }
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "Play Game",
+    "startGame": "Start Game",
+    "next": "Next",
+    "nextRound": "Next Round",
+    "abortGame": "Abort Game",
+    "abortGameConfirm": "Aborting the running game - are you sure?",
+    "endGame": "End Game",
+    "endGameConfirm": "End this game and return to home screen - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
+  }
+}

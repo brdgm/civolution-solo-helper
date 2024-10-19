@@ -1,0 +1,42 @@
+{
+  "gameTitle": "Wasserkraft",
+  "home": {
+    "title": "Wasserkraft Solo Helper",
+    "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Wasserkraft</b></a> gegen Automa, die künstliche Gegenspielerin.",
+    "play2": "Diese Applikation ersetzt das Automa-Kartendeck und führt dich durch das Spiel und das Automa-Regelwerk. Alle Schwierigkeitsgrade werden unterstützt, die Spezialfähigkeiten der Unternehmens und die der meisten Chefingenieure. Es kann gegen bis zu drei Automas gespielt werden.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer"
+    }
+  },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}
