@@ -111,8 +111,8 @@ describe('util/NavigationState', () => {
 
     expect(navigationState.player).to.eq(Player.PLAYER)
     expect(navigationState.cardDeck.toPersistence()).to.eql({pile:[1,2,3,4],discard:[]})
-    expect(navigationState.evolutionCount).to.eq(0)
-    expect(navigationState.prosperityCount).to.eq(0)
+    expect(navigationState.evolutionCount).to.eq(2)
+    expect(navigationState.prosperityCount).to.eq(2)
     expect(navigationState.blueDotCount).to.eq(0)
     expect(navigationState.redDotCount).to.eq(0)
     expect(navigationState.actionRoll).to.eq(0)

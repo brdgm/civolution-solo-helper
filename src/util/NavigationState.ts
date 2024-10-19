@@ -62,15 +62,20 @@ export default class NavigationState {
     else {
       const previousBotPersistence = getPreviousBotPersistence(state, this.round, this.turn)
       this.cardDeck = CardDeck.fromPersistence(previousBotPersistence.cardDeck)
+      let { blueDotCount, redDotCount } = previousBotPersistence
+      if (previousBotPersistence.reset) {
+        blueDotCount = 0
+        redDotCount = 0
+      }
       // draw next card, count dots
       if (this.player == Player.BOT) {
         const nextCard = this.cardDeck.draw()
-        this.blueDotCount = previousBotPersistence.blueDotCount + nextCard.blueDotCount
-        this.redDotCount = previousBotPersistence.redDotCount + nextCard.redDotCount
+        this.blueDotCount = blueDotCount + nextCard.blueDotCount
+        this.redDotCount = redDotCount + nextCard.redDotCount
       }
       else {
-        this.blueDotCount = previousBotPersistence.blueDotCount
-        this.redDotCount = previousBotPersistence.redDotCount  
+        this.blueDotCount = blueDotCount
+        this.redDotCount = redDotCount  
       }
       // counters
       this.evolutionCount = previousBotPersistence.evolutionCount
@@ -154,8 +159,8 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
   }
   return {
     cardDeck: initialCardDeck,
-    evolutionCount: 0,
-    prosperityCount: 0,
+    evolutionCount: 2,
+    prosperityCount: 2,
     blueDotCount: 0,
     redDotCount: 0,
     actionRoll: 0,

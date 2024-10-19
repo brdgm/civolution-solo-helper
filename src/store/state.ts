@@ -74,6 +74,7 @@ export interface BotPersistence {
   actionRoll: number
   territoryRoll: number
   beaconRoll: number
+  reset?: boolean
 }
 export interface CardDeckPersistence {
   pile: number[]

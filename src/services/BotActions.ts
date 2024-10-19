@@ -50,6 +50,14 @@ export default class BotActions {
     return this._reset
   }
 
+  public get evolutionCount() : number {
+    return countScoringCategory(this._items, ScoringCategory.EVOLUTION)
+  }
+
+  public get prosperityCount() : number {
+    return countScoringCategory(this._items, ScoringCategory.PROSPERITY)
+  }
+
 }
 
 export interface ActionItem {
@@ -139,4 +147,10 @@ function getFinalScoringCategoryActions(scoringCategories: ScoringCategory[], co
     items.push({ action:Action.GAIN_VP, count:vpCount })
   }
   return items
+}
+
+function countScoringCategory(items: ActionItem[], scoringCategory: ScoringCategory) : number {
+  return items
+      .filter(item => item.action == Action.ADVANCE_SCORING_CATEGORY && item.scoringCategory == scoringCategory)
+      .reduce((sum, item) => sum + (item.count ?? 0), 0)
 }

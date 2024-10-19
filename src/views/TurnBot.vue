@@ -1,10 +1,17 @@
 <template>
-  <SideBar :navigationState="navigationState"/>
+  <SideBar :navigationState="navigationState" :botActions="botActions"/>
 
   <h1>
     <img src="@/assets/vici.webp" class="vici" alt=""/>
     {{t('turnBot.title')}}
   </h1>
+
+  <template v-if="isReset">
+    <p>Reset...</p>
+  </template>
+  <template v-else>
+    <p>Actions: {{botActions._items}}</p>
+  </template>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next()">
     {{t('action.next')}}
@@ -26,6 +33,7 @@ import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
 import EndRoundButton from '@/components/turn/EndRoundButton.vue'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
+import BotActions from '@/services/BotActions'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -42,8 +50,9 @@ export default defineComponent({
 
     const navigationState = new NavigationState(route, state)
     const { round, turn } = navigationState
+    const botActions = new BotActions(navigationState.currentCard, navigationState)
 
-    return { t, state, navigationState, round, turn }
+    return { t, state, navigationState, round, turn, botActions }
   },
   computed: {
     backButtonRouteTo() : string {
@@ -51,6 +60,9 @@ export default defineComponent({
         return `/round/${this.round}/turn/${this.turn-1}/player`
       }
       return `/round/${this.round}/start`
+    },
+    isReset() : boolean {
+      return this.botActions.isReset
     }
   },
   methods: {
@@ -63,14 +75,17 @@ export default defineComponent({
         player,
         botPersistence: {
           cardDeck: cardDeck.toPersistence(),
-          evolutionCount,
-          prosperityCount,
+          evolutionCount: evolutionCount + this.botActions.evolutionCount,
+          prosperityCount: prosperityCount + this.botActions.prosperityCount,
           blueDotCount,
           redDotCount,
           actionRoll,
           territoryRoll,
           beaconRoll
         }
+      }
+      if (this.isReset && turn.botPersistence) {
+        turn.botPersistence.reset = true
       }
       this.state.storeTurn(turn)
     },

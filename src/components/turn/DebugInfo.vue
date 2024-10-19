@@ -4,7 +4,8 @@
     <p class="debug">
       <b>cardDeck</b>: {{cardDeck.toPersistence()}}<br/>
       <b>currentCard</b>: {{cardDeck.currentCard}}<br/>
-      <b>rolls</b>: action={{navigationState.actionRoll}}, territory={{navigationState.territoryRoll}}, beacon={{navigationState.beaconRoll}}<br/>
+      <b>rolls</b>: action={{navigationState.actionRoll}}, territory={{navigationState.territoryRoll}}, beacon={{navigationState.beaconRoll}},
+        <b>difficultyLevel</b>: {{navigationState.difficultyLevel}}<br/>
     </p>
   </div>
 </template>
