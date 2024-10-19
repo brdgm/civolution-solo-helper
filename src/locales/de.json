@@ -12,6 +12,10 @@
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
       "hard": "Schwer"
+    },
+    "scoringTiles": {
+      "title": "Wertungsplättchen",
+      "randomize": "Neu wählen"
     }
   },
   "difficultyLevel": {

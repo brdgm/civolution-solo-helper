@@ -12,6 +12,10 @@
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard"
+    },
+    "scoringTiles": {
+      "title": "Scoring Tiles",
+      "randomize": "Randomize"
     }
   },
   "difficultyLevel": {
