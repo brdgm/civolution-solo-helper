@@ -10,8 +10,21 @@
     <p>Reset...</p>
   </template>
   <template v-else>
-    <p>Actions: {{botActions._items}}</p>
+    <ul>
+      <li v-for="(action,index) of botActions.items" :key="index">{{action}}</li>
+    </ul>
   </template>
+
+  <div v-if="botActions.isRemoveAttributeChip" class="container-fluid">
+    <div class="row">
+      <div class="col alert alert-warning" v-html="t('turnBot.removeAttributeChip', {chip:removeChipNumber})"></div>
+    </div>
+  </div>  
+  <div v-if="botActions.isRemoveIncomeChip" class="container-fluid">
+    <div class="row">
+      <div class="col alert alert-warning" v-html="t('turnBot.removeIncomeChip', {chip:removeChipNumber})"></div>
+    </div>
+  </div>  
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next()">
     {{t('action.next')}}
@@ -63,25 +76,29 @@ export default defineComponent({
     },
     isReset() : boolean {
       return this.botActions.isReset
+    },
+    removeChipNumber() : number {
+      return Math.ceil(this.navigationState.removeChipRoll / 2)
     }
   },
   methods: {
     saveTurn() : void {
-      const { player, cardDeck, evolutionCount, prosperityCount, blueDotCount, redDotCount,
-        actionRoll, territoryRoll, beaconRoll } = this.navigationState
+      const { player, cardDeck, blueDotCount, redDotCount, actionRoll, territoryRoll, beaconRoll, removeChipRoll } = this.navigationState
+      const { evolutionCount, prosperityCount } = this.botActions
       const turn : Turn = {
         round: this.round,
         turn: this.turn,
         player,
         botPersistence: {
           cardDeck: cardDeck.toPersistence(),
-          evolutionCount: evolutionCount + this.botActions.evolutionCount,
-          prosperityCount: prosperityCount + this.botActions.prosperityCount,
+          evolutionCount,
+          prosperityCount,
           blueDotCount,
           redDotCount,
           actionRoll,
           territoryRoll,
-          beaconRoll
+          beaconRoll,
+          removeChipRoll
         }
       }
       if (this.isReset && turn.botPersistence) {

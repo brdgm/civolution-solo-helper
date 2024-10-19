@@ -27,6 +27,7 @@ export default class NavigationState {
   readonly actionRoll : number
   readonly territoryRoll : number
   readonly beaconRoll : number
+  readonly removeChipRoll : number
   readonly blueDotCount : number
   readonly redDotCount : number
 
@@ -57,6 +58,7 @@ export default class NavigationState {
       this.actionRoll = botPersistence.actionRoll
       this.territoryRoll = botPersistence.territoryRoll
       this.beaconRoll = botPersistence.beaconRoll
+      this.removeChipRoll = botPersistence.removeChipRoll
     }
     // otherwise prepare new turn based on previous card deck
     else {
@@ -85,11 +87,13 @@ export default class NavigationState {
         this.actionRoll = rollDice(6)
         this.territoryRoll = rollDice(6)
         this.beaconRoll = rollDice(6)
+        this.removeChipRoll = rollDice(6)
       }
       else {
         this.actionRoll = 0
         this.territoryRoll = 0
         this.beaconRoll = 0
+        this.removeChipRoll = 0
       }
     }
     this.currentCard = this.cardDeck.currentCard ?? Cards.get(1)
@@ -165,6 +169,7 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
     redDotCount: 0,
     actionRoll: 0,
     territoryRoll: 0,
-    beaconRoll: 0
+    beaconRoll: 0,
+    removeChipRoll: 0
   }
 }

@@ -10,10 +10,12 @@ import NavigationState from '@/util/NavigationState'
  */
 export default class BotActions {
 
+  readonly _navigationState : NavigationState
   readonly _items : ActionItem[]
   readonly _reset : boolean
   
   public constructor(currentCard: Card, navigationState: NavigationState) {
+    this._navigationState = navigationState
     const { blueDotCount, redDotCount, round, difficultyLevel,
       eraScoringTiles, finalScoringTiles, actionRoll } = navigationState
 
@@ -51,11 +53,29 @@ export default class BotActions {
   }
 
   public get evolutionCount() : number {
-    return countScoringCategory(this._items, ScoringCategory.EVOLUTION)
+    return this._navigationState.evolutionCount + countScoringCategory(this._items, ScoringCategory.EVOLUTION)
   }
 
   public get prosperityCount() : number {
-    return countScoringCategory(this._items, ScoringCategory.PROSPERITY)
+    return this._navigationState.prosperityCount + countScoringCategory(this._items, ScoringCategory.PROSPERITY)
+  }
+
+  public get isRemoveAttributeChip() : boolean {
+    for (let count = this._navigationState.evolutionCount+1; count<=this.evolutionCount; count++) {
+      if (isRemoveAttributeChip(count)) {
+        return true
+      }
+    }
+    return false
+  }
+
+  public get isRemoveIncomeChip() : boolean {
+    for (let count = this._navigationState.prosperityCount+1; count<=this.prosperityCount; count++) {
+      if (isRemoveIncomeChip(count)) {
+        return true
+      }
+    }
+    return false
   }
 
 }
@@ -153,4 +173,12 @@ function countScoringCategory(items: ActionItem[], scoringCategory: ScoringCateg
   return items
       .filter(item => item.action == Action.ADVANCE_SCORING_CATEGORY && item.scoringCategory == scoringCategory)
       .reduce((sum, item) => sum + (item.count ?? 0), 0)
+}
+
+function isRemoveAttributeChip(evolutionCount: number) : boolean {
+  return [6, 10].includes(evolutionCount)
+}
+
+function isRemoveIncomeChip(prosperityCount: number) : boolean {
+  return [6, 9, 12].includes(prosperityCount)
 }

@@ -56,7 +56,9 @@
     "takeTurn": "Führe deinen Zug aus."
   },
   "turnBot": {
-    "title": "V.I.C.I"
+    "title": "V.I.C.I",
+    "removeAttributeChip": "Entferne <b>Attributsplatine</b> {chip}.",
+    "removeIncomeChip": "Entferne <b>Einkommensplatine</b> {chip}."
   },
   "roundEnd": {
     "title": "Ende der Epoche",

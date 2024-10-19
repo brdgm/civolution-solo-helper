@@ -3,11 +3,11 @@
     {{t('sideBar.round', {round:navigationState.round})}}
     <h6 class="mt-2">V.I.C.I</h6>
     <div class="count">
-      {{navigationState.evolutionCount + (botActions?.evolutionCount ?? 0)}}
+      {{botActions?.evolutionCount ?? navigationState.evolutionCount}}
       <AppIcon type="action" name="advance-evolution" class="icon"/>
     </div>
     <div class="count">
-      {{navigationState.prosperityCount + (botActions?.prosperityCount ?? 0)}}
+      {{botActions?.prosperityCount ?? navigationState.prosperityCount}}
       <AppIcon type="action" name="advance-prosperity" class="icon"/>
     </div>
     <div class="mt-2">

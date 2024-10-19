@@ -56,7 +56,9 @@
     "takeTurn": "Take your turn."
   },
   "turnBot": {
-    "title": "V.I.C.I"
+    "title": "V.I.C.I",
+    "removeAttributeChip": "Remove <b>attribute chip</b> {chip}.",
+    "removeIncomeChip": "Remove <b>income chip</b> {chip}."
   },
   "roundEnd": {
     "title": "Era End",

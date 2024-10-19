@@ -20,6 +20,7 @@ export default function (params?: MockTurnParams) : Turn {
       actionRoll: params?.actionRoll ?? 0,
       territoryRoll: params?.territoryRoll ?? 0,
       beaconRoll: params?.beaconRoll ?? 0,
+      removeChipRoll: params?.removeChipRoll ?? 0,
       reset: params?.reset
     }
   }
@@ -38,5 +39,6 @@ export interface MockTurnParams {
   actionRoll?: number
   territoryRoll?: number
   beaconRoll?: number
+  removeChipRoll?: number
   reset?: boolean
 }

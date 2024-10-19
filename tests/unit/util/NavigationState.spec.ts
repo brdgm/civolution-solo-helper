@@ -13,7 +13,7 @@ const stateBotData = mockState({initialCardDeck:{pile:[1,2,3,4],discard:[]}, rou
     mockTurn({round:1,turn:3,player:Player.PLAYER}),
     mockTurn({round:1,turn:4,player:Player.BOT,cardDeck:{pile:[3,4],discard:[2,1]},
         evolutionCount:2, prosperityCount:1, blueDotCount:3, redDotCount:1,
-        actionRoll:3, territoryRoll:4, beaconRoll:5})
+        actionRoll:3, territoryRoll:4, beaconRoll:5, removeChipRoll:6})
   ]})
 ]})
 
@@ -73,6 +73,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.actionRoll).to.eq(3)
     expect(navigationState.territoryRoll).to.eq(4)
     expect(navigationState.beaconRoll).to.eq(5)
+    expect(navigationState.removeChipRoll).to.eq(6)
   })
 
   it('turnBot-lastTurn', () => {
@@ -88,6 +89,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.actionRoll).to.greaterThanOrEqual(1)
     expect(navigationState.territoryRoll).to.greaterThanOrEqual(1)
     expect(navigationState.beaconRoll).to.greaterThanOrEqual(1)
+    expect(navigationState.removeChipRoll).to.greaterThanOrEqual(1)
   })
 
   it('turnBot-lastRoundLastTurn', () => {
@@ -103,6 +105,7 @@ describe('util/NavigationState', () => {
     expect(navigationState.actionRoll).to.greaterThanOrEqual(1)
     expect(navigationState.territoryRoll).to.greaterThanOrEqual(1)
     expect(navigationState.beaconRoll).to.greaterThanOrEqual(1)
+    expect(navigationState.removeChipRoll).to.greaterThanOrEqual(1)
   })
 
   it('turnBot-initialCardDeck', () => {
@@ -118,5 +121,6 @@ describe('util/NavigationState', () => {
     expect(navigationState.actionRoll).to.eq(0)
     expect(navigationState.territoryRoll).to.eq(0)
     expect(navigationState.beaconRoll).to.eq(0)
+    expect(navigationState.removeChipRoll).to.eq(0)
   })
 })
