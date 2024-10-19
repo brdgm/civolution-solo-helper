@@ -30,6 +30,7 @@ export default class NavigationState {
   readonly removeChipRoll : number
   readonly blueDotCount : number
   readonly redDotCount : number
+  readonly currentTurnBotPersistence : boolean
 
   constructor(route: RouteLocation, state: State) {    
     this.round = getIntRouteParam(route, 'round')
@@ -59,6 +60,7 @@ export default class NavigationState {
       this.territoryRoll = botPersistence.territoryRoll
       this.beaconRoll = botPersistence.beaconRoll
       this.removeChipRoll = botPersistence.removeChipRoll
+      this.currentTurnBotPersistence = true
     }
     // otherwise prepare new turn based on previous card deck
     else {
@@ -95,6 +97,7 @@ export default class NavigationState {
         this.beaconRoll = 0
         this.removeChipRoll = 0
       }
+      this.currentTurnBotPersistence = false
     }
     this.currentCard = this.cardDeck.currentCard ?? Cards.get(1)
   }

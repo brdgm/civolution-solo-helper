@@ -53,10 +53,18 @@ export default class BotActions {
   }
 
   public get evolutionCount() : number {
+    if (this._navigationState.currentTurnBotPersistence) {
+      // if current turn is load from persistence, from current card is already included
+      return this._navigationState.evolutionCount
+    }
     return this._navigationState.evolutionCount + countScoringCategory(this._items, ScoringCategory.EVOLUTION)
   }
 
   public get prosperityCount() : number {
+    if (this._navigationState.currentTurnBotPersistence) {
+      // if current turn is load from persistence, from current card is already included
+      return this._navigationState.prosperityCount
+    }
     return this._navigationState.prosperityCount + countScoringCategory(this._items, ScoringCategory.PROSPERITY)
   }
 
