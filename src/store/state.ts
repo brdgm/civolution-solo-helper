@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import ScoringCategory from '@/services/enum/ScoringCategory'
+import Player from '@/services/enum/Player'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -20,6 +21,7 @@ export const useStateStore = defineStore(`${name}.state`, {
     resetGame() {
       this.setup.eraScoringTiles = []
       this.setup.finalScoringTiles = []
+      this.setup.initialCardDeck = undefined
       this.rounds = []
     },
     storeRound(round : Round) {
@@ -48,17 +50,26 @@ export interface Setup {
   difficultyLevel: DifficultyLevel
   eraScoringTiles: ScoringCategory[]
   finalScoringTiles: ScoringCategory[]
+  initialCardDeck?: CardDeckPersistence
   debugMode?: boolean
 }
 
 export interface Round {
   round: number
+  startPlayer: Player
   turns: Turn[]
 }
 export interface Turn {
   round: number
   turn: number
-  cardDeck?: CardDeckPersistence
+  player: Player
+  botPersistence?: BotPersistence
+}
+export interface BotPersistence {
+  cardDeck: CardDeckPersistence
+  actionRoll: number
+  territoryRoll: number
+  beaconRoll: number
 }
 export interface CardDeckPersistence {
   pile: number[]

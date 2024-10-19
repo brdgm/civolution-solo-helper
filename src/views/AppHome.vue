@@ -11,7 +11,7 @@
   <p v-html="t('home.play1')"></p>
   <p v-html="t('home.play2')"></p>
 
-  <div class="row">
+  <div class="row mb-3">
     <div class="col hello">
       <div class="vici">
         <img src="@/assets/vici-hello.webp" alt=""/>
@@ -73,6 +73,8 @@ export default defineComponent({
     float: right;
     width: 200px;
     margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     img {
       width: 100%;
     }
