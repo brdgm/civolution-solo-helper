@@ -5,23 +5,19 @@ import { CardDeckPersistence } from '@/store/state'
 import { ref } from 'vue'
 
 /**
- * Manages the Automa card deck with action and support sides.
+ * Manages the solo card deck.
  */
 export default class CardDeck {
 
-  private _pile
-  private _discard
+  private readonly _pile
+  private readonly _discard
 
   private constructor(pile : Card[], discard : Card[]) {
     this._pile = ref(pile)
     this._discard = ref(discard)
   }
 
-  public get actionCard() : Card|undefined {
-    return this._pile.value[0]
-  }
-
-  public get criteriaCard() : Card|undefined {
+  public get currentCard() : Card|undefined {
     return this._discard.value[0]
   }
 
@@ -39,18 +35,16 @@ export default class CardDeck {
    * @returns Next action card
    */
   public draw() : Card {
+    if (this._pile.value.length === 0) {
+      this._pile.value = shuffle(this._discard.value)
+      this._discard.value = []
+    }
     const card = this._pile.value.shift()
     if (!card) {
       throw new Error('Pile is empty.')
     }
     this._discard.value.unshift(card)
-    // empty pile? shuffle and draw again
-    if (this._pile.value.length === 0) {
-      this._pile.value = shuffle(this._discard.value)
-      this._discard.value = []
-      this.draw()
-    }
-    return this._pile.value[0]
+    return card
   }
 
   /**
