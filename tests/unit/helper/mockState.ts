@@ -6,7 +6,7 @@ export default function (params?: MockStateParams) : State {
     language: 'en',
     baseFontSize: 1,
     setup: {
-      difficultyLevel: params?.difficultyLevel ?? DifficultyLevel.MEDIUM
+      difficultyLevel: params?.difficultyLevel ?? DifficultyLevel.BEGINNER
     },
     rounds: params?.rounds ?? []
   }

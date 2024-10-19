@@ -2,8 +2,8 @@
   "gameTitle": "Civolution",
   "home": {
     "title": "Civolution Solo Helper",
-    "play1": "Play <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> against Automa, the artificial opponent.",
-    "play2": "This application replaces the Automa card deck and guides you through the game and Automa ruleset. It supports all difficult levels, the company special abilities and most of the executive officers. You can play against up to three Automa players.",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> against V.I.C.I, the artificial opponent.",
+    "play2": "This application replaces the solo card deck and guides you through the game and solo ruleset.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -13,6 +13,13 @@
       "easy": "Easy",
       "hard": "Hard"
     }
+  },
+  "difficultyLevel": {
+    "1": "Beginner",
+    "2": "Moderate",
+    "3": "Medium",
+    "4": "Advanced",
+    "5": "Expert"
   },
   "notfound": {
     "title": "Not Found"

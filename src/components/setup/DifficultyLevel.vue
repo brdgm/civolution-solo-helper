@@ -1,26 +1,25 @@
 <template>
   <h3 class="mt-4 mb-3">{{t('setup.difficultyLevel.title')}}</h3>
 
-  <template v-for="bot in botCount" :key="bot">
-    <h6 v-if="botCount > 1">{{t('turnBot.title', {bot:bot}, botCount)}}</h6>
-    <div class="row">
-      <div class="col-2 col-lg-1 text-end">
-        <label for="difficultyLevel" class="form-label">{{t('setup.difficultyLevel.easy')}}</label>
-      </div>
-      <div class="col-8 col-lg-4">
-        <input type="range" class="form-range" min="1" max="4" id="difficultyLevel"
-            :value="levels[bot-1]" @input="updateDifficultyLevel(bot, $event)">
-      </div>
-      <div class="col-2 col-lg-1">
-        <label for="difficultyLevel" class="form-label">{{t('setup.difficultyLevel.hard')}}</label>
-      </div>
+  <div class="row">
+    <div class="col-3 col-sm-2 col-md-1 text-end">
+      <label for="difficultyLevel" class="form-label">{{t('setup.difficultyLevel.easy')}}</label>
     </div>
-    <div class="row">
-      <div class="offset-2 offset-lg-1 col-8 col-lg-4 text-muted small">
-        {{t(`difficultyLevel.${levels[bot-1]}`)}}
-      </div>
+    <div class="col-6 col-sm-8 col-md-5">
+      <input type="range" class="form-range" min="1" max="5" id="difficultyLevel"
+          :value="difficultyLevel" @input="updateDifficultyLevel($event)">
     </div>
-  </template>
+    <div class="col-3 col-sm-2 col-md-1">
+      <label for="difficultyLevel" class="form-label">{{t('setup.difficultyLevel.hard')}}</label>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col-11 offset-1">
+      <i>
+        {{t(`difficultyLevel.${difficultyLevel}`)}}
+      </i>
+    </div>
+  </div>
 
 </template>
 
@@ -28,7 +27,6 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
-import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default defineComponent({
   name: 'DifficultyLevel',
@@ -36,30 +34,14 @@ export default defineComponent({
     const { t } = useI18n()
     const state = useStateStore()
 
-    const initialLevels : number[] = []
-    for (let bot = 1; bot<=4; bot++) {
-      initialLevels[bot-1] = state.setup.difficultyLevels[bot-1] ?? DifficultyLevel.MEDIUM
-    }
+    const difficultyLevel = ref(state.setup.difficultyLevel)
 
-    const levels = ref(initialLevels)
-    return { t, state, levels }
-  },
-  computed: {
-    botCount() : number {
-      return this.state.setup.playerSetup.botCount
-    },
-    hasLevel6() : boolean {
-      return this.levels.filter(level => level >= 6).length > 0
-    }
+    return { t, state, difficultyLevel }
   },
   methods: {
-    getDifficultyLevelForBot(bot : number) {
-      return this.state.setup.difficultyLevels[bot-1] ?? DifficultyLevel.MEDIUM
-    },
-    updateDifficultyLevel(bot : number, event: Event) {
-      const level = parseInt((event.target as HTMLInputElement).value)
-      this.levels[bot-1] = level
-      this.state.setup.difficultyLevels = this.levels.slice(0, this.botCount)
+    updateDifficultyLevel(event: Event) {
+      this.difficultyLevel = parseInt((event.target as HTMLInputElement).value)
+      this.state.setup.difficultyLevel = this.difficultyLevel
     }
   }
 })

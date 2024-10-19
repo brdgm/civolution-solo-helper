@@ -2,9 +2,10 @@
  * Difficulty Level
  */
 enum DifficultyLevel {
-  EASY = 1,
-  MEDIUM = 2,
-  HARD = 3,
-  VERY_HARD = 4
+  BEGINNER = 1,
+  MODERATE = 2,
+  MEDIUM = 3,
+  ADVANCED = 4,
+  EXPERT = 5
 }
 export default DifficultyLevel
