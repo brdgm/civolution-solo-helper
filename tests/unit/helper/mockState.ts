@@ -8,8 +8,8 @@ export default function (params?: MockStateParams) : State {
     baseFontSize: 1,
     setup: {
       difficultyLevel: params?.difficultyLevel ?? DifficultyLevel.BEGINNER,
-      eraScoringTiles: params?.eraScoringTiles ?? [],
-      finalScoringTiles: params?.finalScoringTiles ?? [],
+      eraScoringTiles: params?.eraScoringTiles ?? [ScoringCategory.CONSTRUCTION,ScoringCategory.CULTURE,ScoringCategory.EVOLUTION,ScoringCategory.EXPANSION],
+      finalScoringTiles: params?.finalScoringTiles ?? [ScoringCategory.KNOWLEDGE,ScoringCategory.POPULATION,ScoringCategory.PRESTIGE],
       initialCardDeck: params?.initialCardDeck
     },
     rounds: params?.rounds ?? []

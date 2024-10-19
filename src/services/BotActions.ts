@@ -144,7 +144,7 @@ function getScoringActions(scoringAction: ScoringAction, round: number,
 function getEraScoringCategory(eraScoringTiles: ScoringCategory[], round:number) : ScoringCategory {
   const scoringCategory = eraScoringTiles[round-1]
   if (!scoringCategory) {
-    throw new Error(`Invalid era scoring category: ${round}`)
+    throw new Error(`No era scoring category for round ${round}: ${eraScoringTiles}`)
   }
   return scoringCategory
 }
