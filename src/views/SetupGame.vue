@@ -39,12 +39,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-.instructions {
-  max-width: 1000px;
-  ol > li {
-    margin-top: 0.5rem;
-  }
-}
-</style>

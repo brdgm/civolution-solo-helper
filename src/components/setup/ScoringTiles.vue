@@ -3,12 +3,12 @@
 
   <div>
     <div class="finalScoring">
-      <img class="board" src="@/assets/final-scoring.webp" alt=""/>
+      <img class="board" src="@/assets/setup/final-scoring.webp" alt=""/>
       <AppIcon v-for="scoringTile in finalScoringTiles" type="scoring-tile-points" :name="scoringTile" :key="scoringTile"
           class="tile" :class="{[scoringTile]:true}"/>
     </div>
     <div class="eraScoring">
-      <img class="board" src="@/assets/era-scoring.webp" alt=""/>
+      <img class="board" src="@/assets/setup/era-scoring.webp" alt=""/>
       <AppIcon v-for="(scoringTile,index) in eraScoringTiles" type="scoring-tile" :name="scoringTile" :key="scoringTile"
           class="tile" :class="{[`item${index}`]:true}"/>
     </div>

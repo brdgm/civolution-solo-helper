@@ -4,6 +4,10 @@
     "title": "Civolution Solo Helper",
     "play1": "Play <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> against V.I.C.I, the artificial opponent.",
     "play2": "This application replaces the solo card deck and guides you through the game and solo ruleset.",
+    "vici": {
+      "hello": "HELLO,<br/>I AM<br/>V.I.C.I!",
+      "about": "If you want to play Civolution by yourself, let us introduce you to V.I.C.I, an I-CIV entity with the purpose of simulating a rival civilization."
+    },
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -17,6 +21,17 @@
       "title": "Scoring Tiles",
       "randomize": "Randomize"
     }
+  },
+  "setupBot": {
+    "title": "Setup V.I.C.I",
+    "provisionMarker": "Provision marker",
+    "placeDisks": "Choose a player color for V.I.C.I, take the 7 <b>discs</b> of that color and place one of them onto each of your discs on the game boards.",
+    "takeTribesMarkers": "Place 15 <b>tribes</b> (the remaining 5 are not used) and 50 <b>markers</b> of V.I.C.I’s color in V.I.C.I’s play area as a supply.",
+    "placeStartingTribes": "Place 1 of V.I.C.I’s tribes upright onto the remaining non-fire encampment in the <i>Forest starting territory</i> and 1 tribe upright onto the remaining non-fire encampment in the <i>Grassland starting territory</i>.",
+    "placeProvisionMarker": "Place a marker <b>lengthwise</b> in each of the two starting territories next to the farm building space. These markers do not represent raw materials but are called <i>provision markers</i>.",
+    "takeDice": "Place 6 <b>activation dice</b> and <b>1 fate die</b> in V.I.C.I’s play area.",
+    "diceNotice": "You do not roll them, they are used to count the number of V.I.C.I's dice.",
+    "noOtherComponents": "Other components are not used for V.I.C.I."
   },
   "difficultyLevel": {
     "1": "Beginner",

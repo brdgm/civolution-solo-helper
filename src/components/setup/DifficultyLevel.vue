@@ -14,7 +14,7 @@
     </div>
   </div>  
   <div class="row">
-    <div class="col-11 offset-1">
+    <div class="col-11 offset-md-1 offset-sm-2 offset-3">
       <i>
         {{t(`difficultyLevel.${difficultyLevel}`)}}
       </i>

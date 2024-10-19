@@ -11,6 +11,16 @@
   <p v-html="t('home.play1')"></p>
   <p v-html="t('home.play2')"></p>
 
+  <div class="row">
+    <div class="col hello">
+      <div class="vici">
+        <img src="@/assets/vici-hello.webp" alt=""/>
+        <div class="viciText" v-html="t('home.vici.hello')"></div>
+      </div>
+      <div class="text" v-html="t('home.vici.about')"></div>
+    </div>
+  </div>
+
 <!--
   <p class="text-muted fst-italic">
     {{t('home.feedback')}}
@@ -51,5 +61,34 @@ export default defineComponent({
 }
 .kofi-button {
   height: 1.4rem;
+}
+.hello {
+  background-color: #2e4950;
+  border-radius: 15px;
+  margin-right: 15px;
+  margin-left: 10px;
+  max-width: 600px;
+  .vici {
+    position: relative;
+    float: right;
+    width: 200px;
+    margin-left: 15px;
+    img {
+      width: 100%;
+    }
+    .viciText {
+      position: absolute;
+      top: 32px;
+      left: 115px;
+      text-align: center;
+      transform: rotate(5deg);
+      line-height: 1.25rem;
+    }
+  }
+  .text {
+    padding: 10px;
+    font-style: italic;
+    color: #fff;
+  }
 }
 </style>
