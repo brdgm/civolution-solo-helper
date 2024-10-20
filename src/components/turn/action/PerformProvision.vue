@@ -1,29 +1,29 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalPerformProvision">
-    <div class="action">
+  <ActionBox :instructionTitle="t('rules.action.performProvision.title')">
+    <template #action>
       <AppIcon type="action" name="perform-provision" class="icon"/>
-    </div>
-  </div>
-
-  <ModalDialog id="modalPerformProvision" :title="t('rules.action.performProvision.title')">
-    <template #body>
+      <TerritoryPriority/>
+    </template>
+    <template #instruction>
       <p v-html="t('rules.action.performProvision.instruction')"></p>
     </template>
-  </ModalDialog>
+  </ActionBox>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ActionItem } from '@/services/BotActions'
+import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
-import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
+import TerritoryPriority from '../TerritoryPriority.vue'
 
 export default defineComponent({
   name: 'PerformProvision',
   components: {
+    ActionBox,
     AppIcon,
-    ModalDialog
+    TerritoryPriority
   },
   setup() {
     const { t } = useI18n()

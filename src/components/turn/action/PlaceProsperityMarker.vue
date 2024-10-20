@@ -1,31 +1,30 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalPlaceProsperityMarker">
-    <div class="action">
-      <div class="plus">+</div>
-      <div class="value">{{actionItem.count}}</div>
-      <AppIcon type="action" name="place-prosperity-marker" class="icon"/>
-    </div>
-  </div>
-
-  <ModalDialog id="modalPlaceProsperityMarker" :title="t('rules.action.placeProsperityMarker.title')">
-    <template #body>
+  <ActionBox :instructionTitle="t('rules.action.placeProsperityMarker.title')">
+    <template #action>
+      <div class="action">
+        <div class="plus">+</div>
+        <div class="value">{{actionItem.count}}</div>
+        <AppIcon type="action" name="place-prosperity-marker" class="icon"/>
+      </div>
+    </template>
+    <template #instruction>
       <p v-html="t('rules.action.placeProsperityMarker.instruction')"></p>
     </template>
-  </ModalDialog>
+  </ActionBox>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ActionItem } from '@/services/BotActions'
+import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
-import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'PlaceProsperityMarker',
   components: {
-    AppIcon,
-    ModalDialog
+    ActionBox,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()

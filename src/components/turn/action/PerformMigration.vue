@@ -1,29 +1,29 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalPerformMigration">
-    <div class="action">
+  <ActionBox :instructionTitle="t('rules.action.performMigration.title')">
+    <template #action>
       <AppIcon type="action" name="perform-migration" class="icon"/>
-    </div>
-  </div>
-
-  <ModalDialog id="modalPerformMigration" :title="t('rules.action.performMigration.title')">
-    <template #body>
+      <TerritoryPriority/>
+    </template>
+    <template #instruction>
       <p v-html="t('rules.action.performMigration.instruction')"></p>
     </template>
-  </ModalDialog>
+  </ActionBox>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ActionItem } from '@/services/BotActions'
+import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
-import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
+import TerritoryPriority from '../TerritoryPriority.vue'
 
 export default defineComponent({
   name: 'PerformMigration',
   components: {
+    ActionBox,
     AppIcon,
-    ModalDialog
+    TerritoryPriority
   },
   setup() {
     const { t } = useI18n()

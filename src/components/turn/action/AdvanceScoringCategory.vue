@@ -1,33 +1,32 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalAdvanceScoringCategory">
-    <div class="action">
-      <div class="plus">+</div>
-      <div class="value">{{actionItem.count}}</div>
-      <AppIcon v-if="actionItem.scoringCategory" type="advance-track" :name="actionItem.scoringCategory" class="icon"/>
-    </div>
-  </div>
-
-  <ModalDialog id="modalAdvanceScoringCategory" :title="t('rules.action.advanceScoringCategory.title')">
-    <template #body>
+  <ActionBox :instructionTitle="t('rules.action.advanceScoringCategory.title')">
+    <template #action>
+      <div class="action">
+        <div class="plus">+</div>
+        <div class="value">{{actionItem.count}}</div>
+        <AppIcon v-if="actionItem.scoringCategory" type="advance-track" :name="actionItem.scoringCategory" class="icon"/>
+      </div>
+    </template>
+    <template #instruction>
       <p v-html="t('rules.action.advanceScoringCategory.instruction')"></p>
       <p v-html="t('rules.action.advanceScoringCategory.threshold')"></p>
       <p v-html="t('rules.action.advanceScoringCategory.exceedTrack')"></p>
     </template>
-  </ModalDialog>
+  </ActionBox>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ActionItem } from '@/services/BotActions'
+import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
-import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'AdvanceScoringCategory',
   components: {
-    AppIcon,
-    ModalDialog
+    ActionBox,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()

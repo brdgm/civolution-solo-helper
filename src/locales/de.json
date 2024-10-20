@@ -172,6 +172,15 @@
     "player": "Spieler",
     "bot": "V.I.C.I"
   },
+  "territory": {
+    "forest": "Wald",
+    "grassland": "Grasland",
+    "hills": "Hügelland",
+    "swamp": "Sumpf",
+    "mountains": "Gebirge",
+    "desert": "Wüste",
+    "water": "Wasser"
+  },
   "notfound": {
     "title": "Nicht Gefunden"
   },

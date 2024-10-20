@@ -1,30 +1,27 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalRemoveCard">
-    <div class="action">
+  <ActionBox :instructionTitle="t('rules.action.removeCard.title')">
+    <template #action>
       <AppIcon v-if="actionItem.scoringCategory" type="remove-card" :name="actionItem.scoringCategory" class="icon"/>
-    </div>
-  </div>
-
-  <ModalDialog id="modalRemoveCard" :title="t('rules.action.removeCard.title')">
-    <template #body>
+    </template>
+    <template #instruction>
       <p v-html="t('rules.action.removeCard.instruction')"></p>
       <p v-html="t('rules.action.removeCard.refill')"></p>
     </template>
-  </ModalDialog>
+  </ActionBox>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ActionItem } from '@/services/BotActions'
+import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
-import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'RemoveCard',
   components: {
-    AppIcon,
-    ModalDialog
+    ActionBox,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()

@@ -1,31 +1,30 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalGainVp">
-    <div class="action">
-      <AppIcon type="action" name="gain-vp" class="icon"/>
-      <div class="plus">+</div>
-      <div class="value">{{actionItem.count}}</div>
-    </div>
-  </div>
-
-  <ModalDialog id="modalGainVp" :title="t('rules.action.gainVp.title')">
-    <template #body>
+  <ActionBox :instructionTitle="t('rules.action.gainVp.title')">
+    <template #action>
+      <div class="action">
+        <AppIcon type="action" name="gain-vp" class="icon"/>
+        <div class="plus">+</div>
+        <div class="value">{{actionItem.count}}</div>
+      </div>
+    </template>
+    <template #instruction>
       <p v-html="t('rules.action.gainVp.instruction')"></p>
     </template>
-  </ModalDialog>
+  </ActionBox>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ActionItem } from '@/services/BotActions'
+import ActionBox from '../ActionBox.vue'
 import AppIcon from '../../structure/AppIcon.vue'
-import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'GainVp',
   components: {
-    AppIcon,
-    ModalDialog
+    ActionBox,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()
