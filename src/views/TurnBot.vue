@@ -7,7 +7,10 @@
   </h1>
 
   <template v-if="isReset">
-    <p>Reset...</p>
+    <p class="mt-4">
+      <AppIcon name="phase-indicator" class="phase-indicator"/>
+      <span v-html="t('turnBot.reset')"></span>
+    </p>
   </template>
   <template v-else>
     <ul>
@@ -47,6 +50,7 @@ import NavigationState from '@/util/NavigationState'
 import EndRoundButton from '@/components/turn/EndRoundButton.vue'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
 import BotActions from '@/services/BotActions'
+import AppIcon from '@/components/structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -54,7 +58,8 @@ export default defineComponent({
     FooterButtons,
     SideBar,
     EndRoundButton,
-    DebugInfo
+    DebugInfo,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()
@@ -122,5 +127,9 @@ export default defineComponent({
 .vici {
   height: 3rem;
   margin-top: -0.5rem;
+}
+.phase-indicator {
+  width: 2.5rem;
+  margin-right: 0.5rem;
 }
 </style>

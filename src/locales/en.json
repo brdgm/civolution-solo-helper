@@ -57,6 +57,7 @@
   },
   "turnBot": {
     "title": "V.I.C.I",
+    "reset": "V.I.C.I does a <b>Reset</b>.",
     "removeAttributeChip": "Remove <b>attribute chip</b> {chip}.",
     "removeIncomeChip": "Remove <b>income chip</b> {chip}."
   },

@@ -57,6 +57,7 @@
   },
   "turnBot": {
     "title": "V.I.C.I",
+    "reset": "V.I.C.I führt einen <b>Reset</b> durch.",
     "removeAttributeChip": "Entferne <b>Attributsplatine</b> {chip}.",
     "removeIncomeChip": "Entferne <b>Einkommensplatine</b> {chip}."
   },
