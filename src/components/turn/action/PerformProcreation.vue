@@ -1,12 +1,13 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalGainCoinHelp">
-    <div>{{actionItem.action}}</div>
-    <AppIcon type="action" name="perform-procreation" class="icon"/>
+  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalPerformProcreation">
+    <div class="action">
+      <AppIcon type="action" name="perform-procreation" class="icon"/>
+    </div>
   </div>
 
-  <ModalDialog id="modalGainCoinHelp" :title="t('turnBot.action.gainCoin.help.title')">
+  <ModalDialog id="modalPerformProcreation" :title="t('rules.action.performProcreation.title')">
     <template #body>
-      <p v-html="t('turnBot.action.gainCoin.help.instruction')"></p>
+      <p v-html="t('rules.action.performProcreation.instruction')"></p>
     </template>
   </ModalDialog>
 </template>
@@ -38,4 +39,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.icon {
+  height: 3rem;
+}
 </style>

@@ -4,7 +4,6 @@
       <div class="plus">+</div>
       <div class="value">{{actionItem.count}}</div>
       <AppIcon v-if="actionItem.scoringCategory" type="advance-track" :name="actionItem.scoringCategory" class="icon"/>
-      {{ actionItem.scoringCategory }}
     </div>
   </div>
 

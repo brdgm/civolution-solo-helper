@@ -125,6 +125,18 @@
         "title": "Success Points",
         "instruction": "V.I.C.I gains the depicted number of success points."
       },
+      "performMigration": {
+        "title": "Migration",
+        "instruction": "..."
+      },
+      "performProcreation": {
+        "title": "Procreation",
+        "instruction": "..."
+      },
+      "performProvision": {
+        "title": "Provision",
+        "instruction": "..."
+      },
       "placeEvolutionMarker": {
         "title": "Evolution",
         "instruction": "V.I.C.I gains Evolution marker (these are counted automatically by the application)."
@@ -146,6 +158,10 @@
         "title": "Remove Research Card",
         "instruction": "Remove the top card from the <i>face-up research stack</i> of the depicted type.",
         "refill": "If the face-up stack is empty afterwards, refill it at as usual."
+      },
+      "revealSites": {
+        "title": "Reveal Sites",
+        "instruction": "..."
       }
     }
   },

@@ -125,6 +125,15 @@
         "title": "Erfolgspunkte",
         "instruction": "V.I.C.I erhält die angegebenen Erfolgspunkte."
       },
+      "performMigration": {
+        "title": "Wanderung"
+      },
+      "performProcreation": {
+        "title": "Vermehrung"
+      },
+      "performProvision": {
+        "title": "Proviantaktion"
+      },
       "placeEvolutionMarker": {
         "title": "Evolution",
         "instruction": "V.I.C.I erhält Evolutionsmarker (diese werden automatisch von der Applikation gezählt)."
@@ -146,6 +155,9 @@
         "title": "Forschungskarte entfernen",
         "instruction": "Entferne die oberste Karte vom <i>offenen Forschungsstapel</i> der angegebenen Art.",
         "refill": "Sollte der offene Stapel danach leer sein, decke wie üblich eine neue Karte auf."
+      },
+      "revealSites": {
+        "title": "Orte aufdecken"
       }
     }
   },

@@ -1,12 +1,13 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalGainCoinHelp">
-    <div>{{actionItem.action}}</div>
-    <AppIcon type="action" name="perform-provision" class="icon"/>
+  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalPerformProvision">
+    <div class="action">
+      <AppIcon type="action" name="perform-provision" class="icon"/>
+    </div>
   </div>
 
-  <ModalDialog id="modalGainCoinHelp" :title="t('turnBot.action.gainCoin.help.title')">
+  <ModalDialog id="modalPerformProvision" :title="t('rules.action.performProvision.title')">
     <template #body>
-      <p v-html="t('turnBot.action.gainCoin.help.instruction')"></p>
+      <p v-html="t('rules.action.performProvision.instruction')"></p>
     </template>
   </ModalDialog>
 </template>
@@ -38,4 +39,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.icon {
+  height: 3rem;
+}
 </style>
