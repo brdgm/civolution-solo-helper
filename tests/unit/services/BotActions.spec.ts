@@ -52,7 +52,7 @@ describe('services/BotActions', () => {
     const botActions = new BotActions(Cards.get(12), navigationState)
     expect(botActions.isReset).to.eq(false)
     expect(botActions.items).to.eql([
-      { action: Action.ADVANCE_SCORING_CATEGORY, scoringCategory: ScoringCategory.PROSPERITY, count: 2 }
+      { action: Action.PLACE_PROSPERITY_MARKER, count: 2 }
     ])
   })
 
@@ -63,7 +63,7 @@ describe('services/BotActions', () => {
     const botActions = new BotActions(Cards.get(12), navigationState)
     expect(botActions.isReset).to.eq(false)
     expect(botActions.items).to.eql([
-      { action: Action.ADVANCE_SCORING_CATEGORY, scoringCategory: ScoringCategory.PROSPERITY, count: 2 },
+      { action: Action.PLACE_PROSPERITY_MARKER, count: 2 },
       { action: Action.GAIN_VP, count: 3 }
     ])
   })
@@ -75,7 +75,7 @@ describe('services/BotActions', () => {
     const botActions = new BotActions(Cards.get(13), navigationState)
     expect(botActions.isReset).to.eq(false)
     expect(botActions.items).to.eql([
-      { action: Action.ADVANCE_SCORING_CATEGORY, scoringCategory: ScoringCategory.POPULATION, count: 2 }
+      { action: Action.PERFORM_PROCREATION }, { action: Action.PERFORM_PROCREATION }
     ])
   })
 
@@ -108,7 +108,7 @@ describe('services/BotActions', () => {
     const botActions = new BotActions(Cards.get(15), navigationState)
     expect(botActions.isReset).to.eq(false)
     expect(botActions.items).to.eql([
-      { action: Action.ADVANCE_SCORING_CATEGORY, scoringCategory: ScoringCategory.EVOLUTION, count: 1 },
+      { action: Action.PLACE_EVOLUTION_MARKER, count: 1 },
       { action: Action.ADVANCE_SCORING_CATEGORY, scoringCategory: ScoringCategory.PRESTIGE, count: 1 },
       { action: Action.ADVANCE_SCORING_CATEGORY, scoringCategory: ScoringCategory.TECHNOLOGY, count: 1 },
       { action: Action.GAIN_VP, count: 3 }

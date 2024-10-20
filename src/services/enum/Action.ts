@@ -2,19 +2,19 @@
  * Action
  */
 enum Action {
-  ADVANCE_SCORING_CATEGORY = 'advance-scoring-category',
-  REMOVE_CARD = 'remove-card',
-  GAIN_VP = 'gain-vp',
   ADVANCE_FAVOR = 'advance-favor',
-  PLACE_STATUE = 'place-statue',
+  ADVANCE_SCORING_CATEGORY = 'advance-scoring-category',
   GAIN_ACTIVATION_DIE = 'gain-activation-die',
   GAIN_FATE_DIE = 'gain-fate-die',
-  PLACE_EVOLUTION_MARKER = 'place-evolution-marker',
-  PLACE_PROSPERITY_MARKER = 'place-prosperity-marker',
-  PERFORM_PROCREATION = 'perform-procreation',
+  GAIN_VP = 'gain-vp',
   PERFORM_MIGRATION = 'perform-migration',
+  PERFORM_PROCREATION = 'perform-procreation',
   PERFORM_PROVISION = 'perform-provision',
-  REVEAL_SITES = 'reveal-sites',
-  PLACE_HUNTING_TOKEN = 'place-hunting-token'
+  PLACE_EVOLUTION_MARKER = 'place-evolution-marker',
+  PLACE_HUNTING_TOKEN = 'place-hunting-token',
+  PLACE_PROSPERITY_MARKER = 'place-prosperity-marker',
+  PLACE_STATUE = 'place-statue',
+  REMOVE_CARD = 'remove-card',
+  REVEAL_SITES = 'reveal-sites'
 }
 export default Action

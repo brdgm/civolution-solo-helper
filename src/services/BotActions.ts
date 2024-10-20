@@ -57,7 +57,7 @@ export default class BotActions {
       // if current turn is load from persistence, from current card is already included
       return this._navigationState.evolutionCount
     }
-    return this._navigationState.evolutionCount + countScoringCategory(this._items, ScoringCategory.EVOLUTION)
+    return this._navigationState.evolutionCount + countAction(this._items, Action.PLACE_EVOLUTION_MARKER)
   }
 
   public get prosperityCount() : number {
@@ -65,7 +65,7 @@ export default class BotActions {
       // if current turn is load from persistence, from current card is already included
       return this._navigationState.prosperityCount
     }
-    return this._navigationState.prosperityCount + countScoringCategory(this._items, ScoringCategory.PROSPERITY)
+    return this._navigationState.prosperityCount + countAction(this._items, Action.PLACE_PROSPERITY_MARKER)
   }
 
   public get isRemoveAttributeChip() : boolean {
@@ -159,7 +159,7 @@ function getEraScoringCategory(eraScoringTiles: ScoringCategory[], round:number)
 
 function getEraScoringCategoryActions(scoringCategory: ScoringCategory, count: number, vpCount?: number) : ActionItem[] {
   const items : ActionItem[] = []
-  items.push({ action:Action.ADVANCE_SCORING_CATEGORY, scoringCategory, count })
+  items.push(...toScoringCategoryActions(scoringCategory, count))
   if (vpCount) {
     items.push({ action:Action.GAIN_VP, count:vpCount })
   }
@@ -169,7 +169,7 @@ function getEraScoringCategoryActions(scoringCategory: ScoringCategory, count: n
 function getFinalScoringCategoryActions(scoringCategories: ScoringCategory[], count: number, vpCount?: number) : ActionItem[] {
   const items : ActionItem[] = []
   scoringCategories.forEach(scoringCategory => {
-    items.push({ action:Action.ADVANCE_SCORING_CATEGORY, scoringCategory, count })
+    items.push(...toScoringCategoryActions(scoringCategory, count))
   })
   if (vpCount) {
     items.push({ action:Action.GAIN_VP, count:vpCount })
@@ -177,10 +177,8 @@ function getFinalScoringCategoryActions(scoringCategories: ScoringCategory[], co
   return items
 }
 
-function countScoringCategory(items: ActionItem[], scoringCategory: ScoringCategory) : number {
-  return items
-      .filter(item => item.action == Action.ADVANCE_SCORING_CATEGORY && item.scoringCategory == scoringCategory)
-      .reduce((sum, item) => sum + (item.count ?? 0), 0)
+function countAction(items: ActionItem[], action: Action) : number {
+  return items.filter(item => item.action == action).length
 }
 
 function isRemoveAttributeChip(evolutionCount: number) : boolean {
@@ -189,4 +187,30 @@ function isRemoveAttributeChip(evolutionCount: number) : boolean {
 
 function isRemoveIncomeChip(prosperityCount: number) : boolean {
   return [6, 9, 12].includes(prosperityCount)
+}
+
+function toScoringCategoryActions(scoringCategory: ScoringCategory, count: number) : ActionItem[] {
+  const items : ActionItem[] = []
+  switch (scoringCategory) {
+    case ScoringCategory.EVOLUTION:
+      items.push({ action:Action.PLACE_EVOLUTION_MARKER, count })
+      break
+    case ScoringCategory.PROSPERITY:
+      items.push({ action:Action.PLACE_PROSPERITY_MARKER, count })
+      break
+    case ScoringCategory.POPULATION:
+      for (let i=0; i<count; i++) {
+        items.push({ action:Action.PERFORM_PROCREATION })
+      }
+      break
+    case ScoringCategory.EXPANSION:
+      for (let i=0; i<count; i++) {
+        items.push({ action:Action.PERFORM_MIGRATION })
+      }
+      break
+    default:
+      items.push({ action:Action.ADVANCE_SCORING_CATEGORY, scoringCategory, count })
+      break
+  }
+  return items
 }

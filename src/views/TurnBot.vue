@@ -13,9 +13,7 @@
     </p>
   </template>
   <template v-else>
-    <ul>
-      <li v-for="(action,index) of botActions.items" :key="index">{{action}}</li>
-    </ul>
+    <BotActionsDisplay :navigationState="navigationState" :botActions="botActions"/>
   </template>
 
   <div v-if="botActions.isRemoveAttributeChip" class="container-fluid">
@@ -51,6 +49,7 @@ import EndRoundButton from '@/components/turn/EndRoundButton.vue'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
 import BotActions from '@/services/BotActions'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import BotActionsDisplay from '@/components/turn/BotActionsDisplay.vue'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -59,7 +58,8 @@ export default defineComponent({
     SideBar,
     EndRoundButton,
     DebugInfo,
-    AppIcon
+    AppIcon,
+    BotActionsDisplay
   },
   setup() {
     const { t } = useI18n()
