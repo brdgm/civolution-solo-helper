@@ -1,13 +1,14 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalGainCoinHelp">
-    <div>{{actionItem.action}}</div>
-    <AppIcon v-if="actionItem.scoringCategory" type="remove-card" :name="actionItem.scoringCategory" class="icon"/>
-    {{actionItem.scoringCategory}}
+  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalRemoveCard">
+    <div class="action">
+      <AppIcon v-if="actionItem.scoringCategory" type="remove-card" :name="actionItem.scoringCategory" class="icon"/>
+    </div>
   </div>
 
-  <ModalDialog id="modalGainCoinHelp" :title="t('turnBot.action.gainCoin.help.title')">
+  <ModalDialog id="modalRemoveCard" :title="t('rules.action.removeCard.title')">
     <template #body>
-      <p v-html="t('turnBot.action.gainCoin.help.instruction')"></p>
+      <p v-html="t('rules.action.removeCard.instruction')"></p>
+      <p v-html="t('rules.action.removeCard.refill')"></p>
     </template>
   </ModalDialog>
 </template>
@@ -39,4 +40,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.icon {
+  height: 3.5rem;
+}
 </style>

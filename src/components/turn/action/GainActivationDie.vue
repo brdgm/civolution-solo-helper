@@ -1,12 +1,15 @@
 <template>
-  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalGainCoinHelp">
-    <div>{{actionItem.action}}</div>
-    <AppIcon type="action" name="gain-activation-die" class="icon"/>
+  <div class="actionBox col" data-bs-toggle="modal" data-bs-target="#modalGainActivationDie">
+    <div class="action">
+      <div class="plus">+</div>
+      <div class="value">1</div>
+      <AppIcon type="action" name="gain-activation-die" class="icon"/>
+    </div>
   </div>
 
-  <ModalDialog id="modalGainCoinHelp" :title="t('turnBot.action.gainCoin.help.title')">
+  <ModalDialog id="modalGainActivationDie" :title="t('rules.action.gainActivationDie.title')">
     <template #body>
-      <p v-html="t('turnBot.action.gainCoin.help.instruction')"></p>
+      <p v-html="t('rules.action.gainActivationDie.instruction')"></p>
     </template>
   </ModalDialog>
 </template>
@@ -38,4 +41,23 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.action {
+  display: flex;
+  align-items: center;
+  .plus, .value {
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  .plus {
+    font-size: 1.5rem;
+  }
+  .value {
+    font-size: 2.2rem;
+  }
+  .icon {
+    height: 2.5rem;
+  }
+}
 </style>

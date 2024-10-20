@@ -46,23 +46,21 @@ export default defineComponent({
   .icon {
     height: 3.5rem;
   }
-  .plus {
+  .plus, .value {
     position: absolute;
-    top: 6px;
-    left: 0px;
     color: #fedf12;
-    font-size: 1.25rem;
     font-weight: bold;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
+  .plus {
+    top: 6px;
+    left: 0px;
+    font-size: 1.25rem;
+  }
   .value {
-    position: absolute;
     top: -6px;
     left: 15px;
-    color: #fedf12;
     font-size: 2.2rem;
-    font-weight: bold;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
 }
 </style>

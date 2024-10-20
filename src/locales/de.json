@@ -101,6 +101,54 @@
   "sideBar": {
     "round": "Epoche {round}"
   },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Ageras Gunstleiste",
+        "instruction": "Ziehe V.I.C.Is Scheibe auf Ageras Gunstleiste 1 Schritt vorwärts (sofern möglich)."
+      },
+      "advanceScoringCategory": {
+        "title": "Fortschrittsleiste",
+        "instruction": "Ziehe V.I.C.Is Scheibe auf der angegebenen Fortschrittsleiste die angegebene Anzahl Schritte vorwärts.",
+        "threshold": "Immer wenn eine von V.I.C.Is Scheiben eine Bonusschwelle überquert, die Erfolgspunkte als Leistenbonus gibt, erhält V.I.C.I diese Punkte. Alle anderen Leistenboni werden für V.I.C.I ignoriert.",
+        "exceedTrack": "Falls sich V.I.C.Is Scheibe bereits auf Feld 12 der entsprechenden Leiste befindet, erhält V.I.C.I statt dem Schritt wie üblich 2 Punkte."
+      },
+      "gainActivationDie": {
+        "title": "Aktivierungswürfel",
+        "instruction": "V.I.C.I erhält einen zusätzlichen Aktivierungswürfel (laut der üblichen Regeln)."
+      },
+      "gainFateDie": {
+        "title": "Schicksalswürfel",
+        "instruction": "V.I.C.I erhält einen zusätzlichen Schicksalswürfel (laut der üblichen Regeln)."
+      },
+      "gainVp": {
+        "title": "Erfolgspunkte",
+        "instruction": "V.I.C.I erhält die angegebenen Erfolgspunkte."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evolution",
+        "instruction": "V.I.C.I erhält Evolutionsmarker (diese werden automatisch von der Applikation gezählt)."
+      },
+      "placeHuntingToken": {
+        "title": "Jagdplättchen",
+        "instruction": "Lege 1 Jagdplättchen aus der Jagdplättchen-Auslage in ein Gebiet."
+      },
+      "placeProsperityMarker": {
+        "title": "Wohlstand",
+        "instruction": "V.I.C.I erhält Wohlstandsmarker (diese werden automatisch von der Applikation gezählt)."
+      },
+      "placeStatue": {
+        "title": "Statue",
+        "instruction": "Stelle einen Marker aus V.I.C.Is Vorrat als Statue auf den Baugrund im großen Wassergebiet.",
+        "unlimited": "Es gibt kein Limit für die Anzahl der Statuen, die V.I.C.I dort haben darf."
+      },
+      "removeCard": {
+        "title": "Forschungskarte entfernen",
+        "instruction": "Entferne die oberste Karte vom <i>offenen Forschungsstapel</i> der angegebenen Art.",
+        "refill": "Sollte der offene Stapel danach leer sein, decke wie üblich eine neue Karte auf."
+      }
+    }
+  },
   "difficultyLevel": {
     "1": "Einstieg",
     "2": "Moderat",

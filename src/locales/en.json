@@ -101,6 +101,54 @@
   "sideBar": {
     "round": "Era {round}"
   },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Agera track",
+        "instruction": "Advance V.I.C.I’s disc 1 step on the Favor of Agera track (if possible)."
+      },
+      "advanceScoringCategory": {
+        "title": "Progress Track",
+        "instruction": "Advance V.I.C.I’s disc that many steps on the depicted progress track.",
+        "threshold": "Whenever one of V.I.C.I’s discs crosses a bonus threshold that gives success points as a track bonus, V.I.C.I receives those points. All other track bonuses are ignored for V.I.C.I.",
+        "exceedTrack": "If V.I.C.I’s disc is already on space 12 of this track, this action gives V.I.C.I the usual 2 success points instead."
+      },
+      "gainActivationDie": {
+        "title": "Activation Die",
+        "instruction": "V.I.C.I receives an activation die (per the usual rules)."
+      },
+      "gainFateDie": {
+        "title": "Fate Die",
+        "instruction": "V.I.C.I receives a fate die (per the usual rules)."
+      },
+      "gainVp": {
+        "title": "Success Points",
+        "instruction": "V.I.C.I gains the depicted number of success points."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evolution",
+        "instruction": "V.I.C.I gains Evolution marker (these are counted automatically by the application)."
+      },
+      "placeHuntingToken": {
+        "title": "Hunting Token",
+        "instruction": "Place a hunting token from the <i>hunting token display</i> in a territory."
+      },
+      "placeProsperityMarker": {
+        "title": "Prosperity",
+        "instruction": "V.I.C.I gains Prosperity marker (these are counted automatically by the application)."
+      },
+      "placeStatue": {
+        "title": "Statue",
+        "instruction": "Place a marker from V.IC.I’s supply as a statue onto the Building ground in the large Water territory.",
+        "unlimited": "There is no limit to the number of statues V.I.C.I can have there."
+      },
+      "removeCard": {
+        "title": "Remove Research Card",
+        "instruction": "Remove the top card from the <i>face-up research stack</i> of the depicted type.",
+        "refill": "If the face-up stack is empty afterwards, refill it at as usual."
+      }
+    }
+  },
   "difficultyLevel": {
     "1": "Beginner",
     "2": "Moderate",

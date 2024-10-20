@@ -4,11 +4,11 @@
     <h6 class="mt-2">V.I.C.I</h6>
     <div class="count">
       {{botActions?.evolutionCount ?? navigationState.evolutionCount}}
-      <AppIcon type="action" name="advance-evolution" class="icon"/>
+      <AppIcon type="action" name="place-evolution-marker" class="icon"/>
     </div>
     <div class="count">
       {{botActions?.prosperityCount ?? navigationState.prosperityCount}}
-      <AppIcon type="action" name="advance-prosperity" class="icon"/>
+      <AppIcon type="action" name="place-prosperity-marker" class="icon"/>
     </div>
     <div class="mt-2">
       <div class="dotCount blue">
