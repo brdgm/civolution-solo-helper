@@ -1,0 +1,213 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Solo Helper",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> against V.I.C.I, the artificial opponent.",
+    "play2": "This application replaces the solo card deck and guides you through the game and solo ruleset.",
+    "vici": {
+      "hello": "HELLO,<br/>I AM<br/>V.I.C.I!",
+      "about": "If you want to play Civolution by yourself, let us introduce you to V.I.C.I, an I-CIV entity with the purpose of simulating a rival civilization."
+    },
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup Game",
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard"
+    },
+    "scoringTiles": {
+      "title": "Scoring Tiles",
+      "randomize": "Randomize"
+    }
+  },
+  "setupBot": {
+    "title": "Setup V.I.C.I",
+    "provisionMarker": "Provision marker",
+    "placeDisks": "Choose a player color for V.I.C.I, take the 7 <b>discs</b> of that color and place one of them onto each of your discs on the game boards.",
+    "takeTribesMarkers": "Place 15 <b>tribes</b> (the remaining 5 are not used) and 50 <b>markers</b> of V.I.C.I’s color in V.I.C.I’s play area as a supply.",
+    "placeStartingTribes": "Place 1 of V.I.C.I’s tribes upright onto the remaining non-fire encampment in the <i>Forest starting territory</i> and 1 tribe upright onto the remaining non-fire encampment in the <i>Grassland starting territory</i>.",
+    "placeProvisionMarker": "Place a marker <b>lengthwise</b> in each of the two starting territories next to the farm building space. These markers do not represent raw materials but are called <i>provision markers</i>.",
+    "takeDice": "Place 6 <b>activation dice</b> and <b>1 fate die</b> in V.I.C.I’s play area.",
+    "diceNotice": "You do not roll them, they are used to count the number of V.I.C.I's dice.",
+    "noOtherComponents": "Other components are not used for V.I.C.I."
+  },
+  "roundStart": {
+    "title": "Era Start",
+    "newCards": {
+      "title": "1) New Cards",
+      "noAction": "V.I.C.I does nothing."
+    },
+    "newGoals": {
+      "title": "2) New goals",
+      "playerTakeGoal": "Take a goal chip (optional).",
+      "botDetermine": "Determine goal chip for V.I.C.I.",
+      "botTakeGoal": "Remove goal chip <b>{goalChip}</b> (if available).",
+      "botNoGoal": "No goal chip is removed."
+    },
+    "extraFind": {
+      "title": "3) Extra find",
+      "noAction": "V.I.C.I makes no extra find."
+    }
+  },
+  "turnPlayer": {
+    "title": "Player",
+    "takeTurn": "Take your turn."
+  },
+  "turnBot": {
+    "title": "V.I.C.I",
+    "reset": "V.I.C.I does a <b>Reset</b>.",
+    "removeAttributeChip": "Remove <b>attribute chip</b> {chip}.",
+    "removeIncomeChip": "Remove <b>income chip</b> {chip}."
+  },
+  "roundEnd": {
+    "title": "Era End",
+    "sitePhase": {
+      "title": "5) Site phase",
+      "botNotAffected": "V.I.C.I is never affected by face-up sites."
+    },
+    "feedingPhase": {
+      "title": "6) Feeding phase",
+      "feedTribes": {
+        "title": "A) V.I.C.I Feeding phase:"
+      },
+      "scoreStrongTribes": "B) Score V.I.C.I's strong tribes."
+    },
+    "eventPhase": {
+      "title": "7) Event phase",
+      "adjustWeather": "A) V.I.C.I is never affected by the weather.",
+      "resolveEvent": {
+        "title": "B) V.I.C.I never gets event bonuses."
+      },
+      "scoreCategory": "C) Score current category for V.I.C.I.",
+      "startingCivilization": {
+        "title": "D) Determine starting civilization:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Income phase",
+      "scoreStatues": "B) Score V.I.C.I's statues."
+    },
+    "noNextStartPlayer": "Please determine the next start player."
+  },
+  "gameEnd": {
+    "title": "Game End"
+  },
+  "endRoundButton": {
+    "title": "End Action Phase",
+    "confirm": "Do you want to end the action phase?"
+  },
+  "sideBar": {
+    "round": "Era {round}"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Agera track",
+        "instruction": "Advance V.I.C.I’s disc 1 step on the Favor of Agera track (if possible)."
+      },
+      "advanceScoringCategory": {
+        "title": "Progress Track",
+        "instruction": "Advance V.I.C.I’s disc that many steps on the depicted progress track.",
+        "threshold": "Whenever one of V.I.C.I’s discs crosses a bonus threshold that gives success points as a track bonus, V.I.C.I receives those points. All other track bonuses are ignored for V.I.C.I.",
+        "exceedTrack": "If V.I.C.I’s disc is already on space 12 of this track, this action gives V.I.C.I the usual 2 success points instead."
+      },
+      "gainActivationDie": {
+        "title": "Activation Die",
+        "instruction": "V.I.C.I receives an activation die (per the usual rules)."
+      },
+      "gainFateDie": {
+        "title": "Fate Die",
+        "instruction": "V.I.C.I receives a fate die (per the usual rules)."
+      },
+      "gainVp": {
+        "title": "Success Points",
+        "instruction": "V.I.C.I gains the depicted number of success points."
+      },
+      "performMigration": {
+        "title": "Migration",
+        "instruction": "..."
+      },
+      "performProcreation": {
+        "title": "Procreation",
+        "instruction": "..."
+      },
+      "performProvision": {
+        "title": "Provision",
+        "instruction": "..."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evolution",
+        "instruction": "V.I.C.I gains Evolution marker (these are counted automatically by the application)."
+      },
+      "placeHuntingToken": {
+        "title": "Hunting Token",
+        "instruction": "Place a hunting token from the <i>hunting token display</i> in a territory."
+      },
+      "placeProsperityMarker": {
+        "title": "Prosperity",
+        "instruction": "V.I.C.I gains Prosperity marker (these are counted automatically by the application)."
+      },
+      "placeStatue": {
+        "title": "Statue",
+        "instruction": "Place a marker from V.IC.I’s supply as a statue onto the Building ground in the large Water territory.",
+        "unlimited": "There is no limit to the number of statues V.I.C.I can have there."
+      },
+      "removeCard": {
+        "title": "Remove Research Card",
+        "instruction": "Remove the top card from the <i>face-up research stack</i> of the depicted type.",
+        "refill": "If the face-up stack is empty afterwards, refill it at as usual."
+      },
+      "revealSites": {
+        "title": "Reveal Sites",
+        "instruction": "..."
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Beginner",
+    "2": "Moderate",
+    "3": "Medium",
+    "4": "Advanced",
+    "5": "Expert"
+  },
+  "player": {
+    "player": "Player",
+    "bot": "V.I.C.I"
+  },
+  "territory": {
+    "forest": "Forest",
+    "grassland": "Grassland",
+    "hills": "Hills",
+    "swamp": "Swamp",
+    "mountains": "Mountains",
+    "desert": "Desert",
+    "water": "Water"
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "Play Game",
+    "startGame": "Start Game",
+    "next": "Next",
+    "nextRound": "Next Round",
+    "abortGame": "Abort Game",
+    "abortGameConfirm": "Aborting the running game - are you sure?",
+    "endGame": "End Game",
+    "endGameConfirm": "End this game and return to home screen - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
+  }
+}
