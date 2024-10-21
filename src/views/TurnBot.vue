@@ -50,6 +50,7 @@ import DebugInfo from '@/components/turn/DebugInfo.vue'
 import BotActions from '@/services/BotActions'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import BotActionsDisplay from '@/components/turn/BotActionsDisplay.vue'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -83,12 +84,13 @@ export default defineComponent({
       return this.botActions.isReset
     },
     removeChipNumber() : number {
-      return Math.ceil(this.navigationState.removeChipRoll / 2)
+      const removeChipRoll = rollDice(6)
+      return Math.ceil(removeChipRoll / 2)
     }
   },
   methods: {
     saveTurn() : void {
-      const { player, cardDeck, blueDotCount, redDotCount, actionRoll, territoryRoll, beaconRoll, removeChipRoll } = this.navigationState
+      const { player, cardDeck, blueDotCount, redDotCount, actionRoll } = this.navigationState
       const { evolutionCount, prosperityCount } = this.botActions
       const turn : Turn = {
         round: this.round,
@@ -100,10 +102,7 @@ export default defineComponent({
           prosperityCount,
           blueDotCount,
           redDotCount,
-          actionRoll,
-          territoryRoll,
-          beaconRoll,
-          removeChipRoll
+          actionRoll
         }
       }
       if (this.isReset && turn.botPersistence) {

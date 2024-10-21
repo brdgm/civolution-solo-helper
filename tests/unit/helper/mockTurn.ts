@@ -9,8 +9,7 @@ export default function (params?: MockTurnParams) : Turn {
     player: params?.player ?? Player.PLAYER
   }
   if (params?.cardDeck || params?.evolutionCount || params?.prosperityCount
-        || params?.actionRoll || params?.territoryRoll || params?.beaconRoll
-        || params?.blueDotCount || params?.redDotCount) {
+        || params?.actionRoll || params?.blueDotCount || params?.redDotCount || params?.reset) {
     turn.botPersistence = {
       cardDeck: params?.cardDeck ?? CardDeck.new().toPersistence(),
       evolutionCount: params?.evolutionCount ?? 0,
@@ -18,9 +17,6 @@ export default function (params?: MockTurnParams) : Turn {
       blueDotCount: params?.blueDotCount ?? 0,
       redDotCount: params?.redDotCount ?? 0,
       actionRoll: params?.actionRoll ?? 0,
-      territoryRoll: params?.territoryRoll ?? 0,
-      beaconRoll: params?.beaconRoll ?? 0,
-      removeChipRoll: params?.removeChipRoll ?? 0,
       reset: params?.reset
     }
   }
@@ -37,8 +33,5 @@ export interface MockTurnParams {
   blueDotCount?: number
   redDotCount?: number
   actionRoll?: number
-  territoryRoll?: number
-  beaconRoll?: number
-  removeChipRoll?: number
   reset?: boolean
 }

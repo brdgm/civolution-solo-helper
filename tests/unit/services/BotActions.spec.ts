@@ -125,8 +125,7 @@ function getState(difficultyLevel: DifficultyLevel) {
       mockRound({round:1, turns:[
         mockTurn({round:1,turn:1,player:Player.PLAYER}),
         mockTurn({round:1,turn:2,player:Player.BOT,cardDeck:{pile:[2,3,4],discard:[1]},
-            evolutionCount:2, prosperityCount:1, blueDotCount:3, redDotCount:2,
-            actionRoll:3, territoryRoll:4, beaconRoll:5}),
+            evolutionCount:2, prosperityCount:1, blueDotCount:3, redDotCount:2, actionRoll:3}),
         mockTurn({round:1,turn:3,player:Player.PLAYER}),
         mockTurn({round:1,turn:4,player:Player.BOT,cardDeck:{pile:[3,4],discard:[2,1]},
             evolutionCount:2, prosperityCount:1, blueDotCount:5, redDotCount:4})

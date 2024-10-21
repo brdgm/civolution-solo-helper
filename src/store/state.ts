@@ -72,9 +72,6 @@ export interface BotPersistence {
   blueDotCount: number
   redDotCount: number
   actionRoll: number
-  territoryRoll: number
-  beaconRoll: number
-  removeChipRoll: number
   reset?: boolean
 }
 export interface CardDeckPersistence {
