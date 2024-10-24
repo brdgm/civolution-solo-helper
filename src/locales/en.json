@@ -131,7 +131,9 @@
       },
       "performProcreation": {
         "title": "Procreation",
-        "instruction": "..."
+        "minimumRequirement": "<b>Minimum requirement</b>: Territory with at least 1 of V.I.C.I's tribes.",
+        "priorityRequirement": "<b>Priority requirement</b>: At least 1 free encampment.",
+        "territoryDetermined": "Once you’ve determined the territory, add a tribe from V.IC.I’s supply to that territory by letting it settle on an encampment:"
       },
       "performProvision": {
         "title": "Provision",
@@ -162,6 +164,22 @@
       "revealSites": {
         "title": "Reveal Sites",
         "instruction": "..."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Free fire encampment",
+        "freeAny": "Any free encampment",
+        "playerFire": "Fire encampment with one of <b>your</b> tribes",
+        "playerWeakAny": "Any encampment with one of <b>your</b> weak tribes",
+        "playerStrongAny": "Any encampment with one of <b>your</b> strong tribes",
+        "botStrongFire": "Fire encampment with one of V.I.C.I's strong tribes",
+        "botStrongAny": "Any encampment with one of V.I.C.I's strong tribes",
+        "botWeakFire": "Fire encampment with one of V.I.C.I's weak tribes",
+        "botWeakAny": "Any encampment with one of V.I.C.I's weak tribes",
+        "notWeakened": "<b>Attention:</b> V.I.C.I's tribes are <b>not</b> weakened when they displace tribes from encampments!",
+        "migrationCheck": "<b>Important</b>: Check after each procreation that you carry out for V.I.C.I whether <b>all</b> encampments in <b>all</b> territories where V.I.C.I has tribes are <b>solely</b> occupied by V.I.C.I’s own tribes (and thus, none are free or occupied by your tribes). If so, immediately perform 1 migration in addition.",
+        "performMigration": "Perform Migration"
       }
     }
   },

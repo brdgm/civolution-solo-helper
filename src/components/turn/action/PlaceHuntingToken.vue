@@ -22,6 +22,9 @@ export default defineComponent({
     ActionBox,
     AppIcon
   },
+  emits: {
+    addAction: (_actionItem: ActionItem) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
+  },
   setup() {
     const { t } = useI18n()
     return { t }

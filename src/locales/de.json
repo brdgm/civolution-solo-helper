@@ -129,7 +129,10 @@
         "title": "Wanderung"
       },
       "performProcreation": {
-        "title": "Vermehrung"
+        "title": "Vermehrung",
+        "minimumRequirement": "<b>Minimalbedingung</b>: Gebiete, in denen V.I.C.I mindestens 1 Stamm hat.",
+        "priorityRequirement": "<b>Priorität</b>: Gebiete, in denen mindestens 1 Lagerplatz frei ist.",
+        "territoryDetermined": "Hast du das Gebiet bestimmt, füge diesem 1 Stamm aus V.I.C.Is Vorrat hinzu, indem du ihn dort auf einem Lagerplatz niederlässt:"
       },
       "performProvision": {
         "title": "Proviantaktion"
@@ -158,6 +161,22 @@
       },
       "revealSites": {
         "title": "Orte aufdecken"
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Freier Feuer-Lagerplatz",
+        "freeAny": "Beliebiger freier Lagerplatz",
+        "playerFire": "Feuer-Lagerplatz mit 1 <b>deiner</b> Stämme",
+        "playerWeakAny": "Beliebiger Lagerplatz mit 1 <b>deiner</b> schwachen Stämme",
+        "playerStrongAny": "Beliebiger Lagerplatz mit 1 <b>deiner</b> starken Stämme",
+        "botStrongFire": "Feuer-Lagerplatz mit 1 von V.I.C.Is starken Stämmen",
+        "botStrongAny": "Beliebiger Lagerplatz mit 1 von V.I.C.Is starken Stämmen",
+        "botWeakFire": "Feuer-Lagerplatz mit 1 von V.I.C.Is schwachen Stämmen",
+        "botWeakAny": "Beliebiger Lagerplatz mit 1 von V.I.C.Is schwachen Stämmen",
+        "notWeakened": "<b>Achtung:</b> V.I.C.Is Stämme werden <b>nicht</b> geschwächt, wenn sie Stämme in dei Wildnis treiben!",
+        "migrationCheck": "<b>Beachte</b>: Prüfe jedes Mal, nachdem du 1 Vermehrung für V.I.C.I durchgeführt hast, ob in allen Gebieten, in denen V.I.C.I mit Stämmen vertreten ist, <b>alle</b> vorhandenen Lagerplätze <b>ausschließlich</b> von V.I.C.Is eigenen Stämmen besetzt sind. Falls dem so ist, führe zusätzlich sofort 1 Wanderung für V.I.C.I durch.",
+        "performMigration": "Wanderung durchführen"
       }
     }
   },

@@ -2,7 +2,7 @@
   <ActionBox :instructionTitle="t('rules.action.revealSites.title')">
     <template #action>
       <AppIcon type="action" name="reveal-sites" class="icon"/>
-      <TerritoryPriority/>
+      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mt-2"/>
     </template>
     <template #instruction>
       <p v-html="t('rules.action.revealSites.instruction')"></p>
@@ -25,9 +25,12 @@ export default defineComponent({
     AppIcon,
     TerritoryPriority
   },
+  emits: {
+    addAction: (_actionItem: ActionItem) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
+  },
   setup() {
     const { t } = useI18n()
-    return { t }
+        return { t }
   },
   props: {
     actionItem: {

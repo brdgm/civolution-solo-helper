@@ -2,7 +2,7 @@
   <ActionBox :instructionTitle="t('rules.action.performMigration.title')">
     <template #action>
       <AppIcon type="action" name="perform-migration" class="icon"/>
-      <TerritoryPriority/>
+      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mt-2"/>
     </template>
     <template #instruction>
       <p v-html="t('rules.action.performMigration.instruction')"></p>
@@ -24,6 +24,9 @@ export default defineComponent({
     ActionBox,
     AppIcon,
     TerritoryPriority
+  },
+  emits: {
+    addAction: (_actionItem: ActionItem) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
   },
   setup() {
     const { t } = useI18n()

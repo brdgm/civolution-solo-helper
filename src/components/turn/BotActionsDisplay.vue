@@ -1,7 +1,7 @@
 <template>
   <div class="actionList container-fluid m-0">
     <div class="row mt-3 mb-3" v-for="(actionItem,index) in botActions.items" :key="index">
-      <component :is="actionItem.action" :actionItem="actionItem"/>
+      <component :is="actionItem.action" :actionItem="actionItem" @addAction="(actionItem:ActionItem)=>addAction(actionItem,index)"/>
     </div>
   </div>
 </template>
@@ -10,7 +10,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
-import BotActions from '@/services/BotActions'
+import BotActions, { ActionItem } from '@/services/BotActions'
 import AdvanceFavor from './action/AdvanceFavor.vue'
 import AdvanceScoringCategory from './action/AdvanceScoringCategory.vue'
 import GainActivationDie from './action/GainActivationDie.vue'
@@ -56,6 +56,11 @@ export default defineComponent({
     botActions: {
       type: BotActions,
       required: true
+    }
+  },
+  methods: {
+    addAction(actionItem: ActionItem, afterIndex: number) {
+      this.botActions.addAction(actionItem, afterIndex)
     }
   }
 })

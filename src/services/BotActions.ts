@@ -1,9 +1,11 @@
+import { ref } from 'vue'
 import Card, { DiceAction, ScoringAction } from './Card'
 import Action from './enum/Action'
 import DifficultyLevel from './enum/DifficultyLevel'
 import ScoringActionType from './enum/ScoringActionType'
 import ScoringCategory from './enum/ScoringCategory'
 import NavigationState from '@/util/NavigationState'
+import TerritoryRoll, { createTerritoryRoll } from '@/util/TerritoryRoll'
 
 /**
  * Manages the bot actions.
@@ -11,7 +13,7 @@ import NavigationState from '@/util/NavigationState'
 export default class BotActions {
 
   readonly _navigationState : NavigationState
-  readonly _items : ActionItem[]
+  readonly _items
   readonly _reset : boolean
   
   public constructor(currentCard: Card, navigationState: NavigationState) {
@@ -25,27 +27,30 @@ export default class BotActions {
     // collect actions
     if (!this.isReset && currentCard.diceActions && currentCard.diceActionsAdvanced) {
       if (isAdvanced(round, difficultyLevel)) {
-        this._items = getDiceActions(currentCard.diceActionsAdvanced, actionRoll)
+        this._items = ref(getDiceActions(currentCard.diceActionsAdvanced, actionRoll))
       }
       else {
-        this._items = getDiceActions(currentCard.diceActions, actionRoll)
+        this._items = ref(getDiceActions(currentCard.diceActions, actionRoll))
       }
     }
     else if (!this.isReset && currentCard.scoringAction && currentCard.scoringActionAdvanced) {
       if (isAdvanced(round, difficultyLevel)) {
-        this._items = getScoringActions(currentCard.scoringActionAdvanced, round, eraScoringTiles, finalScoringTiles)
+        this._items = ref(getScoringActions(currentCard.scoringActionAdvanced, round, eraScoringTiles, finalScoringTiles))
       }
       else {
-        this._items = getScoringActions(currentCard.scoringAction, round, eraScoringTiles, finalScoringTiles)
+        this._items = ref(getScoringActions(currentCard.scoringAction, round, eraScoringTiles, finalScoringTiles))
       }
     }
     else {
-      this._items = []
+      this._items = ref([])
     }
+
+    // add territory rolls
+    this._items.value.forEach(item => addTerritoryRoll(item))
   }
 
   public get items() : readonly ActionItem[] {
-    return this._items
+    return this._items.value
   }
 
   public get isReset() : boolean {
@@ -57,7 +62,7 @@ export default class BotActions {
       // if current turn is load from persistence, from current card is already included
       return this._navigationState.evolutionCount
     }
-    return this._navigationState.evolutionCount + countAction(this._items, Action.PLACE_EVOLUTION_MARKER)
+    return this._navigationState.evolutionCount + countAction(this._items.value, Action.PLACE_EVOLUTION_MARKER)
   }
 
   public get prosperityCount() : number {
@@ -65,7 +70,7 @@ export default class BotActions {
       // if current turn is load from persistence, from current card is already included
       return this._navigationState.prosperityCount
     }
-    return this._navigationState.prosperityCount + countAction(this._items, Action.PLACE_PROSPERITY_MARKER)
+    return this._navigationState.prosperityCount + countAction(this._items.value, Action.PLACE_PROSPERITY_MARKER)
   }
 
   public get isRemoveAttributeChip() : boolean {
@@ -86,12 +91,18 @@ export default class BotActions {
     return false
   }
 
+  public addAction(actionItem: ActionItem, afterIndex: number) : void {
+    addTerritoryRoll(actionItem)
+    this._items.value.splice(afterIndex+1, 0, actionItem)
+  }
+
 }
 
 export interface ActionItem {
   action: Action
   scoringCategory?: ScoringCategory
   count?: number
+  territoryRoll?: TerritoryRoll
 }
 
 function isAdvanced(round: number, difficultyLevel: DifficultyLevel) : boolean {
@@ -213,4 +224,10 @@ function toScoringCategoryActions(scoringCategory: ScoringCategory, count: numbe
       break
   }
   return items
+}
+
+function addTerritoryRoll(actionItem: ActionItem) {
+  if (!actionItem.territoryRoll && [Action.PERFORM_MIGRATION,Action.PERFORM_PROCREATION,Action.PERFORM_PROVISION,Action.REVEAL_SITES].includes(actionItem.action)) {
+    actionItem.territoryRoll = createTerritoryRoll()
+  }
 }

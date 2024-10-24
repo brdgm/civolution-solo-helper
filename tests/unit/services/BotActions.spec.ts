@@ -74,8 +74,8 @@ describe('services/BotActions', () => {
 
     const botActions = new BotActions(Cards.get(13), navigationState)
     expect(botActions.isReset).to.eq(false)
-    expect(botActions.items).to.eql([
-      { action: Action.PERFORM_PROCREATION }, { action: Action.PERFORM_PROCREATION }
+    expect(botActions.items.map(actionItem => actionItem.action)).to.eql([
+      Action.PERFORM_PROCREATION, Action.PERFORM_PROCREATION
     ])
   })
 
