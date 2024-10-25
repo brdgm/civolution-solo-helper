@@ -164,7 +164,9 @@
       },
       "placeHuntingToken": {
         "title": "Jagdplättchen",
-        "instruction": "Lege 1 Jagdplättchen aus der Jagdplättchen-Auslage in ein Gebiet."
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens ein Stamm hat, und in dem noch kein Jagdplättchen liegt.",
+        "priorityRequirement": "<b>Priorität</b>: Gebietete, in denen <b>du</b> auch einen Stamm hast.",
+        "placeToken": "Lege 1 Jagdplättchen in das Gebiet."
       },
       "placeProsperityMarker": {
         "title": "Wohlstand",

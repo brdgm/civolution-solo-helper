@@ -43,11 +43,20 @@ export default defineComponent({
     territoryRoll: {
       type: Object as PropType<TerritoryRoll>,
       required: true
+    },
+    huntingToken: {
+      type: Boolean,
+      required: false
     }
   },
   computed: {
     territoryPriority() : Territory[] {
-      return getTerritoryPriority(this.territoryRoll.territoryRoll)
+      if (this.huntingToken) {
+        return [Territory.FOREST,Territory.GRASSLAND,Territory.HILLS,Territory.SWAMP,Territory.MOUNTAINS,Territory.DESERT]
+      }
+      else {
+        return getTerritoryPriority(this.territoryRoll.territoryRoll)
+      }
     },
     beaconPriority() : Beacon[] {
       return getBeaconPriority(this.territoryRoll.beaconRoll)

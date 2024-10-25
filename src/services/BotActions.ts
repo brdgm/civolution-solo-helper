@@ -229,7 +229,8 @@ function toScoringCategoryActions(scoringCategory: ScoringCategory, count: numbe
 }
 
 function addTerritoryRoll(actionItem: ActionItem) {
-  if (!actionItem.territoryRoll && [Action.PERFORM_MIGRATION,Action.PERFORM_PROCREATION,Action.PERFORM_PROVISION,Action.REVEAL_SITES].includes(actionItem.action)) {
+  if (!actionItem.territoryRoll && [Action.PERFORM_MIGRATION,Action.PERFORM_PROCREATION,Action.PERFORM_PROVISION,
+      Action.REVEAL_SITES,Action.PLACE_HUNTING_TOKEN].includes(actionItem.action)) {
     actionItem.territoryRoll = createTerritoryRoll()
   }
   if (!actionItem.territoryRollDestination && [Action.PERFORM_MIGRATION].includes(actionItem.action)) {

@@ -165,7 +165,9 @@
       },
       "placeHuntingToken": {
         "title": "Hunting Token",
-        "instruction": "Place a hunting token from the <i>hunting token display</i> in a territory."
+        "minimumRequirement": "Choose a territory, where V.I.C.I has at least one tribe, and where there is no hunting token yet.",
+        "priorityRequirement": "<b>Priority</b>: Territories, where <b>you</b> also have a tribe.",
+        "placeToken": "Place a hunting token in the territory."
       },
       "placeProsperityMarker": {
         "title": "Prosperity",
