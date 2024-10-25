@@ -1,5 +1,5 @@
 <template>
-  <ActionBox :instructionTitle="t('rules.action.performMigration.title')">
+  <ActionBox :instructionTitle="t('rules.action.performMigration.title')" :modalSizeLg="true">
     <template #action>
       <AppIcon type="action" name="perform-migration" class="icon"/>
       <div class="mt-1">{{t('rules.action.performMigration.initialTerritory.title')}}</div>

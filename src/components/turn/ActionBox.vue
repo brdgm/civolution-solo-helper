@@ -3,7 +3,7 @@
     <slot name="action"></slot>
   </div>
 
-  <ModalDialog :id="modalId" :title="instructionTitle" :scrollable="true">
+  <ModalDialog :id="modalId" :title="instructionTitle" :scrollable="true" :size-lg="modalSizeLg">
     <template #body>
       <slot name="instruction"></slot>
     </template>
@@ -28,6 +28,10 @@ export default defineComponent({
     instructionTitle: {
       type: String,
       required: true
+    },
+    modalSizeLg: {
+      type: Boolean,
+      required: false
     }
   },
   methods: {

@@ -1,5 +1,5 @@
 <template>
-  <ActionBox :instructionTitle="t('rules.action.performProcreation.title')">
+  <ActionBox :instructionTitle="t('rules.action.performProcreation.title')" :modalSizeLg="true">
     <template #action>
       <AppIcon type="action" name="perform-procreation" class="icon"/>
       <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mt-2"/>
