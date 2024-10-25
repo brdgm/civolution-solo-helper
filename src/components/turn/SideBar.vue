@@ -26,8 +26,8 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
-import AppIcon from '../structure/AppIcon.vue';
-import BotActions from '@/services/BotActions';
+import AppIcon from '../structure/AppIcon.vue'
+import BotActions from '@/services/BotActions'
 
 export default defineComponent({
   name: 'SideBar',

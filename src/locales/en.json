@@ -81,11 +81,19 @@
       "title": "7) Event phase",
       "adjustWeather": "A) V.I.C.I is never affected by the weather.",
       "resolveEvent": {
-        "title": "B) V.I.C.I never gets event bonuses."
+        "title": "B) V.I.C.I never gets event bonuses.",
+        "compareBot": "However, you must take V.I.C.I into account when determining whether you receive the bonus of an event that requires a majority or lead.",
+        "eventsDetails": "Event F4, F6, F16, F17, F19 or F20",
+        "majorityModal": {
+          "title": "V.I.C.I Event",
+          "event": "Event",
+          "achievement": "Achievement"
+        }
       },
       "scoreCategory": "C) Score current category for V.I.C.I.",
       "startingCivilization": {
-        "title": "D) Determine starting civilization:"
+        "title": "D) Determine starting civilization:",
+        "nextStartPlayer": "Next start player:"
       }
     },
     "incomePhase": {

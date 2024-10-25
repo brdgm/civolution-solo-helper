@@ -81,11 +81,19 @@
       "title": "7) Ereignisphase",
       "adjustWeather": "A) V.I.C.I ist nie vom Wetter betroffen.",
       "resolveEvent": {
-        "title": "B) V.I.C.I erhält nie Ereignis-Boni."
+        "title": "B) V.I.C.I erhält nie Ereignis-Boni.",
+        "compareBot": "Allerdings musst du V.I.C.I berücksichtigen, wenn es darum geht, ob du selbst den Bonus eines Ereignisses erhältst, für den eine Mehrheit oder eine Führung notwendig ist.",
+        "eventsDetails": "Ereginis F4, F6, F16, F17, F19 or F20",
+        "majorityModal": {
+          "title": "V.I.C.I Ereginis",
+          "event": "Ereignis",
+          "achievement": "Erreichter Wert"
+        }
       },
       "scoreCategory": "C) Werte aktuelle Kategorie für V.I.C.I.",
       "startingCivilization": {
-        "title": "D) Bestimme Startzivilisation:"
+        "title": "D) Bestimme Startzivilisation:",
+        "nextStartPlayer": "Nächster Startspieler:"
       }
     },
     "incomePhase": {

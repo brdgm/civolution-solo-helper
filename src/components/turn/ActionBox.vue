@@ -13,7 +13,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
-import showModal from '@brdgm/brdgm-commons/src/util/modal/showModal';
+import showModal from '@brdgm/brdgm-commons/src/util/modal/showModal'
 
 export default defineComponent({
   name: 'ActionBox',
