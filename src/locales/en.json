@@ -103,7 +103,14 @@
     "noNextStartPlayer": "Please determine the next start player."
   },
   "gameEnd": {
-    "title": "Game End"
+    "title": "Game End",
+    "finalScoring": {
+      "title": "Final Scoring",
+      "categories": "Score 9 final scoring categories (you and V.I.C.I)",
+      "consoleStages": "Score the stage partition of the console (only you)",
+      "consoleResearchCards": "Score point bonuses from research cards in the console (only you)"
+    },
+    "winCondition": "If you managed to have more success points in total than V.I.C.I, congratulations on a successful <i>Civolution</i>!"
   },
   "endRoundButton": {
     "title": "End Action Phase",

@@ -103,7 +103,14 @@
     "noNextStartPlayer": "Bitte den nächsten Startspieler bestimmen."
   },
   "gameEnd": {
-    "title": "Spielende"
+    "title": "Spielende",
+    "finalScoring": {
+      "title": "Endwertung",
+      "categories": "Werte die 9 Wertungskategorien (du und V.I.C.I)",
+      "consoleStages": "Werte die Stufenbereiche der Konsole (nur du)",
+      "consoleResearchCards": "Werte die Punktboni der Forschungskarten in der Konsole (nur du)"
+    },
+    "winCondition": "Falls du mehr Erfolgspunkte sammeln konntest als V.I.C.I: Herzlichen Glückwunsch zu einer erfolgreichen <i>Civolution</i>!"
   },
   "endRoundButton": {
     "title": "Aktionsphase beenden",

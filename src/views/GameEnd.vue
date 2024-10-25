@@ -3,7 +3,14 @@
 
   <h1 class="mb-3">{{t('gameEnd.title')}}</h1>
 
-  <p>...</p>
+  <h3 v-html="t('gameEnd.finalScoring.title')"></h3>
+  <ul>
+    <li v-html="t('gameEnd.finalScoring.categories')"></li>
+    <li v-html="t('gameEnd.finalScoring.consoleStages')"></li>
+    <li v-html="t('gameEnd.finalScoring.consoleResearchCards')"></li>
+  </ul>
+
+  <p v-html="t('gameEnd.winCondition')"></p>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
 </template>
