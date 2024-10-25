@@ -127,13 +127,33 @@
       },
       "performMigration": {
         "title": "Migration",
-        "instruction": "..."
+        "initialTerritory": {
+          "title": "Initial Territory",
+          "minimumRequirement": "Choose a territory where V.I.C.I has at least 2 tribes, at least 1 of them is strong.",
+          "twoTribesAvailability": "<b>Attention:</b> If there is no such territory, first perform a procreation.",
+          "performProcreation": "Perform Procreation",
+          "tribePriorityList": {
+            "title": "Pick a strong tribe:",
+            "wilderness": "from wilderness",
+            "fireEncampment": "from fire encampment",
+            "anyEncampment": "from any encampment"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Destination Territory",
+          "minimumRequirement": "Choose a land territory, adjacent to the initial territory.",
+          "priorityRequirement": "<b>Priority</b>: Territory with V.I.C.I's fewest tribes (none = fewest).",
+          "moveTribe": "Move the determined strong tribe there and let it settle on an encampment:",
+          "undevelopedTerritory": "If the tribe enters an undeveloped territory, flip its material tile face up but do not place a marker there."
+        }
       },
       "performProcreation": {
         "title": "Procreation",
-        "minimumRequirement": "<b>Minimum requirement</b>: Territory with at least 1 of V.I.C.I's tribes.",
-        "priorityRequirement": "<b>Priority requirement</b>: At least 1 free encampment.",
-        "territoryDetermined": "Once you’ve determined the territory, add a tribe from V.IC.I’s supply to that territory by letting it settle on an encampment:"
+        "minimumRequirement": "Choose a territory with at least 1 of V.I.C.I's tribes.",
+        "priorityRequirement": "<b>Priority</b>: Territory with at least 1 free encampment.",
+        "territoryDetermined": "Once you’ve determined the territory, add a tribe from V.IC.I’s supply to that territory by letting it settle on an encampment:",
+        "migrationCheck": "<b>Important</b>: Check after each procreation that you carry out for V.I.C.I whether <b>all</b> encampments in <b>all</b> territories where V.I.C.I has tribes are <b>solely</b> occupied by V.I.C.I’s own tribes (and thus, none are free or occupied by your tribes). If so, immediately perform 1 migration in addition.",
+        "performMigration": "Perform Migration"
       },
       "performProvision": {
         "title": "Provision",
@@ -177,9 +197,7 @@
         "botStrongAny": "Any encampment with one of V.I.C.I's strong tribes",
         "botWeakFire": "Fire encampment with one of V.I.C.I's weak tribes",
         "botWeakAny": "Any encampment with one of V.I.C.I's weak tribes",
-        "notWeakened": "<b>Attention:</b> V.I.C.I's tribes are <b>not</b> weakened when they displace tribes from encampments!",
-        "migrationCheck": "<b>Important</b>: Check after each procreation that you carry out for V.I.C.I whether <b>all</b> encampments in <b>all</b> territories where V.I.C.I has tribes are <b>solely</b> occupied by V.I.C.I’s own tribes (and thus, none are free or occupied by your tribes). If so, immediately perform 1 migration in addition.",
-        "performMigration": "Perform Migration"
+        "notWeakened": "<b>Attention:</b> V.I.C.I's tribes are <b>not</b> weakened when they displace tribes from encampments!"
       }
     }
   },

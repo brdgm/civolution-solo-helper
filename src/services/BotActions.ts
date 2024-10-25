@@ -91,9 +91,10 @@ export default class BotActions {
     return false
   }
 
-  public addAction(actionItem: ActionItem, afterIndex: number) : void {
+  public addAction(actionItem: ActionItem, currentIndex: number, before: boolean) : void {
     addTerritoryRoll(actionItem)
-    this._items.value.splice(afterIndex+1, 0, actionItem)
+    const index = before ? currentIndex : currentIndex+1
+    this._items.value.splice(index, 0, actionItem)
   }
 
 }
@@ -103,6 +104,7 @@ export interface ActionItem {
   scoringCategory?: ScoringCategory
   count?: number
   territoryRoll?: TerritoryRoll
+  territoryRollDestination?: TerritoryRoll
 }
 
 function isAdvanced(round: number, difficultyLevel: DifficultyLevel) : boolean {
@@ -229,5 +231,8 @@ function toScoringCategoryActions(scoringCategory: ScoringCategory, count: numbe
 function addTerritoryRoll(actionItem: ActionItem) {
   if (!actionItem.territoryRoll && [Action.PERFORM_MIGRATION,Action.PERFORM_PROCREATION,Action.PERFORM_PROVISION,Action.REVEAL_SITES].includes(actionItem.action)) {
     actionItem.territoryRoll = createTerritoryRoll()
+  }
+  if (!actionItem.territoryRollDestination && [Action.PERFORM_MIGRATION].includes(actionItem.action)) {
+    actionItem.territoryRollDestination = createTerritoryRoll()
   }
 }

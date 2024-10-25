@@ -1,7 +1,8 @@
 <template>
   <div class="actionList container-fluid m-0">
     <div class="row mt-3 mb-3" v-for="(actionItem,index) in botActions.items" :key="index">
-      <component :is="actionItem.action" :actionItem="actionItem" @addAction="(actionItem:ActionItem)=>addAction(actionItem,index)"/>
+      <component :is="actionItem.action" :actionItem="actionItem"
+          @addAction="(actionItem:ActionItem,before:boolean)=>addAction(actionItem,index,before)"/>
     </div>
   </div>
 </template>
@@ -59,8 +60,8 @@ export default defineComponent({
     }
   },
   methods: {
-    addAction(actionItem: ActionItem, afterIndex: number) {
-      this.botActions.addAction(actionItem, afterIndex)
+    addAction(actionItem: ActionItem, currentIndex: number, before: boolean) {
+      this.botActions.addAction(actionItem, currentIndex, before)
     }
   }
 })

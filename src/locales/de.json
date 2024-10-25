@@ -126,13 +126,34 @@
         "instruction": "V.I.C.I erhält die angegebenen Erfolgspunkte."
       },
       "performMigration": {
-        "title": "Wanderung"
+        "title": "Wanderung",
+        "initialTerritory": {
+          "title": "Ausgangsgebiet",
+          "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens 2 Stämme hat, von denen mindestens einer stark ist.",
+          "twoTribesAvailability": "<b>Achtung:</b> Gibt es kein solches Gebiet, führe zuerst eine Vermehrung durch.",
+          "performProcreation": "Vermehrung durchführen",
+          "tribePriorityList": {
+            "title": "Wähle einen starken Stamm:",
+            "wilderness": "aus der Wildnis",
+            "fireEncampment": "vom Feuer-Lagerplatz",
+            "anyEncampment": "von beliebigem Lagerplatz"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Zielgebiet",
+          "minimumRequirement": "Wähle ein Landgebiet, welches benachbart zum Ausgangsgebiet ist.",
+          "priorityRequirement": "<b>Priorität</b>: Gebiet mit V.I.C.Is wenigsten Stämmen (0 = am wengisten).",
+          "moveTribe": "Bewege Stamm auf einen Lagerplatz, wo er sich niederlässt:",
+          "undevelopedTerritory": "Falls der Stamm ein noch nicht erschlossenes Gebiet betritt, decke dessen Rohstoffplättchen wie üblich auf. Ein Marker wird dort nicht platziert."
+        }
       },
       "performProcreation": {
         "title": "Vermehrung",
-        "minimumRequirement": "<b>Minimalbedingung</b>: Gebiete, in denen V.I.C.I mindestens 1 Stamm hat.",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens 1 Stamm hat.",
         "priorityRequirement": "<b>Priorität</b>: Gebiete, in denen mindestens 1 Lagerplatz frei ist.",
-        "territoryDetermined": "Hast du das Gebiet bestimmt, füge diesem 1 Stamm aus V.I.C.Is Vorrat hinzu, indem du ihn dort auf einem Lagerplatz niederlässt:"
+        "territoryDetermined": "Hast du das Gebiet bestimmt, füge diesem 1 Stamm aus V.I.C.Is Vorrat hinzu, indem du ihn dort auf einem Lagerplatz niederlässt:",
+        "migrationCheck": "<b>Beachte</b>: Prüfe jedes Mal, nachdem du 1 Vermehrung für V.I.C.I durchgeführt hast, ob in allen Gebieten, in denen V.I.C.I mit Stämmen vertreten ist, <b>alle</b> vorhandenen Lagerplätze <b>ausschließlich</b> von V.I.C.Is eigenen Stämmen besetzt sind. Falls dem so ist, führe zusätzlich sofort 1 Wanderung für V.I.C.I durch.",
+        "performMigration": "Wanderung durchführen"
       },
       "performProvision": {
         "title": "Proviantaktion"
@@ -174,9 +195,7 @@
         "botStrongAny": "Beliebiger Lagerplatz mit 1 von V.I.C.Is starken Stämmen",
         "botWeakFire": "Feuer-Lagerplatz mit 1 von V.I.C.Is schwachen Stämmen",
         "botWeakAny": "Beliebiger Lagerplatz mit 1 von V.I.C.Is schwachen Stämmen",
-        "notWeakened": "<b>Achtung:</b> V.I.C.Is Stämme werden <b>nicht</b> geschwächt, wenn sie Stämme in dei Wildnis treiben!",
-        "migrationCheck": "<b>Beachte</b>: Prüfe jedes Mal, nachdem du 1 Vermehrung für V.I.C.I durchgeführt hast, ob in allen Gebieten, in denen V.I.C.I mit Stämmen vertreten ist, <b>alle</b> vorhandenen Lagerplätze <b>ausschließlich</b> von V.I.C.Is eigenen Stämmen besetzt sind. Falls dem so ist, führe zusätzlich sofort 1 Wanderung für V.I.C.I durch.",
-        "performMigration": "Wanderung durchführen"
+        "notWeakened": "<b>Achtung:</b> V.I.C.Is Stämme werden <b>nicht</b> geschwächt, wenn sie Stämme in die Wildnis treiben!"
       }
     }
   },

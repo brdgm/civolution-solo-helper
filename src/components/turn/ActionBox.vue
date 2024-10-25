@@ -3,7 +3,7 @@
     <slot name="action"></slot>
   </div>
 
-  <ModalDialog :id="modalId" :title="instructionTitle">
+  <ModalDialog :id="modalId" :title="instructionTitle" :scrollable="true">
     <template #body>
       <slot name="instruction"></slot>
     </template>
