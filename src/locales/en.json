@@ -157,7 +157,10 @@
       },
       "performProvision": {
         "title": "Provision",
-        "instruction": "..."
+        "minimumRequirement": "Choose a territory, where V.I.C.I has at least one tribe.",
+        "priorityRequirement": "<b>Priority</b>: Territories with the fewest provision markers (0 = fewest) and V.I.C.I's most tribes.",
+        "placeMarker": "Place a provision marker in the territory.",
+        "blockFarmSpace": "Once a territory has two provision markers, they block the farm building space (if it's still unoccupied)."
       },
       "placeEvolutionMarker": {
         "title": "Evolution",

@@ -156,7 +156,11 @@
         "performMigration": "Wanderung durchführen"
       },
       "performProvision": {
-        "title": "Proviantaktion"
+        "title": "Proviantaktion",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens 1 Stamm hat.",
+        "priorityRequirement": "<b>Priorität</b>: Gebiete mit den wenigsten Proviantmarkern (0 = wenigste) und V.I.C.Is meisten Stämmen.",
+        "placeMarker": "Platziere einen Proviantmarker in dem Gebiet.",
+        "blockFarmSpace": "Sobald in einen Gebiet zwei Proviantmarker sind, blockieren diese fortan den Farm-Bauplatz (falls noch frei)."
       },
       "placeEvolutionMarker": {
         "title": "Evolution",

@@ -5,7 +5,11 @@
       <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mt-2"/>
     </template>
     <template #instruction>
-      <p v-html="t('rules.action.performProvision.instruction')"></p>
+      <p v-html="t('rules.action.performProvision.minimumRequirement')"></p>
+      <p v-html="t('rules.action.performProvision.priorityRequirement')"></p>
+      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mb-3"/>
+      <p v-html="t('rules.action.performProvision.placeMarker')"></p>
+      <p v-html="t('rules.action.performProvision.blockFarmSpace')"></p>
     </template>
   </ActionBox>
 </template>

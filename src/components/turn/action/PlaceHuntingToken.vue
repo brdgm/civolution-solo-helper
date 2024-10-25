@@ -7,7 +7,7 @@
     <template #instruction>
       <p v-html="t('rules.action.placeHuntingToken.minimumRequirement')"></p>
       <p v-html="t('rules.action.placeHuntingToken.priorityRequirement')"></p>
-      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" :huntingToken="true" class="mb-2"/>
+      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" :huntingToken="true" class="mb-3"/>
       <p v-html="t('rules.action.placeHuntingToken.placeToken')"></p>
     </template>
   </ActionBox>

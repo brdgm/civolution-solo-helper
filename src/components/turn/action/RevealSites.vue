@@ -7,7 +7,7 @@
     <template #instruction>
       <p v-html="t('rules.action.revealSites.minimumRequirement')"></p>
       <p v-html="t('rules.action.revealSites.priorityRequirement')"></p>
-      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mb-2"/>
+      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mb-3"/>
       <p v-html="t('rules.action.revealSites.reveal')"></p>
       <p v-html="t('rules.action.revealSites.gainVP')"></p>
     </template>
