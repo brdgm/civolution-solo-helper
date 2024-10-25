@@ -185,7 +185,10 @@
       },
       "revealSites": {
         "title": "Reveal Sites",
-        "instruction": "..."
+        "minimumRequirement": "Choose a territory, where V.I.C.I has at least one tribe.",
+        "priorityRequirement": "<b>Priority</b>: Territories adjacent to the most face-down sites.",
+        "reveal": "Reveal all face-down sites adjacent to the territory.",
+        "gainVP": "V.I.C.I gains the success points printed on the front of each site that is revealed. Besides this, V.I.C.I’s civilization is never affected by any face-up sites."
       }
     },
     "priority": {

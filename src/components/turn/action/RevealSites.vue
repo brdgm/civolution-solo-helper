@@ -5,7 +5,11 @@
       <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mt-2"/>
     </template>
     <template #instruction>
-      <p v-html="t('rules.action.revealSites.instruction')"></p>
+      <p v-html="t('rules.action.revealSites.minimumRequirement')"></p>
+      <p v-html="t('rules.action.revealSites.priorityRequirement')"></p>
+      <TerritoryPriority v-if="actionItem.territoryRoll" :territoryRoll="actionItem.territoryRoll" class="mb-2"/>
+      <p v-html="t('rules.action.revealSites.reveal')"></p>
+      <p v-html="t('rules.action.revealSites.gainVP')"></p>
     </template>
   </ActionBox>
 </template>

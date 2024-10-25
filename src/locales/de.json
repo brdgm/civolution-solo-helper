@@ -183,7 +183,11 @@
         "refill": "Sollte der offene Stapel danach leer sein, decke wie üblich eine neue Karte auf."
       },
       "revealSites": {
-        "title": "Orte aufdecken"
+        "title": "Orte aufdecken",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens ein Stamm hat.",
+        "priorityRequirement": "<b>Priorität</b>: Gebiete, die an die meisten verdeckten Orte angrenzen.",
+        "reveal": "Decke alle verdeckten Orte auf, die an dieses Gebiet angrenzen.",
+        "gainVP": "V.I.C.I erhält die aufgedruckten Erfolgspunkte jedes Ortes, der aufgedeckt wird. Abgesehen davon wird V.I.C.Is Zivilisation niemals von Orten beeinflusst."
       }
     },
     "priority": {
