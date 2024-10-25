@@ -69,8 +69,8 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>{{t('roundEnd.eventPhase.resolveEvent.majorityModal.event')}}</th>
-            <th>{{t('roundEnd.eventPhase.resolveEvent.majorityModal.achievement')}}</th>
+            <th scope="col">{{t('roundEnd.eventPhase.resolveEvent.majorityModal.event')}}</th>
+            <th scope="col">{{t('roundEnd.eventPhase.resolveEvent.majorityModal.achievement')}}</th>
           </tr>
         </thead>
         <tbody>

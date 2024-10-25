@@ -47,6 +47,16 @@ describe('util/NavigationState', () => {
     expect(navigationState.turn).to.eq(999)
   })
 
+  it('gameEnd', () => {
+    const route = mockRouteLocation({name:'GameEnd'})
+    const state = mockState()
+    const navigationState = new NavigationState(route, state)
+
+    expect(navigationState.player).to.eq(Player.PLAYER)
+    expect(navigationState.round).to.eq(4)
+    expect(navigationState.turn).to.eq(999)
+  })
+
   it('startPlayer', () => {
     const route = mockRouteLocation({name:'TurnBot', params:{round:'1',turn:'3'}})
     const state = mockState({rounds:[

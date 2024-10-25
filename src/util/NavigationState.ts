@@ -30,12 +30,19 @@ export default class NavigationState {
   readonly currentTurnBotPersistence : boolean
 
   constructor(route: RouteLocation, state: State) {    
-    this.round = getIntRouteParam(route, 'round')
-    if (route.name == 'RoundEnd' || route.name == 'GameEnd') {
-      this.turn = MAX_TURN
-    }
-    else {
-      this.turn = getIntRouteParam(route, 'turn')
+    switch (route.name) {
+      case 'GameEnd':
+        this.round = 4
+        this.turn = MAX_TURN
+        break
+      case 'RoundEnd':
+        this.round = getIntRouteParam(route, 'round')
+        this.turn = MAX_TURN
+        break
+      default:
+        this.round = getIntRouteParam(route, 'round')
+        this.turn = getIntRouteParam(route, 'turn')
+        break
     }
 
     this.startPlayer = getStartPlayer(state, this.round)
