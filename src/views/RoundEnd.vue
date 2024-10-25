@@ -10,8 +10,13 @@
   <ul>
     <li v-html="t('roundEnd.feedingPhase.feedTribes.title')"></li>
     <ul>
-      <li class="fst-italic">TODO: Perform 1 provision action.</li>
-      <li class="fst-italic">TODO: Feed/weaken tribes.</li>
+      <li class="actionList">
+        <PerformProvision :actionItem="provisionActionItem"/>
+      </li>
+      <li v-html="t('roundEnd.feedingPhase.feedTribes.oneProvisioningMarker')"></li>
+      <EncampmentPriority :feedingPriority="true"/>
+      <li v-html="t('roundEnd.feedingPhase.feedTribes.twoProvisioningMarkers')"></li>
+      <li v-html="t('roundEnd.feedingPhase.feedTribes.weakenTribes')"></li>
     </ul>
     <li v-html="t('roundEnd.feedingPhase.scoreStrongTribes')"></li>
   </ul>
@@ -71,12 +76,19 @@ import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
 import Player from '@/services/enum/Player'
 import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
+import { ActionItem } from '@/services/BotActions'
+import Action from '@/services/enum/Action'
+import { createTerritoryRoll } from '@/util/TerritoryRoll'
+import PerformProvision from '@/components/turn/action/PerformProvision.vue'
+import EncampmentPriority from '@/components/turn/EncampmentPriority.vue'
 
 export default defineComponent({
   name: 'RoundStart',
   components: {
     FooterButtons,
-    SideBar
+    SideBar,
+    PerformProvision,
+    EncampmentPriority
   },
   setup() {
     const { t } = useI18n()
@@ -112,6 +124,12 @@ export default defineComponent({
     },
     playerOptions() : Player[] {
       return getAllEnumValues(Player)
+    },
+    provisionActionItem() : ActionItem {
+      return {
+        action: Action.PERFORM_PROVISION,
+        territoryRoll: createTerritoryRoll()
+      }
     }
   },
   methods: {
@@ -139,5 +157,13 @@ ul > li {
 }
 ul > ul > li {
   margin-top: 0;
+}
+.actionList {
+  max-width: 38rem;
+  padding-right: 10rem;
+  list-style: none;
+  margin-left: -20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 </style>

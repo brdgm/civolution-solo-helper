@@ -41,3 +41,18 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.actionBox {
+  color: white;
+  background-color: #2e4950;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0.1rem 0.1rem 0.2rem #888);
+  padding: 1rem;
+  cursor: pointer;
+  background-image: url('@/assets/icons/help-semi-transparent.png');
+  background-repeat: no-repeat;
+  background-position: right 5px top 5px;
+  background-size: 1.25rem;
+}
+</style>

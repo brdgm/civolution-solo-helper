@@ -70,7 +70,10 @@
     "feedingPhase": {
       "title": "6) Feeding phase",
       "feedTribes": {
-        "title": "A) V.I.C.I Feeding phase:"
+        "title": "A) V.I.C.I Feeding phase:",
+        "oneProvisioningMarker": "In territories with 1 provision marker, 1 tribe on an encampment is fed. Priority:",
+        "twoProvisioningMarkers": "In territories with 2 provision markers, all tribes on encampments + 1 tribe in wilderness (strong over weak) are fed.",
+        "weakenTribes": "All other tribes are weakened."
       },
       "scoreStrongTribes": "B) Score V.I.C.I's strong tribes."
     },
