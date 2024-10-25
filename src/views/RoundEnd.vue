@@ -191,5 +191,8 @@ ul > ul > li {
   margin-left: -20px;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media (max-width: 600px) {
+    padding-right: 2rem;
+  }
 }
 </style>

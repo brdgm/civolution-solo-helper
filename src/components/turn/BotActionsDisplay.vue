@@ -71,5 +71,8 @@ export default defineComponent({
 .actionList {
   max-width: 38rem;
   padding-right: 10rem;
+  @media (max-width: 600px) {
+    padding-right: 2rem;
+  }
 }
 </style>

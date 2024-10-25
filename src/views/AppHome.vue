@@ -78,6 +78,9 @@ export default defineComponent({
     img {
       width: 100%;
     }
+    @media (max-width: 600px) {
+      width: 150px;
+    }
     .viciText {
       position: absolute;
       top: 32px;
@@ -85,6 +88,12 @@ export default defineComponent({
       text-align: center;
       transform: rotate(5deg);
       line-height: 1.25rem;
+      @media (max-width: 600px) {
+        top: 22px;
+        left: 88px;
+        font-size: 12px;
+        line-height: 15px;
+      }
     }
   }
   .text {
