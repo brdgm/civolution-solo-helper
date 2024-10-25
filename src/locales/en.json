@@ -1,0 +1,275 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Solo Helper",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> against V.I.C.I, the artificial opponent.",
+    "play2": "This application replaces the solo card deck and guides you through the game and solo ruleset.",
+    "vici": {
+      "hello": "HELLO,<br/>I AM<br/>V.I.C.I!",
+      "about": "If you want to play Civolution by yourself, let us introduce you to V.I.C.I, an I-CIV entity with the purpose of simulating a rival civilization."
+    },
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup Game",
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard"
+    },
+    "scoringTiles": {
+      "title": "Scoring Tiles",
+      "randomize": "Randomize"
+    }
+  },
+  "setupBot": {
+    "title": "Setup V.I.C.I",
+    "provisionMarker": "Provision marker",
+    "placeDisks": "Choose a player color for V.I.C.I, take the 7 <b>discs</b> of that color and place one of them onto each of your discs on the game boards.",
+    "takeTribesMarkers": "Place 15 <b>tribes</b> (the remaining 5 are not used) and 50 <b>markers</b> of V.I.C.I’s color in V.I.C.I’s play area as a supply.",
+    "placeStartingTribes": "Place 1 of V.I.C.I’s tribes upright onto the remaining non-fire encampment in the <i>Forest starting territory</i> and 1 tribe upright onto the remaining non-fire encampment in the <i>Grassland starting territory</i>.",
+    "placeProvisionMarker": "Place a marker <b>lengthwise</b> in each of the two starting territories next to the farm building space. These markers do not represent raw materials but are called <i>provision markers</i>.",
+    "takeDice": "Place 6 <b>activation dice</b> and <b>1 fate die</b> in V.I.C.I’s play area.",
+    "diceNotice": "You do not roll them, they are used to count the number of V.I.C.I's dice.",
+    "noOtherComponents": "Other components are not used for V.I.C.I."
+  },
+  "roundStart": {
+    "title": "Era Start",
+    "newCards": {
+      "title": "1) New Cards",
+      "noAction": "V.I.C.I does nothing."
+    },
+    "newGoals": {
+      "title": "2) New goals",
+      "playerTakeGoal": "Take a goal chip (optional).",
+      "botDetermine": "Determine goal chip for V.I.C.I.",
+      "botTakeGoal": "Remove goal chip <b>{goalChip}</b> (if available).",
+      "botNoGoal": "No goal chip is removed."
+    },
+    "extraFind": {
+      "title": "3) Extra find",
+      "noAction": "V.I.C.I makes no extra find."
+    }
+  },
+  "turnPlayer": {
+    "title": "Player",
+    "takeTurn": "Take your turn."
+  },
+  "turnBot": {
+    "title": "V.I.C.I",
+    "reset": "V.I.C.I does a <b>Reset</b>.",
+    "removeAttributeChip": "Remove <b>attribute chip</b> {chip}.",
+    "removeIncomeChip": "Remove <b>income chip</b> {chip}."
+  },
+  "roundEnd": {
+    "title": "Era End",
+    "sitePhase": {
+      "title": "5) Site phase",
+      "botNotAffected": "V.I.C.I is never affected by face-up sites."
+    },
+    "feedingPhase": {
+      "title": "6) Feeding phase",
+      "feedTribes": {
+        "title": "A) V.I.C.I Feeding phase:",
+        "oneProvisioningMarker": "In territories with 1 provision marker, 1 tribe on an encampment is fed. Priority:",
+        "twoProvisioningMarkers": "In territories with 2 provision markers, all tribes on encampments + 1 tribe in wilderness (strong over weak) are fed.",
+        "weakenTribes": "All other tribes are weakened."
+      },
+      "scoreStrongTribes": "B) Score V.I.C.I's strong tribes."
+    },
+    "eventPhase": {
+      "title": "7) Event phase",
+      "adjustWeather": "A) V.I.C.I is never affected by the weather.",
+      "resolveEvent": {
+        "title": "B) V.I.C.I never gets event bonuses.",
+        "compareBot": "However, you must take V.I.C.I into account when determining whether you receive the bonus of an event that requires a majority or lead.",
+        "eventsDetails": "Event F4, F6, F16, F17, F19 or F20",
+        "majorityModal": {
+          "title": "V.I.C.I Event",
+          "event": "Event",
+          "achievement": "Achievement"
+        }
+      },
+      "scoreCategory": "C) Score current category for V.I.C.I.",
+      "startingCivilization": {
+        "title": "D) Determine starting civilization:",
+        "nextStartPlayer": "Next start player:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Income phase",
+      "scoreStatues": "B) Score V.I.C.I's statues."
+    },
+    "noNextStartPlayer": "Please determine the next start player."
+  },
+  "gameEnd": {
+    "title": "Game End",
+    "finalScoring": {
+      "title": "Final Scoring",
+      "categories": "Score 9 final scoring categories (you and V.I.C.I)",
+      "consoleStages": "Score the stage partition of the console (only you)",
+      "consoleResearchCards": "Score point bonuses from research cards in the console (only you)"
+    },
+    "winCondition": "If you managed to have more success points in total than V.I.C.I, congratulations on a successful <i>Civolution</i>!"
+  },
+  "endRoundButton": {
+    "title": "End Action Phase",
+    "confirm": "Do you want to end the action phase?"
+  },
+  "sideBar": {
+    "round": "Era {round}"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Agera track",
+        "instruction": "Advance V.I.C.I’s disc 1 step on the Favor of Agera track (if possible)."
+      },
+      "advanceScoringCategory": {
+        "title": "Progress Track",
+        "instruction": "Advance V.I.C.I’s disc that many steps on the depicted progress track.",
+        "threshold": "Whenever one of V.I.C.I’s discs crosses a bonus threshold that gives success points as a track bonus, V.I.C.I receives those points. All other track bonuses are ignored for V.I.C.I.",
+        "exceedTrack": "If V.I.C.I’s disc is already on space 12 of this track, this action gives V.I.C.I the usual 2 success points instead."
+      },
+      "gainActivationDie": {
+        "title": "Activation Die",
+        "instruction": "V.I.C.I receives an activation die (per the usual rules)."
+      },
+      "gainFateDie": {
+        "title": "Fate Die",
+        "instruction": "V.I.C.I receives a fate die (per the usual rules)."
+      },
+      "gainVp": {
+        "title": "Success Points",
+        "instruction": "V.I.C.I gains the depicted number of success points."
+      },
+      "performMigration": {
+        "title": "Migration",
+        "initialTerritory": {
+          "title": "Initial Territory",
+          "minimumRequirement": "Choose a territory where V.I.C.I has at least 2 tribes, at least 1 of them is strong.",
+          "twoTribesAvailability": "<b>Attention:</b> If there is no such territory, first perform a procreation.",
+          "performProcreation": "Perform Procreation",
+          "tribePriorityList": {
+            "title": "Pick a strong tribe:",
+            "wilderness": "from wilderness",
+            "fireEncampment": "from fire encampment",
+            "anyEncampment": "from any encampment"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Destination Territory",
+          "minimumRequirement": "Choose a land territory, adjacent to the initial territory.",
+          "priorityRequirement": "<b>Priority</b>: Territory with V.I.C.I's fewest tribes (none = fewest).",
+          "moveTribe": "Move the determined strong tribe there and let it settle on an encampment:",
+          "undevelopedTerritory": "If the tribe enters an undeveloped territory, flip its material tile face up but do not place a marker there."
+        }
+      },
+      "performProcreation": {
+        "title": "Procreation",
+        "minimumRequirement": "Choose a territory with at least 1 of V.I.C.I's tribes.",
+        "priorityRequirement": "<b>Priority</b>: Territory with at least 1 free encampment.",
+        "territoryDetermined": "Once you’ve determined the territory, add a tribe from V.IC.I’s supply to that territory by letting it settle on an encampment:",
+        "migrationCheck": "<b>Important</b>: Check after each procreation that you carry out for V.I.C.I whether <b>all</b> encampments in <b>all</b> territories where V.I.C.I has tribes are <b>solely</b> occupied by V.I.C.I’s own tribes (and thus, none are free or occupied by your tribes). If so, immediately perform 1 migration in addition.",
+        "performMigration": "Perform Migration"
+      },
+      "performProvision": {
+        "title": "Provision",
+        "minimumRequirement": "Choose a territory, where V.I.C.I has at least one tribe.",
+        "priorityRequirement": "<b>Priority</b>: Territories with the fewest provision markers (0 = fewest) and V.I.C.I's most tribes.",
+        "placeMarker": "Place a provision marker in the territory.",
+        "blockFarmSpace": "Once a territory has two provision markers, they block the farm building space (if it's still unoccupied)."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evolution",
+        "instruction": "V.I.C.I gains Evolution marker (these are counted automatically by the application)."
+      },
+      "placeHuntingToken": {
+        "title": "Hunting Token",
+        "minimumRequirement": "Choose a territory, where V.I.C.I has at least one tribe, and where there is no hunting token yet.",
+        "priorityRequirement": "<b>Priority</b>: Territories, where <b>you</b> also have a tribe.",
+        "placeToken": "Place a hunting token in the territory."
+      },
+      "placeProsperityMarker": {
+        "title": "Prosperity",
+        "instruction": "V.I.C.I gains Prosperity marker (these are counted automatically by the application)."
+      },
+      "placeStatue": {
+        "title": "Statue",
+        "instruction": "Place a marker from V.IC.I’s supply as a statue onto the Building ground in the large Water territory.",
+        "unlimited": "There is no limit to the number of statues V.I.C.I can have there."
+      },
+      "removeCard": {
+        "title": "Remove Research Card",
+        "instruction": "Remove the top card from the <i>face-up research stack</i> of the depicted type.",
+        "refill": "If the face-up stack is empty afterwards, refill it at as usual."
+      },
+      "revealSites": {
+        "title": "Reveal Sites",
+        "minimumRequirement": "Choose a territory, where V.I.C.I has at least one tribe.",
+        "priorityRequirement": "<b>Priority</b>: Territories adjacent to the most face-down sites.",
+        "reveal": "Reveal all face-down sites adjacent to the territory.",
+        "gainVP": "V.I.C.I gains the success points printed on the front of each site that is revealed. Besides this, V.I.C.I’s civilization is never affected by any face-up sites."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Free fire encampment",
+        "freeAny": "Any free encampment",
+        "playerFire": "Fire encampment with one of <b>your</b> tribes",
+        "playerWeakAny": "Any encampment with one of <b>your</b> weak tribes",
+        "playerStrongAny": "Any encampment with one of <b>your</b> strong tribes",
+        "botStrongFire": "Fire encampment with one of V.I.C.I's strong tribes",
+        "botStrongAny": "Any encampment with one of V.I.C.I's strong tribes",
+        "botWeakFire": "Fire encampment with one of V.I.C.I's weak tribes",
+        "botWeakAny": "Any encampment with one of V.I.C.I's weak tribes",
+        "notWeakened": "<b>Attention:</b> V.I.C.I's tribes are <b>not</b> weakened when they displace tribes from encampments!"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Beginner",
+    "2": "Moderate",
+    "3": "Medium",
+    "4": "Advanced",
+    "5": "Expert"
+  },
+  "player": {
+    "player": "Player",
+    "bot": "V.I.C.I"
+  },
+  "territory": {
+    "forest": "Forest",
+    "grassland": "Grassland",
+    "hills": "Hills",
+    "swamp": "Swamp",
+    "mountains": "Mountains",
+    "desert": "Desert",
+    "water": "Water"
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "Play Game",
+    "startGame": "Start Game",
+    "next": "Next",
+    "nextRound": "Next Round",
+    "abortGame": "Abort Game",
+    "abortGameConfirm": "Aborting the running game - are you sure?",
+    "endGame": "End Game",
+    "endGameConfirm": "End this game and return to home screen - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
+  }
+}

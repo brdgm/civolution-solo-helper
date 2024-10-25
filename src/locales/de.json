@@ -1,0 +1,275 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Solo Helper",
+    "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> gegen V.I.C.I, die künstliche Gegenspielerin.",
+    "play2": "Diese Applikation ersetzt das Solo-Kartendeck und führt dich durch das Spiel und die Solo-Regeln.",
+    "vici": {
+      "hello": "HALLO,<br/>ICH BIN<br/>V.I.C.I!",
+      "about": "Du möchtest Civolution alleine spielen? Dann erlaube uns dir V.I.C.I vorzustellen, eine I-CIV-Entität, deren Aufgabe es ist, eine konkurrierende Zivilisation zu simulieren."
+    },
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer"
+    },
+    "scoringTiles": {
+      "title": "Wertungsplättchen",
+      "randomize": "Neu wählen"
+    }
+  },
+  "setupBot": {
+    "title": "V.I.C.I Aufbau",
+    "provisionMarker": "Proviantmarker",
+    "placeDisks": "Wähle eine Spielfarbe für V.I.C.I, nimm deren 7 <b>Scheiben</b> und platziere je eine davon auf jeder deiner eigenen 7 Scheiben auf den Spielplänen.",
+    "takeTribesMarkers": "Lege 15 <b>Stämme</b> (die übrigen 5 werden nicht verwendet) und 50 <b>Marker</b> von V.I.C.Is Farbe als Vorrat in V.I.C.Is Spielbereich bereit.",
+    "placeStartingTribes": "Stelle dann 1 von V.I.C.Is Stämmen aufrecht auf den freien Lagerplatz (ohne Feuer) im <i>Wald-Startgebiet</i> und 1 Stamm aufrecht auf den freien Lagerplatz (ohne Feuer) im <i>Grasland-Startgebiet</i>.",
+    "placeProvisionMarker": "Lege in beide Startgebiete je 1 von V.I.C.Is Markern <b>flach</b> neben den dortigen Farm-Bauplatz. Diese Marker stellen keine Rohstoffe dar, sondern sogenannte <i>„Proviantmarker“</i>.",
+    "takeDice": "Lege 6 <b>Aktivierungswürfel</b> und 1 <b>Schicksalswürfel</b> in V.I.C.Is Spielbereich bereit.",
+    "diceNotice": "Diese Würfel werden nicht gewürfelt - sie dienen dazu, die Anzahl von V.I.C.Is Würfeln zu ermitteln.",
+    "noOtherComponents": "Anderes Spielmaterial wird für V.I.C.I nicht benötigt."
+  },
+  "roundStart": {
+    "title": "Beginn der Epoche",
+    "newCards": {
+      "title": "1) Neue Karten",
+      "noAction": "V.I.C.I macht nichts."
+    },
+    "newGoals": {
+      "title": "2) Neue Ziele",
+      "playerTakeGoal": "Nehme eine Zielplatine (optional).",
+      "botDetermine": "Bestimme eine Zielplatine für V.I.C.I.",
+      "botTakeGoal": "Entferne Zielplatine <b>{goalChip}</b> (wenn verfügbar).",
+      "botNoGoal": "Es wird keine Zielplatine entfernt."
+    },
+    "extraFind": {
+      "title": "3) Sonderfund",
+      "noAction": "V.I.C.I macht keinen Sonderfund."
+    }
+  },
+  "turnPlayer": {
+    "title": "Spieler",
+    "takeTurn": "Führe deinen Zug aus."
+  },
+  "turnBot": {
+    "title": "V.I.C.I",
+    "reset": "V.I.C.I führt einen <b>Reset</b> durch.",
+    "removeAttributeChip": "Entferne <b>Attributsplatine</b> {chip}.",
+    "removeIncomeChip": "Entferne <b>Einkommensplatine</b> {chip}."
+  },
+  "roundEnd": {
+    "title": "Ende der Epoche",
+    "sitePhase": {
+      "title": "5) Ortsphase",
+      "botNotAffected": "V.I.C.I ist nie von Orten betroffen."
+    },
+    "feedingPhase": {
+      "title": "6) Ernährungsphase",
+      "feedTribes": {
+        "title": "A) V.I.C.I Ernährungsphase:",
+        "oneProvisioningMarker": "In Gebieten mit 1 Proviantmarker ist 1 Stamm auf einem Lagerplatz ernährt. Priorität:",
+        "twoProvisioningMarkers": "In Gebieten mit 2 Proviantmarkern sind alle Stämme auf Lagerplätzen + 1 Stamm in der Wildnis ernäht (stark vor schwach).",
+        "weakenTribes": "Alle übrigen Stämme werden geschwächt."
+      },
+      "scoreStrongTribes": "B) Werte V.I.C.I starke Stämme."
+    },
+    "eventPhase": {
+      "title": "7) Ereignisphase",
+      "adjustWeather": "A) V.I.C.I ist nie vom Wetter betroffen.",
+      "resolveEvent": {
+        "title": "B) V.I.C.I erhält nie Ereignis-Boni.",
+        "compareBot": "Allerdings musst du V.I.C.I berücksichtigen, wenn es darum geht, ob du selbst den Bonus eines Ereignisses erhältst, für den eine Mehrheit oder eine Führung notwendig ist.",
+        "eventsDetails": "Ereginis F4, F6, F16, F17, F19 or F20",
+        "majorityModal": {
+          "title": "V.I.C.I Ereginis",
+          "event": "Ereignis",
+          "achievement": "Erreichter Wert"
+        }
+      },
+      "scoreCategory": "C) Werte aktuelle Kategorie für V.I.C.I.",
+      "startingCivilization": {
+        "title": "D) Bestimme Startzivilisation:",
+        "nextStartPlayer": "Nächster Startspieler:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Einkommensphase",
+      "scoreStatues": "B) Werte V.I.C.Is Statuen."
+    },
+    "noNextStartPlayer": "Bitte den nächsten Startspieler bestimmen."
+  },
+  "gameEnd": {
+    "title": "Spielende",
+    "finalScoring": {
+      "title": "Endwertung",
+      "categories": "Werte die 9 Wertungskategorien (du und V.I.C.I)",
+      "consoleStages": "Werte die Stufenbereiche der Konsole (nur du)",
+      "consoleResearchCards": "Werte die Punktboni der Forschungskarten in der Konsole (nur du)"
+    },
+    "winCondition": "Falls du mehr Erfolgspunkte sammeln konntest als V.I.C.I: Herzlichen Glückwunsch zu einer erfolgreichen <i>Civolution</i>!"
+  },
+  "endRoundButton": {
+    "title": "Aktionsphase beenden",
+    "confirm": "Soll die Aktionsphase beendet werden?"
+  },
+  "sideBar": {
+    "round": "Epoche {round}"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Ageras Gunstleiste",
+        "instruction": "Ziehe V.I.C.Is Scheibe auf Ageras Gunstleiste 1 Schritt vorwärts (sofern möglich)."
+      },
+      "advanceScoringCategory": {
+        "title": "Fortschrittsleiste",
+        "instruction": "Ziehe V.I.C.Is Scheibe auf der angegebenen Fortschrittsleiste die angegebene Anzahl Schritte vorwärts.",
+        "threshold": "Immer wenn eine von V.I.C.Is Scheiben eine Bonusschwelle überquert, die Erfolgspunkte als Leistenbonus gibt, erhält V.I.C.I diese Punkte. Alle anderen Leistenboni werden für V.I.C.I ignoriert.",
+        "exceedTrack": "Falls sich V.I.C.Is Scheibe bereits auf Feld 12 der entsprechenden Leiste befindet, erhält V.I.C.I statt dem Schritt wie üblich 2 Punkte."
+      },
+      "gainActivationDie": {
+        "title": "Aktivierungswürfel",
+        "instruction": "V.I.C.I erhält einen zusätzlichen Aktivierungswürfel (laut der üblichen Regeln)."
+      },
+      "gainFateDie": {
+        "title": "Schicksalswürfel",
+        "instruction": "V.I.C.I erhält einen zusätzlichen Schicksalswürfel (laut der üblichen Regeln)."
+      },
+      "gainVp": {
+        "title": "Erfolgspunkte",
+        "instruction": "V.I.C.I erhält die angegebenen Erfolgspunkte."
+      },
+      "performMigration": {
+        "title": "Wanderung",
+        "initialTerritory": {
+          "title": "Ausgangsgebiet",
+          "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens 2 Stämme hat, von denen mindestens einer stark ist.",
+          "twoTribesAvailability": "<b>Achtung:</b> Gibt es kein solches Gebiet, führe zuerst eine Vermehrung durch.",
+          "performProcreation": "Vermehrung durchführen",
+          "tribePriorityList": {
+            "title": "Wähle einen starken Stamm:",
+            "wilderness": "aus der Wildnis",
+            "fireEncampment": "vom Feuer-Lagerplatz",
+            "anyEncampment": "von beliebigem Lagerplatz"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Zielgebiet",
+          "minimumRequirement": "Wähle ein Landgebiet, welches benachbart zum Ausgangsgebiet ist.",
+          "priorityRequirement": "<b>Priorität</b>: Gebiet mit V.I.C.Is wenigsten Stämmen (0 = am wengisten).",
+          "moveTribe": "Bewege Stamm auf einen Lagerplatz, wo er sich niederlässt:",
+          "undevelopedTerritory": "Falls der Stamm ein noch nicht erschlossenes Gebiet betritt, decke dessen Rohstoffplättchen wie üblich auf. Ein Marker wird dort nicht platziert."
+        }
+      },
+      "performProcreation": {
+        "title": "Vermehrung",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens 1 Stamm hat.",
+        "priorityRequirement": "<b>Priorität</b>: Gebiete, in denen mindestens 1 Lagerplatz frei ist.",
+        "territoryDetermined": "Hast du das Gebiet bestimmt, füge diesem 1 Stamm aus V.I.C.Is Vorrat hinzu, indem du ihn dort auf einem Lagerplatz niederlässt:",
+        "migrationCheck": "<b>Beachte</b>: Prüfe jedes Mal, nachdem du 1 Vermehrung für V.I.C.I durchgeführt hast, ob in allen Gebieten, in denen V.I.C.I mit Stämmen vertreten ist, <b>alle</b> vorhandenen Lagerplätze <b>ausschließlich</b> von V.I.C.Is eigenen Stämmen besetzt sind. Falls dem so ist, führe zusätzlich sofort 1 Wanderung für V.I.C.I durch.",
+        "performMigration": "Wanderung durchführen"
+      },
+      "performProvision": {
+        "title": "Proviantaktion",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens 1 Stamm hat.",
+        "priorityRequirement": "<b>Priorität</b>: Gebiete mit den wenigsten Proviantmarkern (0 = wenigste) und V.I.C.Is meisten Stämmen.",
+        "placeMarker": "Platziere einen Proviantmarker in dem Gebiet.",
+        "blockFarmSpace": "Sobald in einen Gebiet zwei Proviantmarker sind, blockieren diese fortan den Farm-Bauplatz (falls noch frei)."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evolution",
+        "instruction": "V.I.C.I erhält Evolutionsmarker (diese werden automatisch von der Applikation gezählt)."
+      },
+      "placeHuntingToken": {
+        "title": "Jagdplättchen",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens ein Stamm hat, und in dem noch kein Jagdplättchen liegt.",
+        "priorityRequirement": "<b>Priorität</b>: Gebietete, in denen <b>du</b> auch einen Stamm hast.",
+        "placeToken": "Lege 1 Jagdplättchen in das Gebiet."
+      },
+      "placeProsperityMarker": {
+        "title": "Wohlstand",
+        "instruction": "V.I.C.I erhält Wohlstandsmarker (diese werden automatisch von der Applikation gezählt)."
+      },
+      "placeStatue": {
+        "title": "Statue",
+        "instruction": "Stelle einen Marker aus V.I.C.Is Vorrat als Statue auf den Baugrund im großen Wassergebiet.",
+        "unlimited": "Es gibt kein Limit für die Anzahl der Statuen, die V.I.C.I dort haben darf."
+      },
+      "removeCard": {
+        "title": "Forschungskarte entfernen",
+        "instruction": "Entferne die oberste Karte vom <i>offenen Forschungsstapel</i> der angegebenen Art.",
+        "refill": "Sollte der offene Stapel danach leer sein, decke wie üblich eine neue Karte auf."
+      },
+      "revealSites": {
+        "title": "Orte aufdecken",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens ein Stamm hat.",
+        "priorityRequirement": "<b>Priorität</b>: Gebiete, die an die meisten verdeckten Orte angrenzen.",
+        "reveal": "Decke alle verdeckten Orte auf, die an dieses Gebiet angrenzen.",
+        "gainVP": "V.I.C.I erhält die aufgedruckten Erfolgspunkte jedes Ortes, der aufgedeckt wird. Abgesehen davon wird V.I.C.Is Zivilisation niemals von Orten beeinflusst."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Freier Feuer-Lagerplatz",
+        "freeAny": "Beliebiger freier Lagerplatz",
+        "playerFire": "Feuer-Lagerplatz mit 1 <b>deiner</b> Stämme",
+        "playerWeakAny": "Beliebiger Lagerplatz mit 1 <b>deiner</b> schwachen Stämme",
+        "playerStrongAny": "Beliebiger Lagerplatz mit 1 <b>deiner</b> starken Stämme",
+        "botStrongFire": "Feuer-Lagerplatz mit 1 von V.I.C.Is starken Stämmen",
+        "botStrongAny": "Beliebiger Lagerplatz mit 1 von V.I.C.Is starken Stämmen",
+        "botWeakFire": "Feuer-Lagerplatz mit 1 von V.I.C.Is schwachen Stämmen",
+        "botWeakAny": "Beliebiger Lagerplatz mit 1 von V.I.C.Is schwachen Stämmen",
+        "notWeakened": "<b>Achtung:</b> V.I.C.Is Stämme werden <b>nicht</b> geschwächt, wenn sie Stämme in die Wildnis treiben!"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Einstieg",
+    "2": "Moderat",
+    "3": "Mittel",
+    "4": "Fortgeschritten",
+    "5": "Schwer"
+  },
+  "player": {
+    "player": "Spieler",
+    "bot": "V.I.C.I"
+  },
+  "territory": {
+    "forest": "Wald",
+    "grassland": "Grasland",
+    "hills": "Hügelland",
+    "swamp": "Sumpf",
+    "mountains": "Gebirge",
+    "desert": "Wüste",
+    "water": "Wasser"
+  },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}
