@@ -72,7 +72,7 @@
       "feedTribes": {
         "title": "A) V.I.C.I Ernährungsphase:",
         "oneProvisioningMarker": "In Gebieten mit 1 Proviantmarker ist 1 Stamm auf einem Lagerplatz ernährt. Priorität:",
-        "twoProvisioningMarkers": "In Gebieten mit 2 Proviantmarkern sind alle Stämme auf Lagerplätzen + 1 Stamm in der Wildnis ernäht (stark vor schwach).",
+        "twoProvisioningMarkers": "In Gebieten mit 2 Proviantmarkern sind alle Stämme auf Lagerplätzen + 1 Stamm in der Wildnis ernährt (stark vor schwach).",
         "weakenTribes": "Alle übrigen Stämme werden geschwächt."
       },
       "scoreStrongTribes": "B) Werte V.I.C.I starke Stämme."
@@ -83,9 +83,9 @@
       "resolveEvent": {
         "title": "B) V.I.C.I erhält nie Ereignis-Boni.",
         "compareBot": "Allerdings musst du V.I.C.I berücksichtigen, wenn es darum geht, ob du selbst den Bonus eines Ereignisses erhältst, für den eine Mehrheit oder eine Führung notwendig ist.",
-        "eventsDetails": "Ereginis F4, F6, F16, F17, F19 or F20",
+        "eventsDetails": "Ereignis F4, F6, F16, F17, F19 or F20",
         "majorityModal": {
-          "title": "V.I.C.I Ereginis",
+          "title": "V.I.C.I Ereignis",
           "event": "Ereignis",
           "achievement": "Erreichter Wert"
         }
@@ -160,7 +160,7 @@
         "destinationTerritory": {
           "title": "Zielgebiet",
           "minimumRequirement": "Wähle ein Landgebiet, welches benachbart zum Ausgangsgebiet ist.",
-          "priorityRequirement": "<b>Priorität</b>: Gebiet mit V.I.C.Is wenigsten Stämmen (0 = am wengisten).",
+          "priorityRequirement": "<b>Priorität</b>: Gebiet mit V.I.C.Is wenigsten Stämmen (0 = am wenigsten).",
           "moveTribe": "Bewege Stamm auf einen Lagerplatz, wo er sich niederlässt:",
           "undevelopedTerritory": "Falls der Stamm ein noch nicht erschlossenes Gebiet betritt, decke dessen Rohstoffplättchen wie üblich auf. Ein Marker wird dort nicht platziert."
         }
@@ -187,7 +187,7 @@
       "placeHuntingToken": {
         "title": "Jagdplättchen",
         "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens ein Stamm hat, und in dem noch kein Jagdplättchen liegt.",
-        "priorityRequirement": "<b>Priorität</b>: Gebietete, in denen <b>du</b> auch einen Stamm hast.",
+        "priorityRequirement": "<b>Priorität</b>: Gebiete, in denen <b>du</b> auch einen Stamm hast.",
         "placeToken": "Lege 1 Jagdplättchen in das Gebiet."
       },
       "placeProsperityMarker": {

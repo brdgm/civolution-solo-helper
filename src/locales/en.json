@@ -3,7 +3,7 @@
   "home": {
     "title": "Civolution Solo Helper",
     "play1": "Play <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> against V.I.C.I, the artificial opponent.",
-    "play2": "This application replaces the solo card deck and guides you through the game and solo ruleset.",
+    "play2": "This application replaces the solo card deck and guides you through the game and solo rule set.",
     "vici": {
       "hello": "HELLO,<br/>I AM<br/>V.I.C.I!",
       "about": "If you want to play Civolution by yourself, let us introduce you to V.I.C.I, an I-CIV entity with the purpose of simulating a rival civilization."
