@@ -21,13 +21,11 @@
     </div>
   </div>
 
-<!--
   <p class="text-muted fst-italic">
     {{t('home.feedback')}}
-    <a href="https://boardgamegeek.com/thread/XXX/brdgmme-civolution-solo-helper-web-application" target="_blank" rel="noopener">Board Game Geek Thread</a> |
+    <a href="https://boardgamegeek.com/thread/3394387/brdgmme-civolution-solo-helper-web-application" target="_blank" rel="noopener">Board Game Geek Thread</a> |
     <a href="https://github.com/brdgm/civolution-solo-helper" target="_blank" rel="noopener">GitHub</a>
   </p>
--->
 
   <router-link to="/setupGame" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
 
