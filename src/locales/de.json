@@ -3,7 +3,7 @@
   "home": {
     "title": "Civolution Solo Helper",
     "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> gegen V.I.C.I, die künstliche Gegenspielerin.",
-    "play2": "Diese Applikation ersetzt das Solo-Kartendeck und führt dich durch das Spiel und die Solo-Regeln.",
+    "play2": "Diese Applikation ersetzt das Solo-Kartendeck, verwaltet die Schwierigkeitsgrade und führt dich durch das Spiel und die Solo-Regeln.",
     "vici": {
       "hello": "HALLO,<br/>ICH BIN<br/>V.I.C.I!",
       "about": "Du möchtest Civolution alleine spielen? Dann erlaube uns dir V.I.C.I vorzustellen, eine I-CIV-Entität, deren Aufgabe es ist, eine konkurrierende Zivilisation zu simulieren."
