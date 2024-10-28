@@ -2,7 +2,7 @@
   <h3 class="mt-4 mb-3">{{t('setup.randomMap.title')}}</h3>
 
   <p v-if="!show">
-    <button class="btn btn-sm btn-outline-secondary" @click="show=true">{{t('setup.randomMap.show')}}</button>
+    <button class="btn btn-sm btn-outline-secondary" @click="showRandomizer">{{t('setup.randomMap.show')}}</button>
   </p>
   <div v-if="show">
     <div class="map">
@@ -47,7 +47,6 @@ export default defineComponent({
       mapRandomizer.randomize()
       tilePlacements.value = mapRandomizer.tiles
     }
-    randomizeMapTiles()
 
     return { t, state, tilePlacements, randomizeMapTiles }
   },
@@ -57,7 +56,11 @@ export default defineComponent({
     }
   },
   methods: {
-    getTransform(tilePlacement: TilePlacement) {
+    showRandomizer() : void {
+      this.randomizeMapTiles()
+      this.show = true
+    },
+    getTransform(tilePlacement: TilePlacement) : string {
       let x = 0
       let y = 0
       if (tilePlacement.rotation == Rotation.RIGHT) {
