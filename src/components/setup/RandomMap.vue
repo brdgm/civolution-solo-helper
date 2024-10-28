@@ -8,6 +8,7 @@
     <div class="map">
       <div v-for="item of tilePlacements" :key="item.tile.name"
           :style="{position:'absolute',left:`${item.x*100}px`,top:`${item.y*100}px`}">
+        <div class="letter">{{item.tile.name}}</div>
         <AppIcon type="map-tile" :name="item.tile.name"
             :style="{width:'100px','transform-origin':'50px 50px',transform:getTransform(item)}"/>
       </div>
@@ -86,5 +87,16 @@ export default defineComponent({
   overflow-y: hidden;
   border-radius: 10px;
   background-color: #eee;
+  .letter {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    z-index: 100;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+  }
 }
 </style>
