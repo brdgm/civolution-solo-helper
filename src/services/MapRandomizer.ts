@@ -62,6 +62,14 @@ export default class MapRandomizer {
         }
       }
     }
+    // increase probability to place tile A in center a bit
+    for (let x=1; x<4; x++) {
+      if (!matrix[x][1]) {
+        positions.push({ tile, x, y:1, rotation: Rotation.UP })
+        positions.push({ tile, x, y:1, rotation: Rotation.UP })
+        positions.push({ tile, x, y:1, rotation: Rotation.UP })
+      }
+    }
     return positions
   }
   
