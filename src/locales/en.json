@@ -20,6 +20,12 @@
     "scoringTiles": {
       "title": "Scoring Tiles",
       "randomize": "Randomize"
+    },
+    "randomMap": {
+      "title": "Continent",
+      "show": "Random Continent (optional)",
+      "firstPlay": "First Play",
+      "randomize": "Randomize"
     }
   },
   "setupBot": {

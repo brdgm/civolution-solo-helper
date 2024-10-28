@@ -3,6 +3,7 @@
 
   <DifficultyLevel/>
   <ScoringTiles/>
+  <RandomMap/>
 
   <button class="btn btn-primary btn-lg mt-4" @click="setupBot()">
     {{t('setupBot.title')}}
@@ -18,13 +19,15 @@ import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 import ScoringTiles from '@/components/setup/ScoringTiles.vue'
+import RandomMap from '@/components/setup/RandomMap.vue'
 
 export default defineComponent({
   name: 'SetupGame',
   components: {
     FooterButtons,
     DifficultyLevel,
-    ScoringTiles
+    ScoringTiles,
+    RandomMap
   },
   setup() {
     const { t } = useI18n()
