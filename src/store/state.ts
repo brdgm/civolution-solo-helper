@@ -12,7 +12,8 @@ export const useStateStore = defineStore(`${name}.state`, {
       setup: {
         difficultyLevel: DifficultyLevel.BEGINNER,
         eraScoringTiles: [],
-        finalScoringTiles: []
+        finalScoringTiles: [],
+        mapFirstPlay: true
       },
       rounds: []
     } as State
@@ -50,6 +51,7 @@ export interface Setup {
   difficultyLevel: DifficultyLevel
   eraScoringTiles: ScoringCategory[]
   finalScoringTiles: ScoringCategory[]
+  mapFirstPlay?: boolean
   initialCardDeck?: CardDeckPersistence
   debugMode?: boolean
 }
