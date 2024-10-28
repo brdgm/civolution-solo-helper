@@ -5,22 +5,20 @@
     <div class="map">
       <div v-for="item of tilePlacements" :key="item.tile.name"
           :style="{position:'absolute',left:`${item.x*100}px`,top:`${item.y*100}px`}">
-          <div style="position:absolute;z-index:100;background-color:white;"  v-if="item.x==0 && item.y==0">
-        {{ item.tile.name }} {{ item.x }} {{ item.y }} {{ item.rotation }}
-        </div>
-          <AppIcon type="map-tile" :name="item.tile.name"
-            :style="{width:'100px','transform-origin':'top left',transform:getTransform(item)}" v-if="item.x==0 && item.y==0"/>
+        <AppIcon type="map-tile" :name="item.tile.name"
+            :style="{width:'100px','transform-origin':'50px 50px',transform:getTransform(item)}"/>
       </div>
     </div>
 
-    <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" :value="true" v-model="state.setup.mapFirstPlay" @change="randomizeMapTiles">
-        {{t('setup.randomMap.firstPlay')}}
-      </label>
+    <div class="d-flex mt-2">
+      <button class="btn btn-sm btn-outline-secondary" @click="randomizeMapTiles">{{t('setup.randomMap.randomize')}}</button>
+      <div class="form-check ms-2">
+        <label class="form-check-label small">
+          <input class="form-check-input" type="checkbox" :value="true" v-model="state.setup.mapFirstPlay" @change="randomizeMapTiles">
+          {{t('setup.randomMap.firstPlay')}}
+        </label>
+      </div>
     </div>
-
-    <button class="btn btn-sm btn-outline-secondary" @click="randomizeMapTiles">{{t('setup.randomMap.randomize')}}</button>
   </div>
 </template>
 
@@ -55,14 +53,12 @@ export default defineComponent({
       let x = 0
       let y = 0
       if (tilePlacement.rotation == Rotation.RIGHT) {
-        x = 200
+        x = 100
       }
       else if (tilePlacement.rotation == Rotation.DOWN) {
-        x = 100
-        y = 200
+        y = 100
       }
       else if (tilePlacement.rotation == Rotation.LEFT) {        
-        y = 100
       }
       return `translate(${x}px,${y}px) rotate(${tilePlacement.rotation}deg)`
     }
@@ -74,8 +70,11 @@ export default defineComponent({
 .map {
   position: relative;
   border: 1px solid #aaa;
-  width: 500px;
+  width: 502px;
   height: 300px;
   overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 10px;
+  background-color: #eee;
 }
 </style>

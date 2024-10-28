@@ -20,6 +20,11 @@
     "scoringTiles": {
       "title": "Wertungsplättchen",
       "randomize": "Neu wählen"
+    },
+    "randomMap": {
+      "title": "Zufälliger Kontinent",
+      "firstPlay": "Erste Partie",
+      "randomize": "New wählen"
     }
   },
   "setupBot": {

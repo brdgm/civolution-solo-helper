@@ -19,7 +19,7 @@ export default class MapRandomizer {
       this._tiles = []
       if (this._firstPlay) {
         this._tiles.push({ tile: MAP_TILES[0], x: 1, y: 1, rotation: Rotation.UP })
-        this._tiles.push({ tile: MAP_TILES[1], x: 2, y: 1, rotation: Rotation.UP })
+        this._tiles.push({ tile: MAP_TILES[1], x: 2, y: 0, rotation: Rotation.UP })
         this._tiles.push({ tile: MAP_TILES[2], x: 1, y: 2, rotation: Rotation.RIGHT })
       }
       let failed = false
