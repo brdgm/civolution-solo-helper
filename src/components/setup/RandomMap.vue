@@ -1,7 +1,10 @@
 <template>
   <h3 class="mt-4 mb-3">{{t('setup.randomMap.title')}}</h3>
 
-  <div>
+  <p v-if="!show">
+    <button class="btn btn-sm btn-outline-secondary" @click="show=true">{{t('setup.randomMap.show')}}</button>
+  </p>
+  <div v-if="show">
     <div class="map">
       <div v-for="item of tilePlacements" :key="item.tile.name"
           :style="{position:'absolute',left:`${item.x*100}px`,top:`${item.y*100}px`}">
@@ -48,6 +51,11 @@ export default defineComponent({
 
     return { t, state, tilePlacements, randomizeMapTiles }
   },
+  data() {
+    return {
+      show: false
+    }
+  },
   methods: {
     getTransform(tilePlacement: TilePlacement) {
       let x = 0
@@ -57,8 +65,6 @@ export default defineComponent({
       }
       else if (tilePlacement.rotation == Rotation.DOWN) {
         y = 100
-      }
-      else if (tilePlacement.rotation == Rotation.LEFT) {        
       }
       return `translate(${x}px,${y}px) rotate(${tilePlacement.rotation}deg)`
     }
@@ -70,8 +76,9 @@ export default defineComponent({
 .map {
   position: relative;
   border: 1px solid #aaa;
-  width: 502px;
-  height: 300px;
+  width: 501px;
+  max-width: 100%;
+  height: 301px;
   overflow-x: auto;
   overflow-y: hidden;
   border-radius: 10px;

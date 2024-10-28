@@ -22,7 +22,8 @@
       "randomize": "Neu wählen"
     },
     "randomMap": {
-      "title": "Zufälliger Kontinent",
+      "title": "Kontinent",
+      "show": "Zufälliger Kontinent (optional)",
       "firstPlay": "Erste Partie",
       "randomize": "New wählen"
     }
