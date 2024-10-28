@@ -109,19 +109,19 @@ const MAP_TILES : MapTile[] = [
   { name: 'h', length: 2 },  
 ]
 
-interface MapTile {
+export interface MapTile {
   name: string
   length: number
 }
 
-interface TilePlacement {
+export interface TilePlacement {
   tile: MapTile
   x: number
   y: number
   rotation: Rotation
 }
 
-enum Rotation {
+export enum Rotation {
   UP = 0,
   RIGHT = 90,
   DOWN = 180,
