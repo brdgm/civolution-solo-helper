@@ -1,5 +1,4 @@
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
-import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
 
 /**
  * Manages the bot actions.
