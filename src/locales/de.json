@@ -234,11 +234,11 @@
     }
   },
   "difficultyLevel": {
-    "1": "Einstieg",
-    "2": "Moderat",
-    "3": "Mittel",
-    "4": "Fortgeschritten",
-    "5": "Schwer"
+    "1": "Level 1 - Einstieg",
+    "2": "Level 2 - Moderat",
+    "3": "Level 3 - Mittel",
+    "4": "Level 4 - Fortgeschritten",
+    "5": "Level 5 - Schwer"
   },
   "player": {
     "player": "Spieler",
