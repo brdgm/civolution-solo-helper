@@ -12,6 +12,10 @@
 
   <p v-html="t('gameEnd.winCondition')"></p>
 
+  <p class="fst-italic">
+    {{t('setup.difficultyLevel.title')}}: {{t(`difficultyLevel.${state.setup.difficultyLevel}`)}}
+  </p>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
 </template>
 
