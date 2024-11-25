@@ -191,7 +191,7 @@ function getFinalScoringCategoryActions(scoringCategories: ScoringCategory[], co
 }
 
 function countAction(items: ActionItem[], action: Action) : number {
-  return items.filter(item => item.action == action).length
+  return items.filter(item => item.action == action).reduce((sum, item) => sum + (item.count ?? 0), 0)
 }
 
 function isRemoveAttributeChip(evolutionCount: number) : boolean {

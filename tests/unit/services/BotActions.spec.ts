@@ -54,6 +54,21 @@ describe('services/BotActions', () => {
     expect(botActions.items).to.eql([
       { action: Action.PLACE_PROSPERITY_MARKER, count: 2 }
     ])
+    // prosperity count from persistence
+    expect(botActions.prosperityCount).to.eq(1)
+  })
+
+  it('scoringActions-current-era-scoring-category-no-persistence', () => {
+    const route = mockRouteLocation({name:'TurnBot', params:{round:'1',turn:'2'}})
+    const navigationState = new NavigationState(route, getStateNoPersistence(DifficultyLevel.BEGINNER))
+
+    const botActions = new BotActions(Cards.get(12), navigationState)
+    expect(botActions.isReset).to.eq(false)
+    expect(botActions.items).to.eql([
+      { action: Action.PLACE_PROSPERITY_MARKER, count: 2 }
+    ])
+    // default prosperity + 2 from current action
+    expect(botActions.prosperityCount).to.eq(4)
   })
 
   it('scoringActions-current-era-scoring-category-advanced', () => {
@@ -131,4 +146,11 @@ function getState(difficultyLevel: DifficultyLevel) {
             evolutionCount:2, prosperityCount:1, blueDotCount:5, redDotCount:4})
       ]})
   ]})
+}
+
+function getStateNoPersistence(difficultyLevel: DifficultyLevel) {
+  return mockState({initialCardDeck:{pile:[1,2,3,4],discard:[]},
+    difficultyLevel,
+    eraScoringTiles: [ScoringCategory.PROSPERITY,ScoringCategory.POPULATION,ScoringCategory.CULTURE,ScoringCategory.KNOWLEDGE],
+    finalScoringTiles: [ScoringCategory.EVOLUTION,ScoringCategory.PRESTIGE,ScoringCategory.TECHNOLOGY]})
 }
