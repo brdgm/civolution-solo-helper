@@ -30,8 +30,8 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
-import { useStateStore } from '@/store/state';
-import MapRandomizer, { Rotation, TilePlacement } from '@/services/MapRandomizer';
+import { useStateStore } from '@/store/state'
+import MapRandomizer, { Rotation, TilePlacement } from '@/services/MapRandomizer'
 
 export default defineComponent({
   name: 'RandomMap',
