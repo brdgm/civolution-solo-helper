@@ -67,6 +67,7 @@ export default defineComponent({
       const allScoringTilesShuffled = shuffle(allScoringTiles)
       state.setup.finalScoringTiles = allScoringTilesShuffled.slice(0, 3)
       state.setup.eraScoringTiles = allScoringTilesShuffled.slice(3, 7)
+      scoringTilesSelection.value = []
     }
     if (state.setup.eraScoringTiles.length === 0 || state.setup.finalScoringTiles.length === 0) {
       randomizeScoringTiles()
