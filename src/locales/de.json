@@ -19,13 +19,17 @@
     },
     "scoringTiles": {
       "title": "Wertungsplättchen",
-      "randomize": "Neu wählen"
+      "randomize": "Zufällig",
+      "select": "Auswählen",
+      "available": "Verfügbar:",
+      "selected": "Ausgewählt:",
+      "none": "(keine)"
     },
     "randomMap": {
       "title": "Kontinent",
       "show": "Zufälliger Kontinent (optional)",
       "firstPlay": "Erste Partie",
-      "randomize": "New wählen"
+      "randomize": "Zufällig"
     }
   },
   "setupBot": {
@@ -269,7 +273,8 @@
     "backToHome": "Zurück zum Anfang",
     "back": "Zurück",
     "close": "Schließen",
-    "ok": "OK"
+    "ok": "OK",
+    "reset": "Zurücksetzen"
   },
   "footer": {
     "credits": "Credits"
