@@ -19,7 +19,11 @@
     },
     "scoringTiles": {
       "title": "Scoring Tiles",
-      "randomize": "Randomize"
+      "randomize": "Randomize",
+      "select": "Select",
+      "available": "Available:",
+      "selected": "Selected (3 x Final / 4 x Era):",
+      "none": "(none)"  
     },
     "randomMap": {
       "title": "Continent",
@@ -269,7 +273,8 @@
     "backToHome": "Back to Home",
     "back": "Back",
     "close": "Close",
-    "ok": "OK"
+    "ok": "OK",
+    "reset": "Reset"
   },
   "footer": {
     "credits": "Credits"

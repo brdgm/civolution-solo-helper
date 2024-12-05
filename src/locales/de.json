@@ -19,7 +19,11 @@
     },
     "scoringTiles": {
       "title": "Wertungsplättchen",
-      "randomize": "Neu wählen"
+      "randomize": "Neu wählen",
+      "select": "Auswählen",
+      "available": "Verfügbar:",
+      "selected": "Ausgewählt:",
+      "none": "(keine)"
     },
     "randomMap": {
       "title": "Kontinent",
@@ -269,7 +273,8 @@
     "backToHome": "Zurück zum Anfang",
     "back": "Zurück",
     "close": "Schließen",
-    "ok": "OK"
+    "ok": "OK",
+    "reset": "Zurücksetzen"
   },
   "footer": {
     "credits": "Credits"
