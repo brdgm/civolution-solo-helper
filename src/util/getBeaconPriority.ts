@@ -1,4 +1,4 @@
-import Beacon from "@/services/enum/Beacon"
+import Beacon from '@/services/enum/Beacon'
 
 /**
  * Gets prioritized beacons.
