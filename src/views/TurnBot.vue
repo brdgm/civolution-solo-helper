@@ -11,6 +11,7 @@
       <AppIcon name="phase-indicator" class="phase-indicator"/>
       <span v-html="t('turnBot.reset')"></span>
     </p>
+    <p v-html="t('turnBot.resetAdvance')"></p>
   </template>
   <template v-else>
     <BotActionsDisplay :navigationState="navigationState" :botActions="botActions"/>
