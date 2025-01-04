@@ -1,7 +1,7 @@
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 
 /**
- * Manages the bot actions.
+ * Randomize continent map.
  */
 export default class MapRandomizer {
 

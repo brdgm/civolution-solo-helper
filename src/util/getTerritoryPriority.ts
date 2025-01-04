@@ -1,4 +1,4 @@
-import Territory from "@/services/enum/Territory"
+import Territory from '@/services/enum/Territory'
 
 /**
  * Gets prioritized lists of territories.

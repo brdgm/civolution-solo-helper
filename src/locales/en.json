@@ -68,6 +68,7 @@
   "turnBot": {
     "title": "V.I.C.I",
     "reset": "V.I.C.I does a <b>Reset</b>.",
+    "resetAdvance": "Advance the <i>phase indicator</i> to the next <i>reset space</i>.",
     "removeAttributeChip": "Remove <b>attribute chip</b> {chip}.",
     "removeIncomeChip": "Remove <b>income chip</b> {chip}."
   },
