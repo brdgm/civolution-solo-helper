@@ -73,7 +73,7 @@ export default class NavigationState {
         redDotCount = 0
       }
       // draw next card, count dots
-      if (this.player == Player.BOT) {
+      if (this.player == Player.BOT && route.name == 'TurnBot') {
         const nextCard = this.cardDeck.draw()
         this.blueDotCount = blueDotCount + nextCard.blueDotCount
         this.redDotCount = redDotCount + nextCard.redDotCount
@@ -147,9 +147,6 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
   if (round > 1) {
     const lastRoundBotPersistence = getPreviousBotPersistence(state, round - 1, MAX_TURN)
     if (lastRoundBotPersistence) {
-      // reset dot counters for new round
-      lastRoundBotPersistence.blueDotCount = 0
-      lastRoundBotPersistence.redDotCount = 0
       return lastRoundBotPersistence
     }
   }

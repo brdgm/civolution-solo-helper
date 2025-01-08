@@ -99,10 +99,7 @@ describe('services/BotActions', () => {
     const navigationState = new NavigationState(route, getState(DifficultyLevel.BEGINNER))
 
     const botActions = new BotActions(Cards.get(13), navigationState)
-    expect(botActions.isReset).to.eq(false)
-    expect(botActions.items).to.eql([
-      { action: Action.GAIN_VP, count: 4 }
-    ])
+    expect(botActions.isReset).to.eq(true)
   })
 
   it('scoringActions-last-era-scoring-category', () => {
