@@ -73,7 +73,7 @@ export default class NavigationState {
         redDotCount = 0
       }
       // draw next card, count dots
-      if (this.player == Player.BOT) {
+      if (this.player == Player.BOT && route.name == 'TurnBot') {
         const nextCard = this.cardDeck.draw()
         this.blueDotCount = blueDotCount + nextCard.blueDotCount
         this.redDotCount = redDotCount + nextCard.redDotCount
