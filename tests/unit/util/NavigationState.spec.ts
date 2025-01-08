@@ -103,8 +103,8 @@ describe('util/NavigationState', () => {
     expect(navigationState.cardDeck.toPersistence()).to.eql({pile:[4],discard:[3,2,1]})
     expect(navigationState.evolutionCount).to.eq(2)
     expect(navigationState.prosperityCount).to.eq(1)
-    expect(navigationState.blueDotCount).to.eq(2)  // card3.blueDotCount = 2
-    expect(navigationState.redDotCount).to.eq(1)   // card3.redDotCount = 1
+    expect(navigationState.blueDotCount).to.eq(5)  // taken over from last round
+    expect(navigationState.redDotCount).to.eq(2)   // taken over from last round
     expect(navigationState.actionRoll).to.greaterThanOrEqual(1)
   })
 
