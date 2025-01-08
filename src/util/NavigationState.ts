@@ -147,9 +147,6 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
   if (round > 1) {
     const lastRoundBotPersistence = getPreviousBotPersistence(state, round - 1, MAX_TURN)
     if (lastRoundBotPersistence) {
-      // reset dot counters for new round
-      lastRoundBotPersistence.blueDotCount = 0
-      lastRoundBotPersistence.redDotCount = 0
       return lastRoundBotPersistence
     }
   }
