@@ -128,7 +128,8 @@
     "confirm": "Soll die Aktionsphase beendet werden?"
   },
   "sideBar": {
-    "round": "Epoche {round}"
+    "round": "Epoche {round}",
+    "cards": "Karten:"
   },
   "rules": {
     "action": {
