@@ -18,6 +18,9 @@
         <template v-for="index in navigationState.redDotCount" :key="index">■</template>
       </div>
     </div>
+    <div class="cards">
+      {{t('sideBar.cards')}} {{ playedCards }} / {{ totalCards}}
+    </div>
   </div>
 </template>
 
@@ -48,6 +51,14 @@ export default defineComponent({
       type: BotActions,
       required: false
     }
+  },
+  computed: {
+    playedCards() : number {
+      return this.navigationState.cardDeck.discard.length
+    },
+    totalCards() : number {
+      return this.navigationState.cardDeck.pile.length + this.navigationState.cardDeck.discard.length
+    }
   }
 })
 </script>
@@ -64,7 +75,7 @@ export default defineComponent({
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   @media (max-width: 600px) {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 120px;
   }
 }
@@ -87,6 +98,13 @@ export default defineComponent({
   }
   &.red {
     color: #c00;
+  }
+}
+.cards {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  @media (max-width: 600px) {
+    font-size: 0.7rem;
   }
 }
 </style>

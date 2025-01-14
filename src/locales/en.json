@@ -128,7 +128,8 @@
     "confirm": "Do you want to end the action phase?"
   },
   "sideBar": {
-    "round": "Era {round}"
+    "round": "Era {round}",
+    "cards": "Cards:"
   },
   "rules": {
     "action": {
