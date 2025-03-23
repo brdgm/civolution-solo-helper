@@ -19,7 +19,8 @@
       </div>
     </div>
     <div class="cards">
-      {{t('sideBar.cards')}} {{ playedCards }} / {{ totalCards}}
+      {{t('sideBar.cards')}} {{ playedCards }} / {{ totalCards}}<br/>
+      <span v-if="resetCount > 0">{{t('sideBar.resetCount', {count:resetCount}, resetCount)}}</span>
     </div>
   </div>
 </template>
@@ -58,6 +59,9 @@ export default defineComponent({
     },
     totalCards() : number {
       return this.navigationState.cardDeck.pile.length + this.navigationState.cardDeck.discard.length
+    },
+    resetCount() : number {
+      return this.navigationState.resetCount
     }
   }
 })

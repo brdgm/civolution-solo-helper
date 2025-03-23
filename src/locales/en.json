@@ -129,7 +129,8 @@
   },
   "sideBar": {
     "round": "Era {round}",
-    "cards": "Cards:"
+    "cards": "Cards:",
+    "resetCount": "{count} Reset | {count} Resets"
   },
   "rules": {
     "action": {
