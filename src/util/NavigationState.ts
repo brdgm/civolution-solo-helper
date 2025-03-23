@@ -8,6 +8,7 @@ import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import Player from '@/services/enum/Player'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import ScoringCategory from '@/services/enum/ScoringCategory'
+import BotActions from '@/services/BotActions'
 
 export default class NavigationState {
 
@@ -28,6 +29,8 @@ export default class NavigationState {
   readonly blueDotCount : number
   readonly redDotCount : number
   readonly currentTurnBotPersistence : boolean
+  readonly botActions : BotActions
+  readonly resetCount : number
 
   constructor(route: RouteLocation, state: State) {    
     switch (route.name) {
@@ -95,6 +98,8 @@ export default class NavigationState {
       this.currentTurnBotPersistence = false
     }
     this.currentCard = this.cardDeck.currentCard ?? Cards.get(1)
+    this.botActions = new BotActions(this.currentCard, this)
+    this.resetCount = getResetCount(state, this.round, this.turn, this.botActions)
   }
 
 }
@@ -164,4 +169,20 @@ function getPreviousBotPersistence(state: State, round: number, turn: number) : 
     redDotCount: 0,
     actionRoll: 0
   }
+}
+
+function getResetCount(state: State, round: number, turn: number, botActions: BotActions) : number {
+  let resetCount = 0
+  const roundData = state.rounds.find(item => item.round == round)
+  if (roundData) {
+    resetCount = roundData.turns
+        .filter(item => item.turn < turn)
+        .toSorted((a,b) => b.turn - a.turn)
+        .filter(item => item.botPersistence?.reset)
+        .length
+}
+  if (botActions.isReset) {
+    resetCount++
+  }  
+  return resetCount
 }

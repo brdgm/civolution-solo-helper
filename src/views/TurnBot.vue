@@ -48,7 +48,6 @@ import SideBar from '@/components/turn/SideBar.vue'
 import NavigationState from '@/util/NavigationState'
 import EndRoundButton from '@/components/turn/EndRoundButton.vue'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
-import BotActions from '@/services/BotActions'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import BotActionsDisplay from '@/components/turn/BotActionsDisplay.vue'
 import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
@@ -69,8 +68,7 @@ export default defineComponent({
     const state = useStateStore()
 
     const navigationState = new NavigationState(route, state)
-    const { round, turn } = navigationState
-    const botActions = new BotActions(navigationState.currentCard, navigationState)
+    const { round, turn, botActions } = navigationState
 
     return { t, state, navigationState, round, turn, botActions }
   },

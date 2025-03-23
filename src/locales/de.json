@@ -129,7 +129,8 @@
   },
   "sideBar": {
     "round": "Epoche {round}",
-    "cards": "Karten:"
+    "cards": "Karten:",
+    "resetCount": "{count} Reset | {count} Resets"
   },
   "rules": {
     "action": {
