@@ -1,0 +1,289 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Solo Helper",
+    "play1": "Jouez à <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> contre CIV-A, l'entité artificielle.",
+    "play2": "L'application remplace les 22 cartes du mode solo, prend en compte les niveaux de difficulté et vous guide durant la partie en intégrant les règles du mode solo.",
+    "vici": {
+      "hello": "HELLO,<br/>JE ME NOMME<br/>CIV-A !",
+      "about": "Si vous souhaitez jouer seul à Civolution, laissez-nous vous présenter CIV-A, une entité artificielle dont le but est de simuler une civilisation rivale."
+    },
+    "feedback": "Discussion et Retour:"
+  },
+  "setup": {
+    "title": "Mise en place",
+    "difficultyLevel": {
+      "title": "Niveau de difficulté",
+      "easy": "Débutant",
+      "hard": "Expert"
+    },
+    "scoringTiles": {
+      "title": "Tuiles Score",
+      "randomize": "Randomiser",
+      "select": "Selectionner",
+      "available": "Disponibles:",
+      "selected": "Sélectionnées (3 x Finales / 4 x Ères):",
+      "none": "(aucune)"  
+    },
+    "randomMap": {
+      "title": "Continent",
+      "show": "Continent Aléatoire (optionel)",
+      "firstPlay": "Première Partie",
+      "randomize": "Randomiser"
+    }
+  },
+  "setupBot": {
+    "title": "Mise en place CIV-A",
+    "provisionMarker": "Marqueur provision",
+    "placeDisks": "Choisissez une couleur pour CIV-A, prenez les 7 <b>disques</b> de cette couleur et placez un de chaque sur vos disques sur le plateau de jeu.",
+    "takeTribesMarkers": "Formez une réserve avec 15 <b>tribus</b> (les 5 restantes ne sont pas utilisées) et 50 <b>marqueurs</b> de la couleur de CIV-A dans sa zone de jeu.",
+    "placeStartingTribes": "Placez ensuite 1 tribu robuste de CIV-A sur le campement sans feu restant dans le <i>territoire Forêt de départ</i> et 1 autre dans le campement sans feu restant dans le <i>territoire Prairie de départ</i>.",
+    "placeProvisionMarker": "Placez également un marqueur <b>dans le sens de la longueur</b> sur chacun des deux territoires de départ, à côté des cases Construction de Ferme. Ces marqueurs ne représentent pas de ressources mais sont appelés <i>marqueurs Provision</i>.",
+    "takeDice": "Placez 6 <b>dés d'activation</b> et <b>1 dé du destin</b> dans la zone de jeu de CIV-A.",
+    "diceNotice": "Vous ne les lancez pas, ils représentent le nombre de dés que possède CIV-A.",
+    "noOtherComponents": "Les autres éléments du jeu ne sont pas utilisés par CIV-A."
+  },
+  "roundStart": {
+    "title": "Début de l'Ère",
+    "newCards": {
+      "title": "1) Nouvelles cartes",
+      "noAction": "CIV-A ne fait rien."
+    },
+    "newGoals": {
+      "title": "2) Nouveaux succès",
+      "playerTakeGoal": "Choisissez une puce succès (optionel).",
+      "botDetermine": "Détermination du choix de la puce succès pour CIV-A.",
+      "botTakeGoal": "Retirez la puce succès <b>{goalChip}</b> (si disponible).",
+      "botNoGoal": "Aucune puce succès n'est retirée."
+    },
+    "extraFind": {
+      "title": "3) Trouvaille supplémentaire",
+      "noAction": "CIV-A ne fait rien."
+    }
+  },
+  "turnPlayer": {
+    "title": "Joueur",
+    "takeTurn": "Jouez votre tour."
+  },
+  "turnBot": {
+    "title": "CIV-A",
+    "reset": "CIV-A fait une <b>Réinitialisation</b>.",
+    "resetAdvance": "Avancez <i>l'indicateur de phase</i> sur la prochaine <i>case Réinitialisation</i>.",
+    "removeAttributeChip": "Retirez <b>la puce Attribut</b> {chip}.",
+    "removeIncomeChip": "Retirez <b>la puce Revenu</b> {chip}."
+  },
+  "roundEnd": {
+    "title": "Fin de l'Ère",
+    "sitePhase": {
+      "title": "5) Phase Site",
+      "botNotAffected": "CIV-A n'est jamais affectée par les sites."
+    },
+    "feedingPhase": {
+      "title": "6) Phase Alimentation",
+      "feedTribes": {
+        "title": "A) Nourrir les tribus de CIV-A:",
+        "oneProvisioningMarker": "Pour chaque territoire où il y a exactement 1 marqueur Provision, 1 des tribus de CIV-A sur un <b>campement</b> est nourrie. Priorités:",
+        "twoProvisioningMarkers": "Pour chaque territoire où il y a au moins 2 marqueurs Provision, toutes les tribus de CIV-A sur des campements + 1 tribu supplémentaire dans les terres sauvages (robuste avant vulnérable) sont nourries.",
+        "weakenTribes": "Toutes les autres tribus de CIV-A sont affaiblies."
+      },
+      "scoreStrongTribes": "B) Marquer les points des tribus robustes de CIV-A."
+    },
+    "eventPhase": {
+      "title": "7) Phase Événement",
+      "adjustWeather": "A) CIV-A n'est jamais affectée par la météo.",
+      "resolveEvent": {
+        "title": "B) CIV-A ne gagne pas les bonus des événements.",
+        "compareBot": "Cependant, elle affecte si oui ou non vous en gagnez concernant les événements qui nécessitent une majorité ou d'être en tête en termes de points.",
+        "eventsDetails": "Événements F4, F6, F16, F17, F19 or F20",
+        "majorityModal": {
+          "title": "Événement de CIV-A",
+          "event": "Événement",
+          "achievement": "Succès"
+        }
+      },
+      "scoreCategory": "C) Marquer les catégories en cours pour CIV-A.",
+      "startingCivilization": {
+        "title": "D) Désigner la première civilisation:",
+        "nextStartPlayer": "Prochain premier joueur:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Phase Revenu",
+      "scoreStatues": "B) Marquer les points des statues de CIV-A."
+    },
+    "noNextStartPlayer": "Merci de déterminer le prochain premier joueur."
+  },
+  "gameEnd": {
+    "title": "Fin de partie",
+    "finalScoring": {
+      "title": "Décompte final",
+      "categories": "Décomptez les 9 catégories de score (vous et CIV-A)",
+      "consoleStages": "Décomptez les points des séparateurs de console (vous uniquement)",
+      "consoleResearchCards": "Décomptez les points des cartes recherches (vous uniquement)"
+    },
+    "winCondition": "Si vous réussisez à avoir plus de points de victoire que CIV-A, félicitations ! Votre <i>Civolution</i> est couronnée de succès !"
+  },
+  "endRoundButton": {
+    "title": "Fin de le phase Action",
+    "confirm": "Voulez-vous terminer la phase action ?"
+  },
+  "sideBar": {
+    "round": "Ère {round}",
+    "cards": "Cartes:",
+    "resetCount": "{count} Réinitialisation | {count} Réinitialisations"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Piste Agera",
+        "instruction": "Avancez le disque de CIV-A de 1 cran sur la piste Faveur d'Agera (si possible)."
+      },
+      "advanceScoringCategory": {
+        "title": "Piste Progrès",
+        "instruction": "Avancez le disque de CIV-A d'autant de crans que le chiffre indiqué sur la piste progrès.",
+        "threshold": "Dès que l'un des disques de CIV-A dépasse un palier bonus octroyant des points de victoire, CIV-A reçoit ces points. CIV-A ignore les autres bonus de piste.",
+        "exceedTrack": "Si le disque de CIV-A se trouve déjà sur la case 12 de la piste, cette action lui donne les 2 points de victoire comme dans me mode classique."
+      },
+      "gainActivationDie": {
+        "title": "Dé d'Activation",
+        "instruction": "CIV-A reçoit un dé d'activation (selon les règles habituelles)."
+      },
+      "gainFateDie": {
+        "title": "Dé du Destin",
+        "instruction": "CIV-A reçoit un dé du destin (selon les règles habituelles)."
+      },
+      "gainVp": {
+        "title": "Points de Victoire",
+        "instruction": "CIV-A gagne le nombre de points de victoire inscrit."
+      },
+      "performMigration": {
+        "title": "Réalisez une Migration",
+        "initialTerritory": {
+          "title": "Territoire de Départ",
+          "minimumRequirement": "Identifiez un territoire où CIV-A possède au moins 2 tribus, dont au moins l'une d'elles est robuste.",
+          "twoTribesAvailability": "<b>Attention:</b> S'il n'y a pas un tel territoire, faîtes d'abord une procréation.",
+          "performProcreation": "Réalisez une Procréation",
+          "tribePriorityList": {
+            "title": "Identifiez la tribu robuste:",
+            "wilderness": "depuis les terres sauvages",
+            "fireEncampment": "depuis un campement avec un feu",
+            "anyEncampment": "depuis n'importe quel campement"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Territoire d'Arrivée'",
+          "minimumRequirement": "Identifiez un territoire terrestre, adjacent au territoire de départ.",
+          "priorityRequirement": "<b>Priority</b>: Territoire terrestre avec le moins de tribus de CIV-A (aucun = le moins).",
+          "moveTribe": "Déplacez cette tribu robuste sur ce territoire et installez-la sur un campement:",
+          "undevelopedTerritory": "Si la tribu entre dans un territoire non développé, retournez face visible la tuile Ressource sans placer de marqueur."
+        }
+      },
+      "performProcreation": {
+        "title": "Procréation",
+        "minimumRequirement": "Identifiez un territoire où CIV-A a au moins une tribu.",
+        "priorityRequirement": "<b>Priorité</b>: Territoire avec au moins un campement libre.",
+        "territoryDetermined": "Une fois le territoire identifié, ajoutez-y une tribu de la réserve de CIV-A et placez la sur un campement:",
+        "migrationCheck": "<b>Attention</b>: Si, après coup, <b>tous</b> les campements sur <b>tous</b> les territoires dans lesquels CIV-A possède des tribus sont <b>uniquement</b> occupés par ses propres tribus (et que donc, aucun des campents sont libres ou occupés par vos tribus faites immédiatement une migration.",
+        "performMigration": "Réalisez une Migration"
+      },
+      "performProvision": {
+        "title": "Provision",
+        "minimumRequirement": "Identifiez un territoire, où CIV-A a au moins une tribu.",
+        "priorityRequirement": "<b>Priorité</b>: Territoires avec le moins de marqueurs Provision (aucun = le moins) et le plus de tribus de CIV-A.",
+        "placeMarker": "Placez un marqueur Provision dans ce territoire.",
+        "blockFarmSpace": "Dès qu'un territoire a 2 marqueurs Provision, ils bloquent la case construction de la ferme (si encore non occupée)."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evolution",
+        "instruction": "CIV-A gagne un marqueur Evolution (ils sont automatiquement comptabilisés dans l'application)."
+      },
+      "placeHuntingToken": {
+        "title": "Jeton Chasse",
+        "minimumRequirement": "Identifiez un territoire, où CIV-A a au moins une tribu, où il n'y a pas encore de jeton Chasse.",
+        "priorityRequirement": "<b>Priorité</b>: Territoires, où <b>vous</b> avez également une tribu.",
+        "placeToken": "Placez un jeton Chasse dans ce territoire."
+      },
+      "placeProsperityMarker": {
+        "title": "Prosperité",
+        "instruction": "CIV-A gagne un marqueur Prospérité (ils sont automatiquement comptabilisés dans l'application)."
+      },
+      "placeStatue": {
+        "title": "Statue",
+        "instruction": "Placez un marqueur de la réserve de CIV-A pour créer une statue sur le terrain de construction du grand territoire Mer.",
+        "unlimited": "Le nombre de statues n'est pas limité pour CIV-A."
+      },
+      "removeCard": {
+        "title": "Retirez une Carte Recherche",
+        "instruction": "Retirez la première carte de la <i>pile Recherche face visible</i> du type indiqué.",
+        "refill": "Si la pile face visible se vide après coup, formez-en une nouvelle."
+      },
+      "revealSites": {
+        "title": "Révélez des Sites",
+        "minimumRequirement": "Identifiez un territoire, où CIV-A a au moins une tribu.",
+        "priorityRequirement": "<b>Priorité</b>: Territoire adjacent au <b>plus</b> de sites face cachée.",
+        "reveal": "Révélez tous les sites face cachée adjacents à ce territoire.",
+        "gainVP": "CIV-A gagne les points de victoire indiqués sur la face de chaque site que vous révélez lors de cette action. CIV-A n'est jamais affectée par les sites face visible."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Campement libre avec un feu",
+        "freeAny": "N'importe quel campement libre",
+        "playerFire": "Campement avec un feu et 1 de <b>vos</b> tribus",
+        "playerWeakAny": "N'importe quel campement avec une de <b>vos</b> tribus vulnérables",
+        "playerStrongAny": "N'importe quel campement avec une de <b>vos</b> tribus robustes",
+        "botStrongFire": "Campement avec un feu et 1 des tribus robustes de CIV-A",
+        "botStrongAny": "N'importe quel campement avec 1 des tribus robustes de CIV-A",
+        "botWeakFire": "Campement avec un feu et 1 des tribus vulnérables de CIV-A",
+        "botWeakAny": "N'importe quel campement avec 1 des tribus vulnérables de CIV-A",
+        "notWeakened": "<b>Attention:</b> Les tribus de CIV-A <b>ne deviennent pas</b> vulnérables lorsqu'elle sont déplacées des campements !"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Level 1 - Débutant",
+    "2": "Level 2 - Amateur",
+    "3": "Level 3 - Intermédiaire",
+    "4": "Level 4 - Avancé",
+    "5": "Level 5 - Expert"
+  },
+  "player": {
+    "player": "Joueur",
+    "bot": "CIV-A"
+  },
+  "territory": {
+    "forest": "Forêt",
+    "grassland": "Prairie",
+    "hills": "Colline",
+    "swamp": "Marais",
+    "mountains": "Montagne",
+    "desert": "Désert",
+    "water": "Eau"
+  },
+  "notfound": {
+    "title": "Non Trouvé"
+  },
+  "action": {
+    "playGame": "Jouer une Partie",
+    "startGame": "Commencer une Partie",
+    "next": "Prochain",
+    "nextRound": "Prochain Round",
+    "abortGame": "Abandonner la Partie",
+    "abortGameConfirm": "Abandonner la Partie en cours - êtes vous sûr ?",
+    "endGame": "Fin de la Partie",
+    "endGameConfirm": "Terminer la Partie et retourner à l'écran d'accueil - êtes vous sûr ?",
+    "cancel": "Annulez",
+    "backToHome": "Retourner à l'écran d'accueil",
+    "back": "Retour",
+    "close": "Fermer",
+    "ok": "OK",
+    "reset": "Réinitialiser"
+  },
+  "footer": {
+    "credits": "Crédits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Raffraîchir l'Application",
+    "notice": "L'Application a été mise à jour - voulez-vous utilisez la dernière version ?"
+  }
+}

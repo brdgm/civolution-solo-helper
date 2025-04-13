@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/civolution-solo-helper",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "private": true,
   "description": "Civolution Solo Helper",
   "appDeployName": "civolution",
@@ -13,7 +13,7 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "lint": "eslint . --fix",
-    "lint:watch": "nodemon --exec \"npm run lint\" --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+    "lint:watch": "nodemon --exec \"npm run lint\" --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.json",
     "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
@@ -39,7 +39,7 @@
     "@types/mocha": "^10.0.10",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
-    "@vite-pwa/assets-generator": "^0.2.6",
+    "@vite-pwa/assets-generator": "^1.0.0",
     "@vitejs/plugin-legacy": "^6.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitest/coverage-istanbul": "^3.0.4",
@@ -48,6 +48,7 @@
     "babel-plugin-istanbul": "^7.0.0",
     "chai": "^5.1.2",
     "eslint": "^9.19.0",
+    "eslint-plugin-i18n-json": "github:brdgm/eslint-plugin-i18n-json#4.1.0",
     "eslint-plugin-playwright": "^2.2.0",
     "eslint-plugin-vue": "^10.0.0",
     "jsdom": "^26.0.0",
@@ -57,7 +58,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
     "vite": "^6.0.11",
-    "vite-plugin-pwa": "^0.21.1",
+    "vite-plugin-pwa": "^1.0.0",
     "vitest": "^3.0.4"
   }
 }
