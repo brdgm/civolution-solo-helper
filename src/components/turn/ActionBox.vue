@@ -14,6 +14,7 @@
 import { defineComponent } from 'vue'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import showModal from '@brdgm/brdgm-commons/src/util/modal/showModal'
+import { nanoid } from 'nanoid'
 
 export default defineComponent({
   name: 'ActionBox',
@@ -21,7 +22,7 @@ export default defineComponent({
     ModalDialog
   },
   setup() {
-    const modalId = `modal-${crypto.randomUUID()}`
+    const modalId = `modal-${nanoid()}`
     return { modalId }
   },
   props: {
