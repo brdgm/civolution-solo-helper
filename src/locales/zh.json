@@ -130,7 +130,7 @@
   "sideBar": {
     "round": "时代 {round}",
     "cards": "卡牌:",
-    "resetCount": "已重置 {count} 次"
+    "resetCount": "已重置 {count} 次 ｜ 已重置 {count} 次"
   },
   "rules": {
     "action": {
