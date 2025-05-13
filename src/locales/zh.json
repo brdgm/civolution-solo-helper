@@ -1,0 +1,289 @@
+{
+  "gameTitle": "文明演化",
+  "home": {
+    "title": "文明演化单人游玩助手",
+    "play1": "游玩<a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>文明演化</b></a>，与维希进行对战。",
+    "play2": "本应用替代了单人模式牌组，能够设定游戏的难度等级，并引导你完成游戏流程及单人规则设置。",
+    "vici": {
+      "hello": "你好，<br/>我是维希！",
+      "about": "如果你想要独自游玩《文明演化》，那么让我来向你介绍维希（V.I.C.I），一个模拟竞争文明，拥有自我意识的实体（I-CIV）。"
+    },
+    "feedback": "讨论与反馈："
+  },
+  "setup": {
+    "title": "游戏设置",
+    "difficultyLevel": {
+      "title": "难度等级",
+      "easy": "简单",
+      "hard": "困难"
+    },
+    "scoringTiles": {
+      "title": "计分板块",
+      "randomize": "重新生成",
+      "select": "自选",
+      "available": "可选板块:",
+      "selected": "已选板块 (3 x 终局计分 / 4 x 时代计分):",
+      "none": "(无)"  
+    },
+    "randomMap": {
+      "title": "大陆板块",
+      "show": "随机生成大陆板块 (可选)",
+      "firstPlay": "首次游玩",
+      "randomize": "重新生成"
+    }
+  },
+  "setupBot": {
+    "title": "单人模式设置",
+    "provisionMarker": "补给标记",
+    "placeDisks": "为维希选择一种颜色, 拿取该颜色的 7 个 <b>圆片</b>，并在游戏版图上每个你的圆片顶部放置 1 个。",
+    "takeTribesMarkers": "将维希颜色的 15 个 <b>部落</b> (剩余 5 个不使用) 和 50 个 <b>标记</b> 构成供应堆。",
+    "placeStartingTribes": "将维希的 2 个部落，在 <b>初始森林区域</b> 和 <b>初始草原区域</b> 的非篝火营地上各站立放置 1 个。",
+    "placeProvisionMarker": "在这两个初始区域的农场建造格旁，各 <b>躺倒</b> 放置 1 个标记。这些标记不是原材料，被称为 <b>补给标记</b>。",
+    "takeDice": "在维希的游戏区放置 6 个 <b>激活骰</b> 和 1 个 <b>命运骰</b>。",
+    "diceNotice": "不需要掷骰这些骰子，它们只用于计算维希的骰子数量。",
+    "noOtherComponents": "维希不会使用上述以外的其他游戏配件。"
+  },
+  "roundStart": {
+    "title": "时代开始",
+    "newCards": {
+      "title": "阶段 1：新的卡牌",
+      "noAction": "如常进行，但维希不会拿取任何卡牌。"
+    },
+    "newGoals": {
+      "title": "阶段 2：新的目标",
+      "playerTakeGoal": "你拿取一个目标芯片 (可选)。",
+      "botDetermine": "点击确定维希的目标芯片",
+      "botTakeGoal": "为维希移除目标芯片 <b>{goalChip}</b> (如果可用)。",
+      "botNoGoal": "无需移除目标芯片。"
+    },
+    "extraFind": {
+      "title": "阶段 3：额外收获",
+      "noAction": "如常进行，但维希不会执行额外收获行动。"
+    }
+  },
+  "turnPlayer": {
+    "title": "你的回合",
+    "takeTurn": "进行你的回合。"
+  },
+  "turnBot": {
+    "title": "维希的回合",
+    "reset": "维希执行 <b>重置行动</b>。",
+    "resetAdvance": "将 <i>阶段标记</i> 移动到下一个 <i>重置格</i>。",
+    "removeAttributeChip": "移除 <b>属性芯片</b> {chip}。",
+    "removeIncomeChip": "移除 <b>收入芯片</b> {chip}。"
+  },
+  "roundEnd": {
+    "title": "时代结束",
+    "sitePhase": {
+      "title": "阶段 5：地点阶段",
+      "botNotAffected": "地点如常影响你自己的文明。维希的文明 <b>不受</b> 任何正面朝上地点的影响。该规则适用于所有地点，不只是与本阶段相关的地点（包括洞穴和圣岩）。"
+    },
+    "feedingPhase": {
+      "title": "阶段 6：喂养阶段",
+      "feedTribes": {
+        "title": "A) 如常执行喂养阶段。为维希执行以下步骤操作:",
+        "oneProvisioningMarker": "每个只有 1 个补给标记的区域中，位于 <b>营地</b> 的 1 个维希部落视为得到喂养。如果维希在该区域有多个部落位于营地，按照以下 <b>优先级</b> 来确定哪个部落会得到喂养：",
+        "twoProvisioningMarkers": "每个有 2 个及以上补给标记的区域中，所有位于营地的维希部落，以及 1 个位于荒野的维希部落，都视为得到喂养。如果维希有多个部落位于荒野，则选择其中 1 个健康的部落获得喂养。如果没有健康的部落，则选择其中 1 个虚弱的部落。",
+        "weakenTribes": "所有未得到喂养的部落必须遭受弱化（将健康的部落躺倒，虚弱的部落移除）。"
+      },
+      "scoreStrongTribes": "B) 维希如常通过自己的健康部落获得分数。"
+    },
+    "eventPhase": {
+      "title": "阶段 7：事件阶段",
+      "adjustWeather": "A) 如常执行本阶段。",
+      "resolveEvent": {
+        "title": "B) 维希 <b>不会</b> 受到天气影响，也 <b>不会</b> 通过事件获得奖励。",
+        "compareBot": "但在判断你是否会获得需要领先或最多才能获得的奖励时，必须将维希纳入计算（例如，结算事件 F11 “开悟“时，你必须将维希的投资数量与你进行比较）。在结算 F4、F6、F16、F17、F19、F20 时，你必须与事件对应的数值进行比较，判断自己是否满足奖励条件。",
+        "eventsDetails": "点击查看事件 F4、F6、F16、F17、F19 和 F20 的数值",
+        "majorityModal": {
+          "title": "事件多数检定表",
+          "event": "事件",
+          "achievement": "数值"
+        }
+      },
+      "scoreCategory": "C) 如常按照计分类型为维希计算分数。",
+      "startingCivilization": {
+        "title": "D) 确定新的起始文明:",
+        "nextStartPlayer": "下一个起始文明:"
+      }
+    },
+    "incomePhase": {
+      "title": "阶段 8：收入阶段",
+      "scoreStatues": "B) 对维希来说，只有雕像计分与其相关，按照通常规则为维希计算雕像分数。"
+    },
+    "noNextStartPlayer": "请确定下一个起始文明。"
+  },
+  "gameEnd": {
+    "title": "游戏结束",
+    "finalScoring": {
+      "title": "终局计分",
+      "categories": "计算 9 种终局计分类型（你和维希）",
+      "consoleStages": "计算控制台的层级分数（只有你）",
+      "consoleResearchCards": "计算控制台中包含分数奖励研究牌的分数（只有你）"
+    },
+    "winCondition": "如果你的最终分数高于维希，祝贺你进行了一场成功的 <i>文明演化</i>！"
+  },
+  "endRoundButton": {
+    "title": "结束行动阶段",
+    "confirm": "你确定要结束行动阶段吗？"
+  },
+  "sideBar": {
+    "round": "时代 {round}",
+    "cards": "卡牌:",
+    "resetCount": "已重置 {count} 次 ｜ 已重置 {count} 次"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "阿格拉恩惠",
+        "instruction": "在阿格拉恩惠轨上将维希的圆片推进 1 格（如果可能的话）。"
+      },
+      "advanceScoringCategory": {
+        "title": "推进进程轨",
+        "instruction": "在进程轨上将维希的圆片推进所示数量格。",
+        "threshold": "每当维希的圆片越过分数奖励的奖励门槛，维希会获得该分数。对于其他轨道奖励，直接忽略。",
+        "exceedTrack": "如果维希的圆片已经位于该轨道的第 12 格，在改轨道推进的每一步，都改为给予维希 2 分。"
+      },
+      "gainActivationDie": {
+        "title": "激活骰",
+        "instruction": "维希获得 1 个激活骰。(按照规则手册第 28 页的通常规则)。不用投掷该骰子，直接将其与维希的其他骰子放置在一起。"
+      },
+      "gainFateDie": {
+        "title": "命运骰",
+        "instruction": "维希获得 1 个命运骰。(按照规则手册第 28 页的通常规则)。将其与维希的其他骰子放置在一起。"
+      },
+      "gainVp": {
+        "title": "分数",
+        "instruction": "维希获得所示分数。"
+      },
+      "performMigration": {
+        "title": "迁徙",
+        "initialTerritory": {
+          "title": "确定出发区域（区域 X）",
+          "minimumRequirement": "选择一个至少有 2 个维希部落的区域，其中至少要有 1 个健康部落。",
+          "twoTribesAvailability": "<b>注意:</b> 如果没有符合条件的区域，则首先为维希执行 <b>1 次繁育</b>。",
+          "performProcreation": "点击添加繁育步骤",
+          "tribePriorityList": {
+            "title": "在所选区域 X 中选择一个健康部落，选择部落的优先级如下：",
+            "wilderness": "来自荒野",
+            "fireEncampment": "来自篝火营地",
+            "anyEncampment": "来自任意营地"
+          }
+        },
+        "destinationTerritory": {
+          "title": "确定目标区域（区域 Y）",
+          "minimumRequirement": "在与区域 X 相邻的陆地区域中选择 1 个作为目标区域。",
+          "priorityRequirement": "<b>注意</b>: 在这些区域中，只有维希部落最少的区域满足条件（没有 = 最少）。你在这些区域中是否有部落不重要。",
+          "moveTribe": "将选中的健康部落移动到目标区域 Y，并令其定居到该地区的 1 个营地。选择营地的优先级如下：",
+          "undevelopedTerritory": "如果维希的部落进入一个未开发的区域，将该区域的材料板块翻至正面朝上，但无需放置原材料标记。"
+        }
+      },
+      "performProcreation": {
+        "title": "繁育",
+        "minimumRequirement": "选择至少有 1 个维希部落的区域。",
+        "priorityRequirement": "<b>注意</b>: 该区域需要有至少 1 个空置营地。",
+        "territoryDetermined": "当你确定了一个区域，从维希的供应堆将 1 个部落放置到该区域的一个营地上定居。选择营地的优先级如下：",
+        "migrationCheck": "<b>重要</b>: 每次为维希执行繁育后，检查 <b>所有</b> 有维希部落的区域，如果该区域的所有营地都被维希的部落占据（即该区域没有任何营地被你占据或空置），立即为维希执行 <b>1 次额外的迁徙行动</b>。",
+        "performMigration": "点击添加迁徙步骤"
+      },
+      "performProvision": {
+        "title": "补给",
+        "minimumRequirement": "选择至少有 1 个维希部落的区域。",
+        "priorityRequirement": "<b>优先选择</b>：补给标记最少（没有 = 最少），并且维希部落 <b>最多</b> 的区域。",
+        "placeMarker": "从维希的供应区拿取 1 个标记，躺倒放置到该区域农场建造格旁。",
+        "blockFarmSpace": "如果这是该区域的第 2 个补给标记，则将这两个标记一起放置在该农场建造格上（如果该格尚未建造农场），阻挡该格建造农场。"
+      },
+      "placeEvolutionMarker": {
+        "title": "演化",
+        "instruction": "维希获得一个演化标记（这些标记由应用自动计算）。"
+      },
+      "placeHuntingToken": {
+        "title": "狩猎指示物",
+        "minimumRequirement": "选择一个至少有 1 个维希部落，且没有狩猎指示物的区域。",
+        "priorityRequirement": "<b>优先选择</b>：有你部落的区域。",
+        "placeToken": "从狩猎指示物展示区拿取 1 个狩猎指示物放置到该区域。"
+      },
+      "placeProsperityMarker": {
+        "title": "繁荣",
+        "instruction": "维希获得一个繁荣标记（这些标记由应用自动计算）。"
+      },
+      "placeStatue": {
+        "title": "雕像",
+        "instruction": "从维希的供应区拿取 1 个标记，将其作为雕像放置到被大片水流区域环绕的建造点上。",
+        "unlimited": "维希在此处的雕像数量没有限制。"
+      },
+      "removeCard": {
+        "title": "移除研究牌",
+        "instruction": "从图示类型的 <i>正面朝上研究牌堆</i> 移除最顶部的卡牌。",
+        "refill": "如果在这之后正面朝上的研究牌堆空置，则按照通常规则进行补充。"
+      },
+      "revealSites": {
+        "title": "探索地点",
+        "minimumRequirement": "选择至少有 1 个维希部落的区域。",
+        "priorityRequirement": "<b>优先选择</b>: 有最多正面朝下地点相邻的区域。",
+        "reveal": "将与该区域相邻的所有正面朝下的地点翻开。",
+        "gainVP": "维希获得在本次行动中翻开的每个地点上印制的分数。维希 <b>不受</b> 任何正面朝上地点的影响。"
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "空置篝火营地",
+        "freeAny": "任意空置营地",
+        "playerFire": "有你部落的篝火营地",
+        "playerWeakAny": "有你虚弱部落的任意营地",
+        "playerStrongAny": "有你健康部落的任意营地",
+        "botStrongFire": "有维希健康部落的篝火营地",
+        "botStrongAny": "有维希健康部落的任意营地",
+        "botWeakFire": "有维希虚弱部落的篝火营地",
+        "botWeakAny": "有维希虚弱部落的任意营地",
+        "notWeakened": "<b>注意:</b> 维希的部落在驱逐营地中的部落时， <b>不会</b> 遭受弱化！"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "等级 1 - 初学级",
+    "2": "等级 2 - 温和级",
+    "3": "等级 3 - 普通级",
+    "4": "等级 4 - 进阶级",
+    "5": "等级 5 - 专家级"
+  },
+  "player": {
+    "player": "玩家",
+    "bot": "维希"
+  },
+  "territory": {
+    "forest": "森林",
+    "grassland": "草原",
+    "hills": "丘陵",
+    "swamp": "沼泽",
+    "mountains": "山脉",
+    "desert": "沙漠",
+    "water": "水流"
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "开始游玩",
+    "startGame": "开始游戏",
+    "next": "下一步",
+    "nextRound": "下一轮",
+    "abortGame": "中止游戏",
+    "abortGameConfirm": "你确定要中止正在进行的游戏吗？",
+    "endGame": "结束游戏",
+    "endGameConfirm": "你确定要结束游戏并返回主页吗？",
+    "cancel": "取消",
+    "backToHome": "返回主页",
+    "back": "返回",
+    "close": "关闭",
+    "ok": "确定",
+    "reset": "重置"
+  },
+  "footer": {
+    "credits": "致谢"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "刷新应用",
+    "notice": "发现新版本 - 你想要刷新以使用最新版本吗？"
+  }
+}
