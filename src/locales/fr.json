@@ -129,7 +129,6 @@
   },
   "sideBar": {
     "round": "Ère {round}",
-    "bot": "CIV-A",
     "cards": "Cartes:",
     "resetCount": "{count} Réinitialisation | {count} Réinitialisations"
   },

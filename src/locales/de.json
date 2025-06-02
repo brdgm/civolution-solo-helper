@@ -129,7 +129,6 @@
   },
   "sideBar": {
     "round": "Epoche {round}",
-    "bot": "V.I.C.I",
     "cards": "Karten:",
     "resetCount": "{count} Reset | {count} Resets"
   },

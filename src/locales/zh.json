@@ -129,7 +129,6 @@
   },
   "sideBar": {
     "round": "时代 {round}",
-    "bot": "V.I.C.I",
     "cards": "卡牌:",
     "resetCount": "已重置 {count} 次 ｜ 已重置 {count} 次"
   },
