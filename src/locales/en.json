@@ -129,6 +129,7 @@
   },
   "sideBar": {
     "round": "Era {round}",
+    "bot": "V.I.C.I",
     "cards": "Cards:",
     "resetCount": "{count} Reset | {count} Resets"
   },
