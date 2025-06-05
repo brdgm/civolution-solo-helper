@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     {{t('sideBar.round', {round:navigationState.round})}}
-    <h6 class="mt-2">V.I.C.I</h6>
+    <h6 class="mt-2">{{t('player.bot')}}</h6>
     <div class="count">
       {{botActions?.evolutionCount ?? navigationState.evolutionCount}}
       <AppIcon type="action" name="place-evolution-marker" class="icon"/>
