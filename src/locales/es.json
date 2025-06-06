@@ -1,0 +1,289 @@
+{
+  "gameTitle": "Civolución",
+  "home": {
+    "title": "Civolución - Asistente para juego en solitario",
+    "play1": "Juega <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolución</b></a> contra CIVICA, tu oponente de inteligencia artificial.",
+    "play2": "Esta aplicación sustituye la baraja de cartas de solitario, gestiona los niveles de dificultad y te guía a través del juego con las reglas de solitario.",
+    "vici": {
+      "hello": "¡HOLA,<br/>YO SOY<br/>CIVICA!",
+      "about": "Si quieres jugar a Civolución, pemite que te presentemos a CIVICA, una entidad de I-CIV con el objetivo de simular civilizaciones reales."
+    },
+    "feedback": "Comentarios y discusión:"
+  },
+  "setup": {
+    "title": "Configurar Partida",
+    "difficultyLevel": {
+      "title": "Nivel de Dificultad",
+      "easy": "Fácil",
+      "hard": "Difícil"
+    },
+    "scoringTiles": {
+      "title": "Losetas de Puntuación",
+      "randomize": "Aleatorizar",
+      "select": "Seleccionar",
+      "available": "Disponibles:",
+      "selected": "Seleccionadas (3 x Finales / 4 x Era):",
+      "none": "(ninguna)"  
+    },
+    "randomMap": {
+      "title": "Continente",
+      "show": "Continente Aleatorio (opcional)",
+      "firstPlay": "Primera Partida",
+      "randomize": "Aleatorizar"
+    }
+  },
+  "setupBot": {
+    "title": "Configurar CIVICA",
+    "provisionMarker": "Marcador de provisiones",
+    "placeDisks": "Elige un color para CIVICA, coge los 7 <b>discos</b> de ese color y coloca uno sobre cada uno de tus discos en los tableros de juego.",
+    "takeTribesMarkers": "Coloca 15 <b>tribus</b> (las 5 restantes no se usan) y 50 <b>marcadores</b> del color de CIVICA en la reserva de CIVICA.",
+    "placeStartingTribes": "Coloca 1 de las tribus de CIVICA en el campamento sin fogata restante del <i>territorio de Bosque inicial</i> y 1 de las tribus en el campamento sin fogata restante del <i>territorio de Prado inicial</i>.",
+    "placeProvisionMarker": "Coloca un marcador <b>tumbado</b> en cada uno de los dos territorios iniciales junto al espacio de construcción de granja. Estos marcadores no representan materiales sino que se denominan <i>marcadores de provisiones</i>.",
+    "takeDice": "Coloca 6 <b>dados de activación</b> y <b>1 dado de destino</b> en la zona de juego de CIVICA.",
+    "diceNotice": "No los lances, se usan para llevar la cuenta del número de dados de CIVICA.",
+    "noOtherComponents": "El resto de componentes no son usados por CIVICA."
+  },
+  "roundStart": {
+    "title": "Inicio de Era",
+    "newCards": {
+      "title": "1) Nuevas cartas",
+      "noAction": "CIVICA no hace nada."
+    },
+    "newGoals": {
+      "title": "2) Nuevos objetivos",
+      "playerTakeGoal": "Coge una loseta de objetivo (opcional).",
+      "botDetermine": "Elige la loseta de objetivo para CIVICA.",
+      "botTakeGoal": "Retira la loseta de objetivo <b>{goalChip}</b> (si está disponible).",
+      "botNoGoal": "No se retira loseta de objetivo."
+    },
+    "extraFind": {
+      "title": "3) Hallazgo adicional",
+      "noAction": "CIVICA no hace hallazgos adicionales."
+    }
+  },
+  "turnPlayer": {
+    "title": "Jugador",
+    "takeTurn": "Juega tu turno."
+  },
+  "turnBot": {
+    "title": "CIVICA",
+    "reset": "CIVICA hace un <b>Reinicio</b>.",
+    "resetAdvance": "Avanza el <i>marcador de fase</i> al siguiente <i>espacio de reinicio</i>.",
+    "removeAttributeChip": "Retira el <b>marcador de característica</b> {chip}.",
+    "removeIncomeChip": "Retira el <b>marcador de ingresos</b> {chip}."
+  },
+  "roundEnd": {
+    "title": "Fin de la Era",
+    "sitePhase": {
+      "title": "5) Fase de parajes",
+      "botNotAffected": "CIVICA no se ve afectada por los parajes descubiertos."
+    },
+    "feedingPhase": {
+      "title": "6) Fase de alimentación",
+      "feedTribes": {
+        "title": "A) Fase de alimentación de CIVICA:",
+        "oneProvisioningMarker": "En territorios con 1 marcador de provisiones, alimenta a 1 tribu en un campamento. Prioridad:",
+        "twoProvisioningMarkers": "En territorios con 2 marcadores de provisiones, alimenta a todas las tribus en campamentos + 1 tribu en el páramo (fuerte o débil).",
+        "weakenTribes": "El resto de tribus se debilitan."
+      },
+      "scoreStrongTribes": "B) Puntúa las tribus fuertes de CIVICA."
+    },
+    "eventPhase": {
+      "title": "7) Fase de evento",
+      "adjustWeather": "A) A CIVICA no le afecta el clima",
+      "resolveEvent": {
+        "title": "B) CIVICA nunca recibe bonificaciones de los eventos.",
+        "compareBot": "Sin embargo, debes tener en cuenta a CIVICA cuando determines si recibes bonificaciones de un evento que requiera tener en cuenta una mayoría o estar en cabeza.",
+        "eventsDetails": "Evento F4, F6, F16, F17, F19 or F20",
+        "majorityModal": {
+          "title": "Evento de CIVICA",
+          "event": "Evento",
+          "achievement": "Logro"
+        }
+      },
+      "scoreCategory": "C) Puntúa la categoría actual para CIVICA.",
+      "startingCivilization": {
+        "title": "D) Determina la civilización inicial:",
+        "nextStartPlayer": "Siguiente jugador inicial:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Fase de ingresos",
+      "scoreStatues": "B) Puntúa las estatuas de CIVICA."
+    },
+    "noNextStartPlayer": "Por favor, detemina el siguiente jugador inicial."
+  },
+  "gameEnd": {
+    "title": "Final de Partida",
+    "finalScoring": {
+      "title": "Puntuación Final",
+      "categories": "Puntúa las 9 categorías finales (tú y CIVICA)",
+      "consoleStages": "Puntúa las fases de la consola (solo tú)",
+      "consoleResearchCards": "Puntúa las cartas de investigación en tu consola que tengan puntuación final (solo tú)"
+    },
+    "winCondition": "Si has conseguido tener más puntos de éxito que CIVICA, ¡has conseguido una exitosa <i>Civolución</i>!"
+  },
+  "endRoundButton": {
+    "title": "Fin de la Fase de Acciones",
+    "confirm": "¿Quieres finalizar la fase de acciones?"
+  },
+  "sideBar": {
+    "round": "Era {round}",
+    "cards": "Cartas:",
+    "resetCount": "{count} Reinicio | {count} Reinicios"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Medidor de Agera",
+        "instruction": "Avanza 1 casilla el disco de CIVICA en el medidor de Favor de Agera (si es posible)."
+      },
+      "advanceScoringCategory": {
+        "title": "Medidor de Progreso",
+        "instruction": "Avanza el disco de CIVICA el número indicado de pasos en la columna correspondiente del medidor de progreso.",
+        "threshold": "Cuando uno de los discos de CIVICA cruce una marca de bonificación que le proporcione puntos de éxito, CIVICA recibe esos puntos. CIVICA ignora el resto de bonificaciones.",
+        "exceedTrack": "Si el disco de CIVICA está en la casilla 12 de su medidor, esta acción le proporciona a CIVICA 2 puntos de éxito."
+      },
+      "gainActivationDie": {
+        "title": "Dado de Activación",
+        "instruction": "CIVICA recibe un dado de activación (siguiendo las reglas normales)."
+      },
+      "gainFateDie": {
+        "title": "Dado de Destino",
+        "instruction": "CIVICA recibe un dado de destino (siguiendo las reglas normales)."
+      },
+      "gainVp": {
+        "title": "Puntos de Éxito",
+        "instruction": "CIVICA gana los puntos de éxito que se indican."
+      },
+      "performMigration": {
+        "title": "Migración",
+        "initialTerritory": {
+          "title": "Territorio Origen",
+          "minimumRequirement": "Elige un territorio donde CIVICA tenga al menos 2 tribus, y al menos 1 de ellas sea fuerte.",
+          "twoTribesAvailability": "<b>Atención:</b> Si ningún territorio cumple, realiza una procreación primero.",
+          "performProcreation": "Realiza una Procreación",
+          "tribePriorityList": {
+            "title": "Elige una tribu fuerte:",
+            "wilderness": "del páramo",
+            "fireEncampment": "de un campamento con fogata",
+            "anyEncampment": "de cualquier campamento"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Territorio Destino",
+          "minimumRequirement": "Elige un territorio terrestre, adyacente al territorio de origen.",
+          "priorityRequirement": "<b>Prioridad</b>: Territorio con menos tribus de CIVICA (ninguna = menor).",
+          "moveTribe": "Mueve la tribu fuerte seleccionada allí y asiéntala en un campamento.",
+          "undevelopedTerritory": "Si la tribu entra en un territorio sin desarrollar, voltea la loseta de material bocarriba pero no coloques ningún marcador."
+        }
+      },
+      "performProcreation": {
+        "title": "Procreación",
+        "minimumRequirement": "Elige un territorio con al menos 1 tribu de CIVICA.",
+        "priorityRequirement": "<b>Prioridad</b>: Territorio con al menos 1 campamento libre.",
+        "territoryDetermined": "Cuando hayas elegido el territorio, añade una tribu de la reserva de CIVICA asentándola en un campamento:",
+        "migrationCheck": "<b>Importante</b>: Comprueba, después de cada procreación que realices para CIVICA, si <b>todos</b> los campamentos en <b>todos</b> los territorios donde CIVICA tiene tribus están ocupados <b>únicamente</b> por tribus de CIVICA (por tanto no hay ninguno libre u ocupado por tus tribus). En este caso, realiza inmediatamente 1 migración adicional.",
+        "performMigration": "Realizar Migración"
+      },
+      "performProvision": {
+        "title": "Aprovisionar",
+        "minimumRequirement": "Elige un territorio, donde CIVICA tenga al menos una tribu.",
+        "priorityRequirement": "<b>Prioridad</b>: Territorios con la menor cantidad de marcadores de provisiones (0 = la menor) y la mayor cantidad de tribus de CIVICA.",
+        "placeMarker": "Coloca un marcador de provisiones en el territorio.",
+        "blockFarmSpace": "Cuando el territorio tenga 2 marcadores de provisiones, bloquearán el espacio de construcción de granja (si está desocupado)."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evolución",
+        "instruction": "CIVICA gana un marcador de Evolución (la aplicación lleva la cuenta automáticamente)."
+      },
+      "placeHuntingToken": {
+        "title": "Marcador de Caza",
+        "minimumRequirement": "Elige un territorio donde CIVICA tenga al menos una tribu, y donde no haya un marcador de caza.",
+        "priorityRequirement": "<b>Prioridad</b>: Territorios, donde <b>tú</b> también tengas una tribu.",
+        "placeToken": "Coloca un marcador de caza en el territorio."
+      },
+      "placeProsperityMarker": {
+        "title": "Prosperidad",
+        "instruction": "CIVICA gana un marcador de Prosperidad (la aplicación lleva la cuenta automáticamente)."
+      },
+      "placeStatue": {
+        "title": "Estatua",
+        "instruction": "Coloca un marcador de la reserva de CIVICA como una estatua en el terreno de construcción situado en el territorio más grande de Agua.",
+        "unlimited": "No hay límite del número de estatuas que CIVICA puede tener ahí."
+      },
+      "removeCard": {
+        "title": "Eliminar Carta de Investigación",
+        "instruction": "Elimina la carta superior de la <i>pila de investigación bocarriba</i> del tipo indicado.",
+        "refill": "Si la pila bocarriba queda vacía tras esto, rellénala de la forma habitual."
+      },
+      "revealSites": {
+        "title": "Descubrir Parajes",
+        "minimumRequirement": "Elige un territorio donde CIVICA tenga al menos una tribu.",
+        "priorityRequirement": "<b>Prioridad</b>: Territorios adyacentes al mayor número de parajes sin descubrir.",
+        "reveal": "Descubre todos los parajes que estén bocabajo adyacentes al territorio.",
+        "gainVP": "CIVICA gana los puntos de éxito de cada paraje que sea descubierto. Además, a CIVICA nunca le afectan los efectos de los parajes descubiertos."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Campamento con fogata vacío",
+        "freeAny": "Cualquier campamento vacío",
+        "playerFire": "Campamento con fogata con una de <b>tus</b> tribus",
+        "playerWeakAny": "Cualquier campamento con una de <b>tus</b> tribus débiles",
+        "playerStrongAny": "Cualquier campamento con una de <b>tus</b> tribus fuertes",
+        "botStrongFire": "Campamento con fogata con una de las tribus fuertes de CIVICA",
+        "botStrongAny": "Cualquier campamento con una de las tribus fuertes de CIVICA",
+        "botWeakFire": "Campamento con fogata con una de las tribus débiles de CIVICA",
+        "botWeakAny": "Cualquier campamento con una de las tribus débiles de CIVICA",
+        "notWeakened": "<b>Atención:</b> las tribus de CIVICA no se debilitan cuando desplazan a otras tribus de su campamento"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Nivel 1 - Principiante",
+    "2": "Nivel 2 - Moderado",
+    "3": "Nivel 3 - Medio",
+    "4": "Nivel 4 - Avanzado",
+    "5": "Nivel 5 - Experto"
+  },
+  "player": {
+    "player": "Jugador",
+    "bot": "CIVICA"
+  },
+  "territory": {
+    "forest": "Bosque",
+    "grassland": "Pradera",
+    "hills": "Colinas",
+    "swamp": "Pantano",
+    "mountains": "Montañas",
+    "desert": "Desierto",
+    "water": "Agua"
+  },
+  "notfound": {
+    "title": "No encontrado"
+  },
+  "action": {
+    "playGame": "Jugar",
+    "startGame": "Iniciar Partida",
+    "next": "Siguiente",
+    "nextRound": "Siguiente Ronda",
+    "abortGame": "Finalizar Partida",
+    "abortGameConfirm": "Se va a finalizar la partida - ¿estás seguro?",
+    "endGame": "Fin de Partida",
+    "endGameConfirm": "Finalizar la partida y volver a la página de inicio - ¿estás seguro?",
+    "cancel": "Cancelar",
+    "backToHome": "Volver a Inicio",
+    "back": "Regresar",
+    "close": "Cerrar",
+    "ok": "OK",
+    "reset": "Reiniciar"
+  },
+  "footer": {
+    "credits": "Créditos"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Actualizar aplicación",
+    "notice": "La aplicación ha sido actualizada - ¿quieres recargar para usar la última versión?"
+  }
+}
