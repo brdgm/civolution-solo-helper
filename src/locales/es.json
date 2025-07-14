@@ -69,8 +69,8 @@
     "title": "CIVICA",
     "reset": "CIVICA hace un <b>Reinicio</b>.",
     "resetAdvance": "Avanza el <i>marcador de fase</i> al siguiente <i>espacio de reinicio</i>.",
-    "removeAttributeChip": "Retira el <b>marcador de característica</b> {chip}.",
-    "removeIncomeChip": "Retira el <b>marcador de ingresos</b> {chip}."
+    "removeAttributeChip": "Retira la <b>loseta de atributo</b> {chip}.",
+    "removeIncomeChip": "Retira la <b>loseta de ingresos</b> {chip}."
   },
   "roundEnd": {
     "title": "Fin de la Era",
