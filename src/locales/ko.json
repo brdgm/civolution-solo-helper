@@ -1,0 +1,289 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Solo Helper",
+    "play1": "오토마인 비키를 상대로 <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a>을 즐겨보세요.",
+    "play2": "본 헬퍼는 1인 게임용 카드를 대체하고 난이도를 관리하며 1인 게임 규칙을 안내해줍니다.",
+    "vici": {
+      "hello": "반가워!<br/>내 이름은<br/>비키야!",
+      "about": "시볼루션을 혼자 하길 원하는 여러분께 비키(V.I.C.I)를 소개합니다. I-CIV 지성체인 비키가 여러분의 라이벌 문명이 되어줄 것입니다."
+    },
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "게임 준비",
+    "difficultyLevel": {
+      "title": "난이도",
+      "easy": "쉬움",
+      "hard": "어려움"
+    },
+    "scoringTiles": {
+      "title": "점수 타일",
+      "randomize": "무작위로 정하기",
+      "select": "직접 선택하기",
+      "available": "사용 가능한 타일:",
+      "selected": "선택됨 (3 x 최종 점수 / 4 x 시대 점수):",
+      "none": "(비었음)"  
+    },
+    "randomMap": {
+      "title": "대륙 타일",
+      "show": "무작위 대륙 타일 배치 (선택사항)",
+      "firstPlay": "첫 게임",
+      "randomize": "무작위로 정하기"
+    }
+  },
+  "setupBot": {
+    "title": "비키 준비하기",
+    "provisionMarker": "공급 마커",
+    "placeDisks": "비키의 색깔을 정하고 그 색깔 <b>디스크</b> 7개를 게임 보드에 배치한 플레이어의 디스크 위에 하나씩 올려놓습니다.",
+    "takeTribesMarkers": "비키의 색깔 <b>부족</b> 15명과 (5명은 사용하지 않습니다) <b>마커</b> 50개를 비키의 공급처에 놓습니다.",
+    "placeStartingTribes": "비키의 부족 1명을 <i>숲 시작 지형</i>의 모닥불이 없는 야영지에 세워 놓고, 다른 부족 1명을 <i>평야 시작 지형</i>의 모닥불이 없는 야영지에 세워 놓습니다.",
+    "placeProvisionMarker": "마커를 두 시작 지형의 농장 건물 칸 옆에 하나씩 <b>가로로</b> 배치합니다. 이 두 마커는 원재료가 아닌 <i>공급 마커</i>입니다.",
+    "takeDice": "비키가 사용할 <b>행동 주사위 6개</b>와 <b>보조 주사위 1개</b>를 비키의 개인 공간에 모아 놓습니다.",
+    "diceNotice": "해당 주사위는 플레이어가 사용하지 않습니다. 비키의 주사위의 눈을 세는 데 사용됩니다.",
+    "noOtherComponents": "비키는 다른 구성물은 사용하지 않습니다."
+  },
+  "roundStart": {
+    "title": "시대 시작",
+    "newCards": {
+      "title": "1) 카드 페이즈",
+      "noAction": "비키는 아무 행동도 하지 않습니다."
+    },
+    "newGoals": {
+      "title": "2) 목표 페이즈",
+      "playerTakeGoal": "플레이어 문명은 <b>목표 칩</b> 1개를 골라 1개를 골라 콘솔의 <b>목표 구역</b>에 앞면으로 놓습니다. (선택사항).",
+      "botDetermine": "비키의 목표 칩 선택하기",
+      "botTakeGoal": "<b>{goalChip}</b>번째 칸 목표 칩 제거 (가능하다면).",
+      "botNoGoal": "아무 목표 칩도 제거하지 않습니다."
+    },
+    "extraFind": {
+      "title": "3) 추가 탐색 페이즈",
+      "noAction": "비키는 추가 탐색을 하지 않습니다."
+    }
+  },
+  "turnPlayer": {
+    "title": "플레이어 문명",
+    "takeTurn": "차례를 진행합니다."
+  },
+  "turnBot": {
+    "title": "비키(V.I.C.I)",
+    "reset": "비키는 <b>재조정</b>을 합니다.",
+    "resetAdvance": "<i>페이즈 토큰</i>을 다음 <i>재조정 칸</i>으로 이동시킵니다.",
+    "removeAttributeChip": "{chip}번째 칸 <b>특화 칩</b> 제거.",
+    "removeIncomeChip": "{chip}번째 칸 <b>수입 칩</b> 제거."
+  },
+  "roundEnd": {
+    "title": "시대 종료",
+    "sitePhase": {
+      "title": "5) 특별 장소 페이즈",
+      "botNotAffected": "비키는 앞면으로 된 특별 장소에 <b>전혀</b> 영향을 받지 않습니다."
+    },
+    "feedingPhase": {
+      "title": "6) 식량 페이즈",
+      "feedTribes": {
+        "title": "A) 비키의 식량 페이즈:",
+        "oneProvisioningMarker": "지형에 공급 마커가 1개라면, <b>야영지</b>에 있는 비키의 부족 1명은 상태를 유지합니다. 우선 순위:",
+        "twoProvisioningMarkers": "지형에 공급 마커가 2개라면, 야영지에 있는 모든 부족, 추가로 야생에 있는 부족 1명은 상태를 유지합니다. (건강한 부족 우선)",
+        "weakenTribes": "다른 모든 부족은 전부 약화됩니다."
+      },
+      "scoreStrongTribes": "B) Score V.I.C.I's strong tribes."
+    },
+    "eventPhase": {
+      "title": "7) 이벤트 페이즈",
+      "adjustWeather": "A) 비키는 날씨의 영향을 <b>전혀</b> 받지 않습니다.",
+      "resolveEvent": {
+        "title": "B) 비키는 사건의 보너스를 <b>전혀</b> 받지 않습니다.",
+        "compareBot": "하지만 플레이어가 다수 또는 선두를 가리는 사건의 보너스를 받으려면, 비키보다 더 많거나 앞서야 합니다.",
+        "eventsDetails": "F4, F6, F16, F17, F19, F20 이벤트 카드인 경우",
+        "majorityModal": {
+          "title": "비키 번영 표",
+          "event": "이벤트 카드",
+          "achievement": "마커의 총 개수"
+        }
+      },
+      "scoreCategory": "C) 이번 시대 항목에서의 비키의 점수를 계산합니다.",
+      "startingCivilization": {
+        "title": "D) 새로운 시작 문명:",
+        "nextStartPlayer": "다음 시작 문명:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) 수입 페이즈",
+      "scoreStatues": "B) 비키의 조각상 점수를 계산합니다."
+    },
+    "noNextStartPlayer": "다음 시작 문명을 결정해주세요."
+  },
+  "gameEnd": {
+    "title": "게임 종료",
+    "finalScoring": {
+      "title": "최종 점수 계산",
+      "categories": "9개의 점수 항목에서 점수를 획득합니다. (모든 문명)",
+      "consoleStages": "콘솔의 설치 공간에서 점수를 획득합니다. (플레이어 문명만)",
+      "consoleResearchCards": "게임 종료 보너스 점수가 포함된 카드에서 점수를 획득합니다. (플레이어 문명만)"
+    },
+    "winCondition": "비키보다 점수가 높다면, 성공적으로 <i>Civolution</i>을 마치셨습니다. 축하드립니다!"
+  },
+  "endRoundButton": {
+    "title": "행동 페이즈 종료",
+    "confirm": "행동 페이즈를 종료하시겠습니까?"
+  },
+  "sideBar": {
+    "round": "{round}번째 시대",
+    "cards": "행동 카드 수:",
+    "resetCount": "재조정 {count}회 | 재조정 {count}회"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "혜택 트랙",
+        "instruction": "비키는 혜택 트랙을 1칸 전진시킵니다. (가능하다면)."
+      },
+      "advanceScoringCategory": {
+        "title": "진보 트랙",
+        "instruction": "진보 트랙을 1칸 전진시킵니다.",
+        "threshold": "비키의 디스크가 점수를 얻는 보너스 경계선을 지나치면 점수를 얻으며, 점수가 아닌 트랙 보너스는 전부 무시합니다.",
+        "exceedTrack": "비키의 디스크가 이미 트랙의 12번째 칸에 있다면, 일반 규칙대로 비키도 디스크를 전진시키는 대신 2점을 얻습니다."
+      },
+      "gainActivationDie": {
+        "title": "행동 주사위",
+        "instruction": "행동 주사위 1개를 비키의 주사위에 추가합니다. (주사위를 굴리지는 않습니다)"
+      },
+      "gainFateDie": {
+        "title": "보조 주사위",
+        "instruction": "보조 주사위 1개를 비키의 주사위에 추가합니다. (주사위를 굴리지는 않습니다)"
+      },
+      "gainVp": {
+        "title": "점수 획득",
+        "instruction": "비키는 1점 얻습니다."
+      },
+      "performMigration": {
+        "title": "이동",
+        "initialTerritory": {
+          "title": "출발 지형",
+          "minimumRequirement": "비키의 부족이 적어도 2명 있고, 그중 건강한 부족이 있는 지형을 선택합니다.",
+          "twoTribesAvailability": "<b>주의:</b> 그러한 지형이 없다면, 비키는 번식을 1번 합니다.",
+          "performProcreation": "번식하기",
+          "tribePriorityList": {
+            "title": "선택되는 건강한 부족 우선 순위:",
+            "wilderness": "야생에 있는 부족",
+            "fireEncampment": "모닥불이 있는 야영지에 있는 부족",
+            "anyEncampment": "아무 야영지에 있는 부족"
+          }
+        },
+        "destinationTerritory": {
+          "title": "도착 지형",
+          "minimumRequirement": "출발 지형과 인접한 육지 지형을 선택합니다.",
+          "priorityRequirement": "<b>우선 순위</b>: 비키의 부족 수가 가장 적은 지형 (부족이 없는 지형 = 가장 적은 지형).",
+          "moveTribe": "선택한 건강한 부족은 도착 지형으로 이동하고, 야영지에 정착합니다:",
+          "undevelopedTerritory": "비키의 부족이 미개발된 지형에 들어갔다면, 쟈료 타일을 앞면으로 뒤집지만 해당 지형에 마커(원재료)를 놓지는 않습니다."
+        }
+      },
+      "performProcreation": {
+        "title": "번식",
+        "minimumRequirement": "비키의 부족이 최소 1명이라도 있는 지형을 선택합니다.",
+        "priorityRequirement": "<b>우선 순위</b>: 빈 야영지가 최소 1개라도 있는 지형",
+        "territoryDetermined": "지형이 결정되면 비키의 공급처에서 부족 1명을 야영지에 놓습니다:",
+        "migrationCheck": "<b>중요</b>: 비키가 번식을 끝낸 후, 비키의 부족이 있는 <b>모든</b> 지형에서 <b>모든</b> 야영지에 비키의 부족만 <b>단독으로</b> 있다면, 비키는 즉시 이동을 1번 합니다. (즉, 해당 지형에 빈 야영지나 플레이어의 부족이 점령한 야영지가 없는 경우에만 즉시 이동합니다)",
+        "performMigration": "이동하기"
+      },
+      "performProvision": {
+        "title": "공급",
+        "minimumRequirement": "비키의 부족이 최소 1명이라도 있는 지형을 선택합니다.",
+        "priorityRequirement": "<b>우선 순위</b>: 공급 마커가 <b>가장 적은</b> 지형(0 = 가장 적은 지형) 중에서 비키의 부족 수가 <b>가장 많은</b> 지형.",
+        "placeMarker": "비키의 공급처에서 해당 지형에 마커 1개를 가져와 농장 건물 칸 옆에 가로로 놓습니다.",
+        "blockFarmSpace": "지형에 공급 마커가 2개 놓인다면, 농장 건물 칸을 가리게 됩니다. (농장 건물 칸이 비어있던 경우에만)."
+      },
+      "placeEvolutionMarker": {
+        "title": "진화",
+        "instruction": "비키가 공급처에서 마커를 1개 가져와 진화 표에 놓습니다. (본 헬퍼에 의해 자동으로 계산됩니다)"
+      },
+      "placeHuntingToken": {
+        "title": "사냥 토큰",
+        "minimumRequirement": " 비키의 부족이 최소 1명이라도 있고, 사냥 토큰이 없는 지형을 1개 선택합니다.",
+        "priorityRequirement": "<b>우선 순위</b>: 비키의 부족과 플레이어의 부족 <b>둘 다</b> 있는 지형",
+        "placeToken": "해당 지형에 사냥 토큰을 1개 놓습니다."
+      },
+      "placeProsperityMarker": {
+        "title": "번영",
+        "instruction": "비키가 공급처에서 마커를 1개 가져와 번영 표에 놓습니다. (본 헬퍼에 의해 자동으로 계산됩니다)"
+      },
+      "placeStatue": {
+        "title": "조각상",
+        "instruction": "비키의 공급처에서 마커를 1개 가져와 건축 부지가 있는 <b>섬</b>에 조각상으로 놓습니다.",
+        "unlimited": "비키는 조각상을 개수 제한 없이 놓을 수 있습니다."
+      },
+      "removeCard": {
+        "title": "발명 카드 제거",
+        "instruction": "발명 카드의 <i>앞면 더미</i> 맨 위의 카드를 제거합니다.",
+        "refill": "앞면 더미가 비었다면, 일반 규칙대로 새로 한 장을 펼칩니다."
+      },
+      "revealSites": {
+        "title": "특별 장소 공개",
+        "minimumRequirement": "비키의 부족이 최소 1명이라도 있는 지형을 선택합니다.",
+        "priorityRequirement": "<b>우선 순위</b>: 인접한 뒷면 특별 장소가 <b>가장 많은</b> 지형",
+        "reveal": "인접한 모든 뒷면 특별 장소를 공개합니다.",
+        "gainVP": "비키는 이번에 공개한 모든 특별 장소에서 점수를 얻습니다. 비키는 앞면으로 된 특별 장소에 <b>전혀</b> 영향을 받지 않습니다."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "비어 있는 모닥불이 있는 야영지",
+        "freeAny": "비어 있는 아무 야영지",
+        "playerFire": "<b>플레이어</b>의 부족과 모닥불이 함께 있는 야영지",
+        "playerWeakAny": "<b>플레이어</b>의 약화된 부족이 있는 아무 야영지",
+        "playerStrongAny": "<b>플레이어</b>의 건강한 부족이 있는 아무 야영지",
+        "botStrongFire": "비키의 건강한 부족과 모닥불이 함께 있는 야영지",
+        "botStrongAny": "비키의 건강한 부족이 있는 아무 야영지",
+        "botWeakFire": "비키의 약화된 부족과 모닥불이 함께 있는 야영지",
+        "botWeakAny": "비키의 약화된 부족이 있는 아무 야영지",
+        "notWeakened": "<b>주의:</b> 비키의 부족은 다른 부족을 쫓아내도 약화되지 <b>않습니다</b>!"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Level 1 - Beginner",
+    "2": "Level 2 - Moderate",
+    "3": "Level 3 - Medium",
+    "4": "Level 4 - Advanced",
+    "5": "Level 5 - Expert"
+  },
+  "player": {
+    "player": "Player",
+    "bot": "V.I.C.I"
+  },
+  "territory": {
+    "forest": "숲",
+    "grassland": "평야",
+    "hills": "언덕",
+    "swamp": "늪",
+    "mountains": "산",
+    "desert": "사막",
+    "water": "물"
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "게임하기",
+    "startGame": "게임 시작",
+    "next": "다음",
+    "nextRound": "다음 라운드",
+    "abortGame": "게임 포기",
+    "abortGameConfirm": "정말로 진행 중인 게임을 포기하시겠습니까?",
+    "endGame": "게임 종료",
+    "endGameConfirm": "정말로 이번 게임을 종료하시고 메인 화면으로 이동하시겠습니까?",
+    "cancel": "취소",
+    "backToHome": "홈으로",
+    "back": "뒤로",
+    "close": "닫기",
+    "ok": "확인",
+    "reset": "초기화"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "어플리케이션 새로고침",
+    "notice": "어플리케이션이 업데이트 되었습니다. 새로고침하고 최신 버전을 사용하시겠습니까?"
+  }
+}
