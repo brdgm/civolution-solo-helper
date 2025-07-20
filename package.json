@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/civolution-solo-helper",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "private": true,
   "description": "Civolution Solo Helper",
   "appDeployName": "civolution",
