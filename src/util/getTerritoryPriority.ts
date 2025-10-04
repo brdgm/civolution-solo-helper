@@ -5,7 +5,7 @@ import Territory from '@/services/enum/Territory'
  * @param territoryRoll Territory roll
  * @returns List of territories
  */
-export default function(territoryRoll : number) : Territory[] {
+export default function getTerritoryPriority(territoryRoll : number) : Territory[] {
   const splitIndex = territoryRoll - 1
   return TERRITORY_PRIORITY.slice(splitIndex).concat(TERRITORY_PRIORITY.slice(0, splitIndex))
 }

@@ -3,7 +3,7 @@
  * @param prosperityMarkerCount Number of prosperity markers
  * @returns Event achievements
  */
-export default function(prosperityMarkerCount : number) : EventAchievement[] {
+export default function getEventAchievements(prosperityMarkerCount : number) : EventAchievement[] {
   return EVENT_THRESHOLDS.map(({ event, thresholds }) =>
       ({ event, count: countThresholds(prosperityMarkerCount, thresholds)}))
 }
