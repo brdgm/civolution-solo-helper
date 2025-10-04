@@ -5,7 +5,7 @@ import Beacon from '@/services/enum/Beacon'
  * @param beaconRoll Beacon roll
  * @returns Beacon list
  */
-export default function(beaconRoll : number) : Beacon[] {
+export default function getBeaconPriority(beaconRoll : number) : Beacon[] {
   const splitIndex = Math.floor((beaconRoll - 1) / 2)
   return BEACON_PRIORITY.slice(splitIndex).concat(BEACON_PRIORITY.slice(0, splitIndex))
 }
