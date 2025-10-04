@@ -46,7 +46,9 @@ export default class BotActions {
     }
 
     // add territory rolls
-    this._items.value.forEach(item => addTerritoryRoll(item))
+    for (const item of this._items.value) {
+      addTerritoryRoll(item)
+    }
   }
 
   public get items() : readonly ActionItem[] {
@@ -181,9 +183,9 @@ function getEraScoringCategoryActions(scoringCategory: ScoringCategory, count: n
 
 function getFinalScoringCategoryActions(scoringCategories: ScoringCategory[], count: number, vpCount?: number) : ActionItem[] {
   const items : ActionItem[] = []
-  scoringCategories.forEach(scoringCategory => {
+  for (const scoringCategory of scoringCategories) {
     items.push(...toScoringCategoryActions(scoringCategory, count))
-  })
+  }
   if (vpCount) {
     items.push({ action:Action.GAIN_VP, count:vpCount })
   }
