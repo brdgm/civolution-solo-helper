@@ -2,7 +2,7 @@ import CardDeck from '@/services/CardDeck'
 import Player from '@/services/enum/Player'
 import { CardDeckPersistence, Turn } from '@/store/state'
 
-export default function (params?: MockTurnParams) : Turn {
+export default function mockTurn(params?: MockTurnParams) : Turn {
   const turn : Turn = {
     round: params?.round ?? 1,
     turn: params?.turn ?? 1,

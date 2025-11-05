@@ -3,7 +3,7 @@ import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescri
 import pluginVitest from '@vitest/eslint-plugin'
 import pluginPlaywright from 'eslint-plugin-playwright'
 import i18nJsonPlugin from 'eslint-plugin-i18n-json'
-import path from 'path'
+import path from 'node:path'
 
 export default defineConfigWithVueTs(
   {
@@ -18,6 +18,12 @@ export default defineConfigWithVueTs(
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
+
+  {
+    rules: {
+      'semi': ['error', 'never']
+    }
+  },
 
   {
     ...pluginVitest.configs.recommended,

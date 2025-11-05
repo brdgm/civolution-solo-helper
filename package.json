@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/civolution-solo-helper",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "private": true,
   "description": "Civolution Solo Helper",
   "appDeployName": "civolution",
@@ -17,7 +17,7 @@
     "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
-    "@brdgm/brdgm-commons": "^1.6.9",
+    "@brdgm/brdgm-commons": "^1.8.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "core-js": "^3.40.0",
@@ -30,12 +30,12 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@intlify/unplugin-vue-i18n": "^6.0.3",
+    "@intlify/unplugin-vue-i18n": "^11.0.0",
     "@playwright/test": "^1.51.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/bootstrap": "^5.2.10",
     "@types/chai": "^5.0.1",
-    "@types/jsdom": "^21.1.7",
+    "@types/jsdom": "^27.0.0",
     "@types/lodash": "^4.17.15",
     "@types/mocha": "^10.0.10",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
@@ -43,16 +43,16 @@
     "@vite-pwa/assets-generator": "^1.0.0",
     "@vitejs/plugin-legacy": "^7.0.0",
     "@vitejs/plugin-vue": "^6.0.0",
-    "@vitest/coverage-istanbul": "^3.0.4",
+    "@vitest/coverage-istanbul": "^4.0.0",
     "@vitest/eslint-plugin": "^1.1.25",
     "@vue/eslint-config-typescript": "^14.3.0",
     "babel-plugin-istanbul": "^7.0.0",
-    "chai": "^5.1.2",
+    "chai": "^6.0.0",
     "eslint": "^9.19.0",
     "eslint-plugin-i18n-json": "github:brdgm/eslint-plugin-i18n-json#4.1.0",
     "eslint-plugin-playwright": "^2.2.0",
     "eslint-plugin-vue": "^10.0.0",
-    "jsdom": "^26.0.0",
+    "jsdom": "^27.0.0",
     "nodemon": "^3.1.9",
     "sass": "~1.78.0",
     "source-map-support": "^0.5.21",
@@ -60,6 +60,6 @@
     "typescript": "^5.7.3",
     "vite": "^7.0.0",
     "vite-plugin-pwa": "^1.0.0",
-    "vitest": "^3.0.4"
+    "vitest": "^4.0.0"
   }
 }
