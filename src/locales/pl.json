@@ -1,0 +1,289 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Solo Helper",
+    "play1": "Graj w <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> przeciwko V.I.C.I, sztucznemu przeciwnikowi.",
+    "play2": "Ta aplikacja zastępuje talię kart solo, zarządza poziomami trudności i prowadzi cię przez grę oraz zasady gry solo.",
+    "vici": {
+      "hello": "CZEŚĆ,<br/>JESTEM<br/>V.I.C.I!",
+      "about": "Jeśli chcesz grać w Civolution sam, poznaj V.I.C.I, jednostkę I-CIV, której celem jest symulowanie rywalizującej cywilizacji."
+    },
+    "feedback": "Dyskusja i opinie:"
+  },
+  "setup": {
+    "title": "Konfiguracja gry",
+    "difficultyLevel": {
+      "title": "Poziom trudności",
+      "easy": "Łatwy",
+      "hard": "Trudny"
+    },
+    "scoringTiles": {
+      "title": "Płytki punktacyjne",
+      "randomize": "Losuj",
+      "select": "Wybierz",
+      "available": "Dostępne:",
+      "selected": "Wybrane (3 x Finał / 4 x Era):",
+      "none": "(brak)"  
+    },
+    "randomMap": {
+      "title": "Kontynent",
+      "show": "Losowy kontynent (opcjonalne)",
+      "firstPlay": "Pierwsza gra",
+      "randomize": "Losuj"
+    }
+  },
+  "setupBot": {
+    "title": "Konfiguracja V.I.C.I",
+    "provisionMarker": "Znacznik zaopatrzenia",
+    "placeDisks": "Wybierz kolor gracza dla V.I.C.I, weź 7 <b>dysków</b> tego koloru i umieść jeden z nich na każdym ze swoich dysków na planszach gry.",
+    "takeTribesMarkers": "Umieść 15 <b>plemion</b> (pozostałe 5 nie są używane) i 50 <b>znaczników</b> koloru V.I.C.I w obszarze gry V.I.C.I jako zapas.",
+    "placeStartingTribes": "Umieść 1 z plemion V.I.C.I pionowo na pozostałym obozowisku bez ognia w <i>Lesnym terytorium startowym</i> i 1 plemię pionowo na pozostałym obozowisku bez ognia w <i>Terytorium startowym łąki</i>.",
+    "placeProvisionMarker": "Umieść znacznik <b>wzdłużnie</b> w każdym z dwóch terytoriów startowych obok miejsca budynku farmy. Te znaczniki nie reprezentują surowców, ale nazywane są <i>znacznikami zaopatrzenia</i>.",
+    "takeDice": "Umieść 6 <b>kości aktywacji</b> i <b>1 kość przeznaczenia</b> w obszarze gry V.I.C.I.",
+    "diceNotice": "Nie rzucasz nimi, są używane do liczenia liczby kości V.I.C.I.",
+    "noOtherComponents": "Inne komponenty nie są używane dla V.I.C.I."
+  },
+  "roundStart": {
+    "title": "Początek ery",
+    "newCards": {
+      "title": "1) Nowe karty",
+      "noAction": "V.I.C.I nic nie robi."
+    },
+    "newGoals": {
+      "title": "2) Nowe cele",
+      "playerTakeGoal": "Weź żeton celu (opcjonalne).",
+      "botDetermine": "Określ żeton celu dla V.I.C.I.",
+      "botTakeGoal": "Usuń żeton celu <b>{goalChip}</b> (jeśli dostępny).",
+      "botNoGoal": "Żaden żeton celu nie jest usuwany."
+    },
+    "extraFind": {
+      "title": "3) Dodatkowe odkrycie",
+      "noAction": "V.I.C.I nie dokonuje dodatkowego odkrycia."
+    }
+  },
+  "turnPlayer": {
+    "title": "Gracz",
+    "takeTurn": "Wykonaj swoją turę."
+  },
+  "turnBot": {
+    "title": "V.I.C.I",
+    "reset": "V.I.C.I wykonuje <b>Reset</b>.",
+    "resetAdvance": "Przesuń <i>wskaźnik fazy</i> do następnego <i>pola resetu</i>.",
+    "removeAttributeChip": "Usuń <b>żeton atrybutu</b> {chip}.",
+    "removeIncomeChip": "Usuń <b>żeton dochodu</b> {chip}."
+  },
+  "roundEnd": {
+    "title": "Koniec ery",
+    "sitePhase": {
+      "title": "5) Faza miejsc",
+      "botNotAffected": "V.I.C.I nigdy nie jest dotknięte odkrytymi miejscami."
+    },
+    "feedingPhase": {
+      "title": "6) Faza żywienia",
+      "feedTribes": {
+        "title": "A) Faza żywienia V.I.C.I:",
+        "oneProvisioningMarker": "Na terytoriach z 1 znacznikiem zaopatrzenia, 1 plemię na obozowisku jest żywione. Priorytet:",
+        "twoProvisioningMarkers": "Na terytoriach z 2 znacznikami zaopatrzenia, wszystkie plemiona na obozowiskach + 1 plemię w dziczy (silne nad słabym) są żywione.",
+        "weakenTribes": "Wszystkie inne plemiona są osłabiane."
+      },
+      "scoreStrongTribes": "B) Punktuj silne plemiona V.I.C.I."
+    },
+    "eventPhase": {
+      "title": "7) Faza wydarzeń",
+      "adjustWeather": "A) V.I.C.I nigdy nie jest dotknięte pogodą.",
+      "resolveEvent": {
+        "title": "B) V.I.C.I nigdy nie otrzymuje bonusów z wydarzeń.",
+        "compareBot": "Jednak musisz brać V.I.C.I pod uwagę przy określaniu, czy otrzymasz bonus z wydarzenia, które wymaga większości lub przewagi.",
+        "eventsDetails": "Wydarzenie F4, F6, F16, F17, F19 lub F20",
+        "majorityModal": {
+          "title": "Wydarzenie V.I.C.I",
+          "event": "Wydarzenie",
+          "achievement": "Osiągnięcie"
+        }
+      },
+      "scoreCategory": "C) Punktuj bieżącą kategorię dla V.I.C.I.",
+      "startingCivilization": {
+        "title": "D) Określ cywilizację startową:",
+        "nextStartPlayer": "Następny gracz startowy:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Faza dochodu",
+      "scoreStatues": "B) Punktuj posągi V.I.C.I."
+    },
+    "noNextStartPlayer": "Proszę określ następnego gracza startowego."
+  },
+  "gameEnd": {
+    "title": "Koniec gry",
+    "finalScoring": {
+      "title": "Punktacja finalna",
+      "categories": "Punktuj 9 kategorii punktacji finalnej (ty i V.I.C.I)",
+      "consoleStages": "Punktuj podział etapów konsoli (tylko ty)",
+      "consoleResearchCards": "Punktuj bonusy punktowe z kart badań w konsoli (tylko ty)"
+    },
+    "winCondition": "Jeśli udało ci się zdobyć więcej punktów sukcesu łącznie niż V.I.C.I, gratulacje za udaną <i>Civolution</i>!"
+  },
+  "endRoundButton": {
+    "title": "Zakończ fazę akcji",
+    "confirm": "Czy chcesz zakończyć fazę akcji?"
+  },
+  "sideBar": {
+    "round": "Era {round}",
+    "cards": "Karty:",
+    "resetCount": "{count} Reset | {count} Resetów"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Ścieżka Agery",
+        "instruction": "Przesuń dysk V.I.C.I o 1 krok na ścieżce Łaski Agery (jeśli to możliwe)."
+      },
+      "advanceScoringCategory": {
+        "title": "Ścieżka postępu",
+        "instruction": "Przesuń dysk V.I.C.I o tyle kroków na przedstawionej ścieżce postępu.",
+        "threshold": "Gdy jeden z dysków V.I.C.I przekroczy próg bonusowy, który daje punkty sukcesu jako bonus ścieżki, V.I.C.I otrzymuje te punkty. Wszystkie inne bonusy ścieżki są ignorowane dla V.I.C.I.",
+        "exceedTrack": "Jeśli dysk V.I.C.I znajduje się już na polu 12 tej ścieżki, ta akcja daje V.I.C.I zwyczajowe 2 punkty sukcesu zamiast tego."
+      },
+      "gainActivationDie": {
+        "title": "Kość aktywacji",
+        "instruction": "V.I.C.I otrzymuje kość aktywacji (zgodnie ze zwykłymi zasadami)."
+      },
+      "gainFateDie": {
+        "title": "Kość przeznaczenia",
+        "instruction": "V.I.C.I otrzymuje kość przeznaczenia (zgodnie ze zwykłymi zasadami)."
+      },
+      "gainVp": {
+        "title": "Punkty sukcesu",
+        "instruction": "V.I.C.I zyskuje przedstawioną liczbę punktów sukcesu."
+      },
+      "performMigration": {
+        "title": "Migracja",
+        "initialTerritory": {
+          "title": "Terytorium początkowe",
+          "minimumRequirement": "Wybierz terytorium, gdzie V.I.C.I ma przynajmniej 2 plemiona, z których przynajmniej 1 jest silne.",
+          "twoTribesAvailability": "<b>Uwaga:</b> Jeśli nie ma takiego terytorium, najpierw wykonaj rozmnażanie.",
+          "performProcreation": "Wykonaj rozmnażanie",
+          "tribePriorityList": {
+            "title": "Wybierz silne plemię:",
+            "wilderness": "z dzikiej przyrody",
+            "fireEncampment": "z obozowiska ognia",
+            "anyEncampment": "z dowolnego obozowiska"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Terytorium docelowe",
+          "minimumRequirement": "Wybierz terytorium lądowe, przylegające do terytorium początkowego.",
+          "priorityRequirement": "<b>Priorytet</b>: Terytorium z najmniejszą liczbą plemion V.I.C.I (brak = najmniej).",
+          "moveTribe": "Przenieś określone silne plemię tam i pozwól mu osiedlić się na obozowisku:",
+          "undevelopedTerritory": "Jeśli plemię wchodzi na nierozwinięte terytorium, odwróć jego płytkę materiału na górę, ale nie umieszczaj tam znacznika."
+        }
+      },
+      "performProcreation": {
+        "title": "Rozmnażanie",
+        "minimumRequirement": "Wybierz terytorium z przynajmniej 1 plemieniem V.I.C.I.",
+        "priorityRequirement": "<b>Priorytet</b>: Terytorium z przynajmniej 1 wolnym obozowiskiem.",
+        "territoryDetermined": "Po określeniu terytorium dodaj plemię z zapasu V.I.C.I do tego terytorium, pozwalając mu osiedlić się na obozowisku:",
+        "migrationCheck": "<b>Ważne</b>: Sprawdź po każdym rozmnażaniu, które wykonujesz dla V.I.C.I, czy <b>wszystkie</b> obozowiska we <b>wszystkich</b> terytoriach, gdzie V.I.C.I ma plemiona, są <b>wyłącznie</b> zajęte przez własne plemiona V.I.C.I (a zatem żadne nie są wolne ani zajęte przez twoje plemiona). Jeśli tak, natychmiast wykonaj dodatkowo 1 migrację.",
+        "performMigration": "Wykonaj migrację"
+      },
+      "performProvision": {
+        "title": "Zaopatrzenie",
+        "minimumRequirement": "Wybierz terytorium, gdzie V.I.C.I ma przynajmniej jedno plemię.",
+        "priorityRequirement": "<b>Priorytet</b>: Terytoria z najmniejszą liczbą znaczników zaopatrzenia (0 = najmniej) i największą liczbą plemion V.I.C.I.",
+        "placeMarker": "Umieść znacznik zaopatrzenia na terytorium.",
+        "blockFarmSpace": "Gdy terytorium ma dwa znaczniki zaopatrzenia, blokują one miejsce budynku farmy (jeśli jest nadal niezajęte)."
+      },
+      "placeEvolutionMarker": {
+        "title": "Ewolucja",
+        "instruction": "V.I.C.I zyskuje znacznik ewolucji (są liczone automatycznie przez aplikację)."
+      },
+      "placeHuntingToken": {
+        "title": "Żeton polowania",
+        "minimumRequirement": "Wybierz terytorium, gdzie V.I.C.I ma przynajmniej jedno plemię i gdzie nie ma jeszcze żetonu polowania.",
+        "priorityRequirement": "<b>Priorytet</b>: Terytoria, gdzie <b>ty</b> również masz plemię.",
+        "placeToken": "Umieść żeton polowania na terytorium."
+      },
+      "placeProsperityMarker": {
+        "title": "Dobrobyt",
+        "instruction": "V.I.C.I zyskuje znacznik dobrobytu (są liczone automatycznie przez aplikację)."
+      },
+      "placeStatue": {
+        "title": "Posąg",
+        "instruction": "Umieść znacznik z zapasu V.I.C.I jako posąg na placu budowy w dużym terytorium wodnym.",
+        "unlimited": "Nie ma limitu liczby posągów, które V.I.C.I może tam mieć."
+      },
+      "removeCard": {
+        "title": "Usuń kartę badań",
+        "instruction": "Usuń górną kartę z <i>odkrytej sterty kart badań</i> przedstawionego typu.",
+        "refill": "Jeśli odkryta sterta jest pusta po tym, uzupełnij ją jak zwykle."
+      },
+      "revealSites": {
+        "title": "Odkryj miejsca",
+        "minimumRequirement": "Wybierz terytorium, gdzie V.I.C.I ma przynajmniej jedno plemię.",
+        "priorityRequirement": "<b>Priorytet</b>: Terytoria przylegające do największej liczby zakrytych miejsc.",
+        "reveal": "Odkryj wszystkie zakryte miejsca przylegające do terytorium.",
+        "gainVP": "V.I.C.I zyskuje punkty sukcesu wydrukowane na przodzie każdego odkrytego miejsca. Poza tym cywilizacja V.I.C.I nigdy nie jest dotknięta żadnymi odkrytymi miejscami."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Wolne obozowisko ognia",
+        "freeAny": "Dowolne wolne obozowisko",
+        "playerFire": "Obozowisko ognia z jednym z <b>twoich</b> plemion",
+        "playerWeakAny": "Dowolne obozowisko z jednym z <b>twoich</b> słabych plemion",
+        "playerStrongAny": "Dowolne obozowisko z jednym z <b>twoich</b> silnych plemion",
+        "botStrongFire": "Obozowisko ognia z jednym z silnych plemion V.I.C.I",
+        "botStrongAny": "Dowolne obozowisko z jednym z silnych plemion V.I.C.I",
+        "botWeakFire": "Obozowisko ognia z jednym ze słabych plemion V.I.C.I",
+        "botWeakAny": "Dowolne obozowisko z jednym ze słabych plemion V.I.C.I",
+        "notWeakened": "<b>Uwaga:</b> Plemiona V.I.C.I <b>nie</b> są osłabiane, gdy wypierają plemiona z obozowisk!"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Poziom 1 - Początkujący",
+    "2": "Poziom 2 - Umiarkowany",
+    "3": "Poziom 3 - Średni",
+    "4": "Poziom 4 - Zaawansowany",
+    "5": "Poziom 5 - Ekspert"
+  },
+  "player": {
+    "player": "Gracz",
+    "bot": "V.I.C.I"
+  },
+  "territory": {
+    "forest": "Las",
+    "grassland": "Łąka",
+    "hills": "Wzgórza",
+    "swamp": "Bagno",
+    "mountains": "Góry",
+    "desert": "Pustynia",
+    "water": "Woda"
+  },
+  "notfound": {
+    "title": "Nie znaleziono"
+  },
+  "action": {
+    "playGame": "Graj",
+    "startGame": "Rozpocznij grę",
+    "next": "Dalej",
+    "nextRound": "Następna runda",
+    "abortGame": "Przerwij grę",
+    "abortGameConfirm": "Przerywanie trwającej gry - czy jesteś pewien?",
+    "endGame": "Zakończ grę",
+    "endGameConfirm": "Zakończyć tę grę i wrócić do ekranu głównego - czy jesteś pewien?",
+    "cancel": "Anuluj",
+    "backToHome": "Powrót do głównego",
+    "back": "Wstecz",
+    "close": "Zamknij",
+    "ok": "OK",
+    "reset": "Reset"
+  },
+  "footer": {
+    "credits": "Twórcy"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Odśwież aplikację",
+    "notice": "Aplikacja została zaktualizowana - czy chcesz odświeżyć, aby korzystać z najnowszej wersji?"
+  }
+}
