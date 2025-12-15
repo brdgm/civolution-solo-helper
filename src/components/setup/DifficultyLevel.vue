@@ -20,6 +20,11 @@
       </i>
     </div>
   </div>
+  <div class="row mt-3">
+    <div class="col-sm-10 offset-sm-1 col-12">
+      <p class="alert alert-secondary" v-html="t('setup.difficultyLevel.acceptanceLetter')"></p>
+    </div>
+  </div>
 
 </template>
 
