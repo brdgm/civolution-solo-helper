@@ -15,7 +15,8 @@
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
-      "hard": "Schwer"
+      "hard": "Schwer",
+      "acceptanceLetter": "Erhöhe den Schwierigkeitsgrad wenn du mit der <a href='https://boardgamegeek.com/boardgameexpansion/450530/civolution-acceptance-letter' target='_blank' rel='noopener'>Acceptance Letter</a>-Erweiterung spielst – sie bringt nur dir Vorteile."
     },
     "scoringTiles": {
       "title": "Wertungsplättchen",

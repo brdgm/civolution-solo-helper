@@ -15,7 +15,8 @@
     "difficultyLevel": {
       "title": "Difficulty Level",
       "easy": "Easy",
-      "hard": "Hard"
+      "hard": "Hard",
+      "acceptanceLetter": "Increase the difficulty when playing with the <a href='https://boardgamegeek.com/boardgameexpansion/450530/civolution-acceptance-letter' target='_blank' rel='noopener'>Acceptance Letter</a> expansion, as it only benefits you."
     },
     "scoringTiles": {
       "title": "Scoring Tiles",
