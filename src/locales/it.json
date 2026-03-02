@@ -1,0 +1,290 @@
+{
+  "gameTitle": "Civolution",
+  "home": {
+    "title": "Civolution Aiuto gioco in solitario",
+    "play1": "Gioca <a href='https://boardgamegeek.com/boardgame/400602/civolution' target='_blank' rel='noopener'><b>Civolution</b></a> contro V.I.C.I, IA.",
+    "play2": "Questa applicazione sostituisce il mazzo di carte solitario, gestisce i livelli di difficoltà e ti guida attraverso il gioco e il setup delle regole in solitario.",
+    "vici": {
+      "hello": "CIAO,<br/>SONO<br/>V.I.C.I!",
+      "about": "Se vuoi giocare a Civolution da solo, vi presentiamo V.I.C.I, una versatile I-Civ interattiva creata allo scopo di simulare una civilta rivale."
+    },
+    "feedback": "Discussioni e Feedback:"
+  },
+  "setup": {
+    "title": "Setup",
+    "difficultyLevel": {
+      "title": "Livello di Difficolta",
+      "easy": "Facile",
+      "hard": "Difficile",
+      "acceptanceLetter": "Aumenta la Difficolta quando giochi con <a href='https://boardgamegeek.com/boardgameexpansion/450530/civolution-acceptance-letter' target='_blank' rel='noopener'>Acceptance Letter</a> espansione, poiché è solo un vantaggio per te."
+    },
+    "scoringTiles": {
+      "title": "Tessere Punteggio",
+      "randomize": "Casuale",
+      "select": "Seleziona",
+      "available": "Disponibile:",
+      "selected": "Seleziona (3 x Finali / 4 x Era):",
+      "none": "(nessuno)"  
+    },
+    "randomMap": {
+      "title": "Continente",
+      "show": "Continenti Casuali (opzionale)",
+      "firstPlay": "Prima Partita",
+      "randomize": "Casuale"
+    }
+  },
+  "setupBot": {
+    "title": "Setup V.I.C.I",
+    "provisionMarker": "Segnalino provviste",
+    "placeDisks": "Scegli un colore per V.I.C.I, prendi i 7 <b>dischi</b> di quel colore e posizionane uno su ciascuno dei tuoi dischi presenti sulle plance di gioco.",
+    "takeTribesMarkers": "Piazza 15 <b>tribu</b> (le restanti 5 non vengono usate) e 50 <b>segnalini</b> del colore di V.I.C.I. nella sua area di gioco come riserva.",
+    "placeStartingTribes": "Piazza 1 delle tribu di V.I.C.I in piedi sull'accampamento senza falò rimasto libero nel <i>Territorio iniziale Foresta </i> e 1 sua tribù in piedi sull'accampamento senza falò rimasto libero nel <i>territorio iniziale Prateria</i>.",
+    "placeProvisionMarker": "Piazza un segnalino <b>steso in posizione orizzontale</b> in ciascuno dei due Territori iniziali accanto allo spazio di costruzione fattoria. Questi segnalini non rappresentano materie prime ma sono chiamati <i>segnalini provviste</i>.",
+    "takeDice": "Colloca 6 <b>dadi attivazione</b> e <b>1 dado fato</b> nell'area di gioco di V.I.C.I.",
+    "diceNotice": "Non lanciarli, servono per contare il numero di dadi di V.I.C.I..",
+    "noOtherComponents": "V.I.C.I. non utilizza altri componenti"
+  },
+  "roundStart": {
+    "title": "Inizio Era",
+    "newCards": {
+      "title": "1) Nuove carte",
+      "noAction": "V.I.C.I non fa nulla."
+    },
+    "newGoals": {
+      "title": "2) Nuovi obiettivi",
+      "playerTakeGoal": "Prendi un chip obiettivo (opzionale).",
+      "botDetermine": "Scegliere un chip obiettivo per V.I.C.I.",
+      "botTakeGoal": "Rimuovi un chip obiettivo <b>{goalChip}</b> (se disponibile).",
+      "botNoGoal": "Nessun chip obiettivo viene rimosso."
+    },
+    "extraFind": {
+      "title": "3) Risorsa Extra",
+      "noAction": "V.I.C.I non riceve risorse extra."
+    }
+  },
+  "turnPlayer": {
+    "title": "Giocatore",
+    "takeTurn": "Svolgi il tuo turno."
+  },
+  "turnBot": {
+    "title": "V.I.C.I",
+    "reset": "V.I.C.I effettua un <b>Ripristino</b>.",
+    "resetAdvance": "Avanza <i>l'indicatore di fase</i> sulla prossima <i>casella di ripristino</i>.",
+    "removeAttributeChip": "Rimuovi <b>chip attributo</b> {chip}.",
+    "removeIncomeChip": "Rimuovi <b>chip introito</b> {chip}."
+  },
+  "roundEnd": {
+    "title": "Fine Era",
+    "sitePhase": {
+      "title": "5) Fase luoghi",
+      "botNotAffected": "V.I.C.I non risente mai degli effetti dei luoghi."
+    },
+    "feedingPhase": {
+      "title": "6) Fase nutrimento",
+      "feedTribes": {
+        "title": "A) Fase nutrimento di V.I.C.I :",
+        "oneProvisioningMarker": "Nei territori con 1 segnalino provviste, 1 tribu su un accampamento è sfamata. Priorità:",
+        "twoProvisioningMarkers": "Nei territori con 2 segnalini provviste, tutte le tribu negli accampamenti + 1 tribu nella natura selvaggia (forte su debole) sono sfamate.",
+        "weakenTribes": "Tutte le altre tribu devono essere indebolite."
+      },
+      "scoreStrongTribes": "B) Segna punti per le tribu forti di V.I.C.I."
+    },
+    "eventPhase": {
+      "title": "7) Fase evento",
+      "adjustWeather": "A) Il meteo non ha mai effetto su V.I.C.I.",
+      "resolveEvent": {
+        "title": "B) V.I.C.I non ottiene mai i bonus degli eventi.",
+        "compareBot": "Tuttavia, devi prendere in considerazione V.I.C.I. quando stabilisci se ricevi il bonus di un evento che richiede una maggioranza o di essere in testa.",
+        "eventsDetails": "Eventi F4, F6, F16, F17, F19 o F20",
+        "majorityModal": {
+          "title": "Evento V.I.C.I",
+          "event": "Evento",
+          "achievement": "Risultato"
+        }
+      },
+      "scoreCategory": "C) V.I.C.I. ottiene Punti Successo per la categoria oggetto di valutazione",
+      "startingCivilization": {
+        "title": "D) Determina la civilizazione iniziale come di consueto:",
+        "nextStartPlayer": "Prossimo giocatore iniziale:"
+      }
+    },
+    "incomePhase": {
+      "title": "8) Fase introiti",
+      "scoreStatues": "B) Conta il punteggio delle statue di V.I.C.I."
+    },
+    "noNextStartPlayer": "Determina il prossimo giocatore iniziale."
+  },
+  "gameEnd": {
+    "title": "Fine Partita",
+    "finalScoring": {
+      "title": "Punteggio Finale",
+      "categories": "Segna 9 categorie di punteggio finale (te e V.I.C.I)",
+      "consoleStages": "Segna punti dalla partizione in stadi della console (solo te)",
+      "consoleResearchCards": "Segna punti bonus delle carte ricerca nella console (solo te)"
+    },
+    "winCondition": "Se sei riuscito ad avere in totale più punti successo di V.I.C.I., congratulazioni per il successo <i>Civolution</i>!"
+  },
+  "endRoundButton": {
+    "title": "Fine Fase Azioni",
+    "confirm": "Vuoi terminare la fase azioni?"
+  },
+  "sideBar": {
+    "round": "Era {round}",
+    "cards": "Carte:",
+    "resetCount": "{count} Reset | {count} Resets"
+  },
+  "rules": {
+    "action": {
+      "advanceFavor": {
+        "title": "Tracciato Agera",
+        "instruction": "Avanza il disco di V.I.C.I di 1 passo sul tracciato favore di Agera (se possibile)."
+      },
+      "advanceScoringCategory": {
+        "title": "Tracciato Progresso",
+        "instruction": "Fai avanzare il disco di V.I.C.I del numero di caselle indicato sul tracciato avanzamento raffigurato.",
+        "threshold": "Ogni volta che il disco di V.I.C.I oltrepassa una soglia dei bonus che fornisce punti successo come bonus del tracciato, V.I.C.I ottiene quei punti. Ignora tutti gli altri bonus dei tracciati.",
+        "exceedTrack": "Se il disco di V.I.C.I si trova già sulla casella 12 di questo tracciato, V.I.C.I ottiene i consueti 2 punti successo."
+      },
+      "gainActivationDie": {
+        "title": "Dado Attivazione",
+        "instruction": "V.I.C.I riceve un dado attivazione (secondo le normali regole)."
+      },
+      "gainFateDie": {
+        "title": "Dado Fato",
+        "instruction": "V.I.C.I riceve un dado fato (secondo le normali regole)."
+      },
+      "gainVp": {
+        "title": "Punti Successo",
+        "instruction": "V.I.C.I ottiene i punti successo raffigurati."
+      },
+      "performMigration": {
+        "title": "Migrazione",
+        "initialTerritory": {
+          "title": "Territorio di Partenza",
+          "minimumRequirement": "Scegli un territorio in cui V.I.C.I. abbia almeno 2 tribù, di cui almeno 1 forte.",
+          "twoTribesAvailability": "<b>Attenzione:</b> In caso negativo, eseguire prima una procreazione.",
+          "performProcreation": "Effettua Procreazione",
+          "tribePriorityList": {
+            "title": "Scegli una tribù forte:",
+            "wilderness": "dalla natura selvaggia",
+            "fireEncampment": "da un accampamento con il falò",
+            "anyEncampment": "da qualsiasi accampamento"
+          }
+        },
+        "destinationTerritory": {
+          "title": "Territorio di Destinazione",
+          "minimumRequirement": "Scegli un territorio terrestre, adiacente al territorio di partenza.",
+          "priorityRequirement": "<b>Priorità</b>: Territorio con il minor numero di tribù di V.I.C.I. (nessuna = minor numero).",
+          "moveTribe": "Sposta la tribù forte così determinata verso il territorio e piazzala su un accampamento:",
+          "undevelopedTerritory": "Se la tribù entra in un territorio non sviluppato, gira a faccia in su la tessera materia prima relativa ma non piazzare un segnalino lì."
+        }
+      },
+      "performProcreation": {
+        "title": "Procreazione",
+        "minimumRequirement": "Scegli un territorio con almeno una delle tribù di V.I.C.I.",
+        "priorityRequirement": "<b>Priorità</b>: Territorio con almeno 1 accampamento libero.",
+        "territoryDetermined": "Una volta determinato il territorio, aggiungi una tribù dalla riserva di V.I.C.I a quel territorio piazzandola su un accampamento:",
+        "migrationCheck": "<b>Importante</b>: Controllare dopo ogni procreazione che effettui per conto di V.I.C.I. se <b>tutti</b> gli accampamenti in <b>tutti</b> i territori dove V.I.C.I ha delle tribù sono <b>unicamente</b> occupati dalle tribù di V.I.C.I (e quindi, nessuno accampamento nei suoi territori è libero o occupato dalle tue tribù). In caso affermativo, effettua immediatamente 1 migrazione aggiuntiva per conto di V.I.C.I.",
+        "performMigration": "Effettua 1 Migrazione"
+      },
+      "performProvision": {
+        "title": "Provviste",
+        "minimumRequirement": "Determina un territorio in cui V.I.C.I. abbia almeno una tribù.",
+        "priorityRequirement": "<b>Priorità</b>: Territori con il minor numero di segnalini provviste (0 = minore) ed il maggior numero di tribù di V.I.C.I.",
+        "placeMarker": "Piazza un segnalino provviste nel territorio.",
+        "blockFarmSpace": "Una volta che un territorio ha due segnalini provviste, questi bloccano lo spazio di costruzione della fattoria (se è ancora vuoto)."
+      },
+      "placeEvolutionMarker": {
+        "title": "Evoluzione",
+        "instruction": "V.I.C.I ottiene segnalini Evoluzione (questi vengono conteggiati automaticamente dall'applicazione)."
+      },
+      "placeHuntingToken": {
+        "title": "Segnalini Caccia",
+        "minimumRequirement": "Scegli un territorio in cui V.I.C.I. abbia almeno una tribù e in cui non ci sia ancora alcun segnalino caccia.",
+        "priorityRequirement": "<b>Priorità</b>: Territori, dove <b>tu</b> hai almeno una tribù.",
+        "placeToken": "Piazza un segnalino caccia nel territorio."
+      },
+      "placeProsperityMarker": {
+        "title": "Prosperità",
+        "instruction": "V.I.C.I ottiene un segnalino Prosperità (questi vengono conteggiati automaticamente dall'applicazione)."
+      },
+      "placeStatue": {
+        "title": "Statue",
+        "instruction": "Piazza un segnalino dalla riserva di V.I.C.I. come statua sul terreno edificabile nel territorio acquatico grande.",
+        "unlimited": "Non c'è limite al numero di statue che V.I.C.I può avere qui."
+      },
+      "removeCard": {
+        "title": "Rimuovi carte ricerca",
+        "instruction": "Rimuovere la carta in cima al<i>mazzo ricerca</i> del tipo raffigurato.",
+        "refill": "Se il mazzo a faccia in su è vuoto, riempilo come al solito."
+      },
+      "revealSites": {
+        "title": "Esplorazione",
+        "minimumRequirement": "Scegli un territorio in cui V.I.C.I. abbia almeno una tribù.",
+        "priorityRequirement": "<b>Priorità</b>: Territori adiacenti al maggior numero di luoghi a faccia in giù.",
+        "reveal": "Rivela tutti i siti a faccia in giù adiacenti al territorio.",
+        "gainVP": "V.I.C.I ottiene i Punti Successo indicati sul fronte di ogni luogo che viene rivelato. Oltre a questo, la civiltà di V.I.C.I. non viene mai influenzata da alcun sito scoperto."
+      }
+    },
+    "priority": {
+      "encampment": {
+        "freeFire": "Accampamento libero con un falò",
+        "freeAny": "Qualsiasi accampamento libero",
+        "playerFire": "Accampamento con un falò con una <b>tua</b> tribù",
+        "playerWeakAny": "Qualsiasi accampamento con una <b>tua</b> tribù debole",
+        "playerStrongAny": "Qualsiasi accampamento con una <b>tua</b> tribù forte",
+        "botStrongFire": "Accampamento con un falò con una tribù forte di V.I.C.I.",
+        "botStrongAny": "Accampamento con una tribù forte di V.I.C.I.",
+        "botWeakFire": "Accampamento con un falò con una tribù debole di V.I.C.I.",
+        "botWeakAny": "Qualsiasi accampamento con una tribù debole di V.I.C.I.",
+        "notWeakened": "<b>Attenzione:</b> le tribù di V.I.C.I <b>non</b> vengono indebolite quando allontanano un'altra tribù da un accampamento!"
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Level 1 - Principiante",
+    "2": "Level 2 - Moderato",
+    "3": "Level 3 - Medio",
+    "4": "Level 4 - Avanzato",
+    "5": "Level 5- Esperto"
+  },
+  "player": {
+    "player": "Giocatore",
+    "bot": "V.I.C.I"
+  },
+  "territory": {
+    "forest": "Foresta",
+    "grassland": "Pianura",
+    "hills": "Colline",
+    "swamp": "Palude",
+    "mountains": "Montagna",
+    "desert": "Deserto",
+    "water": "Acqua"
+  },
+  "notfound": {
+    "title": "Non trovato"
+  },
+  "action": {
+    "playGame": "Gioca Partita",
+    "startGame": "Inizia Partita",
+    "next": "Prossimo",
+    "nextRound": "Prossimo turno",
+    "abortGame": "Interrompere la partita",
+    "abortGameConfirm": "Interrompere la partita in corso - sei sicuro?",
+    "endGame": "Fine Partita",
+    "endGameConfirm": "Termina la partita e torna alla schermata iniziale: sei sicuro?",
+    "cancel": "Cancella",
+    "backToHome": "Torna all'inizio",
+    "back": "Indietro",
+    "close": "Chiudi",
+    "ok": "OK",
+    "reset": "Resetta"
+  },
+  "footer": {
+    "credits": "Crediti"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Aggiorna applicazione",
+    "notice": "L'applicazione è stata aggiornata: vuoi aggiornarla per utilizzare la versione più recente?"
+  }
+}
