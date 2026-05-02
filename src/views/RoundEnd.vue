@@ -82,7 +82,6 @@ import Action from '@/services/enum/Action'
 import { createTerritoryRoll } from '@/util/TerritoryRoll'
 import PerformProvision from '@/components/turn/action/PerformProvision.vue'
 import EncampmentPriority from '@/components/turn/EncampmentPriority.vue'
-import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'RoundStart',
@@ -90,8 +89,7 @@ export default defineComponent({
     FooterButtons,
     SideBar,
     PerformProvision,
-    EncampmentPriority,
-    ModalDialog
+    EncampmentPriority
   },
   setup() {
     const { t } = useI18n()
