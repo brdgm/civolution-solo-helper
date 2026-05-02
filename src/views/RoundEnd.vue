@@ -64,25 +64,6 @@
     {{t('action.next')}}
   </button>
 
-  <ModalDialog id="eventMajorityModal" :title="t('roundEnd.eventPhase.resolveEvent.majorityModal.title')">
-    <template #body>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">{{t('roundEnd.eventPhase.resolveEvent.majorityModal.event')}}</th>
-            <th scope="col">{{t('roundEnd.eventPhase.resolveEvent.majorityModal.achievement')}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="eventAchievement of eventAchievements" :key="eventAchievement.event">
-            <td>{{eventAchievement.event}}</td>
-            <td>{{eventAchievement.count}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </template>
-  </ModalDialog>
-
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -102,7 +83,6 @@ import { createTerritoryRoll } from '@/util/TerritoryRoll'
 import PerformProvision from '@/components/turn/action/PerformProvision.vue'
 import EncampmentPriority from '@/components/turn/EncampmentPriority.vue'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
-import getEventAchievements, { EventAchievement } from '@/util/getEventAchievements'
 
 export default defineComponent({
   name: 'RoundStart',
@@ -153,9 +133,6 @@ export default defineComponent({
         action: Action.PERFORM_PROVISION,
         territoryRoll: createTerritoryRoll()
       }
-    },
-    eventAchievements() : EventAchievement[] {
-      return getEventAchievements(this.navigationState.prosperityCount)
     }
   },
   methods: {
