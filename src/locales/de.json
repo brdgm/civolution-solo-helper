@@ -85,7 +85,7 @@
         "title": "A) V.I.C.I Ernährungsphase:",
         "oneProvisioningMarker": "In Gebieten mit 1 Proviantmarker ist 1 Stamm auf einem Lagerplatz ernährt. Priorität:",
         "twoProvisioningMarkers": "In Gebieten mit 2 Proviantmarkern sind alle Stämme auf Lagerplätzen + 1 Stamm in der Wildnis ernährt (stark vor schwach).",
-        "weakenTribes": "Alle übrigen Stämme werden geschwächt."
+        "weakenTribes": "Alle übrigen Stämme werden geschwächt (die starken hinlegen, die schwachen entfernen)."
       },
       "scoreStrongTribes": "B) Werte V.I.C.I starke Stämme."
     },
