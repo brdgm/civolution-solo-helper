@@ -22,7 +22,10 @@
       {{t('sideBar.cards')}} {{ playedCards }} / {{ totalCards}}<br/>
       <span v-if="resetCount > 0">{{t('sideBar.resetCount', {count:resetCount}, resetCount)}}</span>
     </div>
+    <button class="btn btn-sm btn-outline-secondary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#eventMajorityModal">{{t('roundEnd.eventPhase.resolveEvent.majorityModal.title')}}</button>
   </div>
+
+  <EventMajorityModal :navigationState="navigationState"/>
 </template>
 
 <script lang="ts">
@@ -32,11 +35,13 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '../structure/AppIcon.vue'
 import BotActions from '@/services/BotActions'
+import EventMajorityModal from './EventMajorityModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
   components: {
-    AppIcon
+    AppIcon,
+    EventMajorityModal
   },
   setup() {
     const { t } = useI18n()
