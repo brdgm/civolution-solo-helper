@@ -216,7 +216,7 @@
       "removeCard": {
         "title": "Remove Research Card",
         "instruction": "Remove the top card from the <i>face-up research stack</i> of the depicted type.",
-        "refill": "If the face-up stack is empty afterwards, refill it at as usual."
+        "refill": "If the face-up stack is empty afterwards, refill it as usual."
       },
       "revealSites": {
         "title": "Reveal Sites",
@@ -246,7 +246,7 @@
     "2": "Level 2 - Moderate",
     "3": "Level 3 - Medium",
     "4": "Level 4 - Advanced",
-    "5": "Level 5- Expert"
+    "5": "Level 5 - Expert"
   },
   "player": {
     "player": "Player",
