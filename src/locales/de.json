@@ -52,7 +52,7 @@
     },
     "newGoals": {
       "title": "2) Neue Ziele",
-      "playerTakeGoal": "Nehme eine Zielplatine (optional).",
+      "playerTakeGoal": "Nimm eine Zielplatine (optional).",
       "botDetermine": "Bestimme eine Zielplatine für V.I.C.I.",
       "botTakeGoal": "Entferne Zielplatine <b>{goalChip}</b> (wenn verfügbar).",
       "botNoGoal": "Es wird keine Zielplatine entfernt."
@@ -87,7 +87,7 @@
         "twoProvisioningMarkers": "In Gebieten mit 2 Proviantmarkern sind alle Stämme auf Lagerplätzen + 1 Stamm in der Wildnis ernährt (stark vor schwach).",
         "weakenTribes": "Alle übrigen Stämme werden geschwächt (die starken hinlegen, die schwachen entfernen)."
       },
-      "scoreStrongTribes": "B) Werte V.I.C.I starke Stämme."
+      "scoreStrongTribes": "B) Werte V.I.C.Is starke Stämme."
     },
     "eventPhase": {
       "title": "7) Ereignisphase",
@@ -95,7 +95,7 @@
       "resolveEvent": {
         "title": "B) V.I.C.I erhält nie Ereignis-Boni.",
         "compareBot": "Allerdings musst du V.I.C.I berücksichtigen, wenn es darum geht, ob du selbst den Bonus eines Ereignisses erhältst, für den eine Mehrheit oder eine Führung notwendig ist.",
-        "eventsDetails": "Ereignis F4, F6, F16, F17, F19 or F20",
+        "eventsDetails": "Ereignis F4, F6, F16, F17, F19 oder F20",
         "majorityModal": {
           "title": "V.I.C.I Ereignis",
           "event": "Ereignis",
@@ -192,7 +192,7 @@
         "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens 1 Stamm hat.",
         "priorityRequirement": "<b>Priorität</b>: Gebiete mit den wenigsten Proviantmarkern (0 = wenigste) und V.I.C.Is meisten Stämmen.",
         "placeMarker": "Platziere einen Proviantmarker in dem Gebiet.",
-        "blockFarmSpace": "Sobald in einen Gebiet zwei Proviantmarker sind, blockieren diese fortan den Farm-Bauplatz (falls noch frei)."
+        "blockFarmSpace": "Sobald in einem Gebiet zwei Proviantmarker sind, blockieren diese fortan den Farm-Bauplatz (falls noch frei)."
       },
       "placeEvolutionMarker": {
         "title": "Evolution",
@@ -200,7 +200,7 @@
       },
       "placeHuntingToken": {
         "title": "Jagdplättchen",
-        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens ein Stamm hat, und in dem noch kein Jagdplättchen liegt.",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens einen Stamm hat, und in dem noch kein Jagdplättchen liegt.",
         "priorityRequirement": "<b>Priorität</b>: Gebiete, in denen <b>du</b> auch einen Stamm hast.",
         "placeToken": "Lege 1 Jagdplättchen in das Gebiet."
       },
@@ -220,7 +220,7 @@
       },
       "revealSites": {
         "title": "Orte aufdecken",
-        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens ein Stamm hat.",
+        "minimumRequirement": "Wähle ein Gebiet, in dem V.I.C.I mindestens einen Stamm hat.",
         "priorityRequirement": "<b>Priorität</b>: Gebiete, die an die meisten verdeckten Orte angrenzen.",
         "reveal": "Decke alle verdeckten Orte auf, die an dieses Gebiet angrenzen.",
         "gainVP": "V.I.C.I erhält die aufgedruckten Erfolgspunkte jedes Ortes, der aufgedeckt wird. Abgesehen davon wird V.I.C.Is Zivilisation niemals von Orten beeinflusst."
