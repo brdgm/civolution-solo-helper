@@ -15,7 +15,8 @@
     "difficultyLevel": {
       "title": "Nivel de Dificultad",
       "easy": "Fácil",
-      "hard": "Difícil"
+      "hard": "Difícil",
+      "acceptanceLetter": "Aumenta la dificultad cuando juegues con la expansión <a href='https://boardgamegeek.com/boardgameexpansion/450530/civolution-acceptance-letter' target='_blank' rel='noopener'>Carta de Admisión</a>, ya que solo te beneficia a ti."
     },
     "scoringTiles": {
       "title": "Losetas de Puntuación",
